@@ -1,53 +1,39 @@
 /* Themify Customize Styling */
-#body {	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/ryandrums.png);background-attachment: fixed; 
+body {	
+	background-color: #ffffff; 
+}
+a {	
+	color: #b51717; 
+}
+a:hover {	
+	color: #cf5555; 
 }
 h1, .col4-1 h1, .col4-2 h1, .col3-1 h1, .col2-1 h1, .page-title, .sidebar-none .page-title {	
 	font-family:Maven Pro;	font-weight:normal;
  
 }
+h2 {	
+	color: #ffffff; 
+}
 #headerwrap {	
-	background-color: #303036; 
-}
-#header {	background-image: none;
-	color: #ffffff; 
-}
-#header a {	
-	color: #ffffff; 
-}
-#header a:hover {	
-	color: #5b5ba3; 
+	background-color: #474747; 
 }
 #site-logo {	
-	font-family:Maven Pro;	font-weight:normal;
- 
+	color: #ffffff; 
 }
-#site-logo img {		width: 60px;
-	height: 60px; 
-}
-#site-logo a {		width: 60px; 
-}
-#main-nav a:hover {	
-	color: #8a2020; 
-}
-#main-nav .current_page_item a,  #main-nav .current-menu-item a {	
-	color: #8a2020; 
+#site-logo a {	
+	color: #ffffff; 
 }
 @media screen and (max-width: 976px) { /* Themify Customize Styling */
-#site-logo img {		width: 60px;
-	height: 60px; 
-}
-#site-logo a {		width: 60px; 
+#site-logo a {	
+	color: #ffffff; 
 }
  }@media screen and (max-width: 716px) { /* Themify Customize Styling */
-#site-logo img {		width: 60px;
-	height: 60px; 
-}
-#site-logo a {		width: 60px; 
+#site-logo a {	
+	color: #ffffff; 
 }
  }@media screen and (max-width: 414px) { /* Themify Customize Styling */
-#site-logo img {		width: 60px;
-	height: 60px; 
-}
-#site-logo a {		width: 60px; 
+#site-logo a {	
+	color: #ffffff; 
 }
  }

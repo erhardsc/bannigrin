@@ -31,6 +31,18 @@ Template: themify-shoppe
 	background-position: 50% 50% !important;
 }
 
+a, u {
+	text-decoration: none;
+}
+
+#menu-item-2722 a {
+	color: white !important;
+}
+
+#site-logo a:hover {
+	color: white !important;
+}
+
 /*
 .home-banner,
 .home-banner video.vjs-tech {
