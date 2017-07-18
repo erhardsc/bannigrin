@@ -19,4 +19,4 @@ function custom_js() {
 
 }
 add_action( 'wp_enqueue_scrips', custom_js() );
-// From Local hosts
+// From Server
