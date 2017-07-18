@@ -1,0 +1,69 @@
+/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/close-up-drum.jpg);
+	
+	background-color: rgba(71,71,71, 1.00)
+}
+.themify_builder_2551_row.module_row_0 a {
+	text-decoration: underline
+}
+
+@media screen and (max-width: 1024px) {/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	padding-top : 7%
+}
+
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 716px) {/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	padding-top : 9%
+}
+
+}
+@media screen and (max-width: 414px) {
+}
+@media screen and (max-width: 414px) {/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	padding-top : 20%
+}
+
+}
+/* .module_row_0 .module_column_0.tb_2551_column Style */
+.module_row_0 .module_column_0.tb_2551_column a {
+	text-decoration: underline
+}
+
+.themify_builder .text-2551-0-0-0.module-text { font-family: Maven Pro; color: #ffffff; font-size: 2em; text-align: center; margin-bottom: -2%;  } 
+.themify_builder .text-2551-0-0-0.module-text h1 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h2 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h3:not(.module-title) { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h4 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h5 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h6 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-2.module-text { color: #c2c2c2; text-align: center;  } 
+.themify_builder .text-2551-0-0-2.module-text h1 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-2.module-text h2 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-2.module-text h3:not(.module-title) { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-2.module-text h4 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-2.module-text h5 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-2.module-text h6 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-2.module-text a { color: #e6e6e6;  } 
+.themify_builder .text-2551-0-0-2.module-text a:hover { color: #8a8a8a;  } 
+.themify_builder .text-2551-0-0-3.module-text { font-family: Maven Pro; color: #ffffff; text-align: center;  } 
+.themify_builder .text-2551-0-0-3.module-text h1 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h2 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h3:not(.module-title) { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h4 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h5 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h6 { font-family: Maven Pro; color: #ffffff;  } 
+.themify_builder .text-2551-0-0-5.module-text { color: #c2c2c2; font-size: .6em; text-align: center;  } 
+.themify_builder .text-2551-0-0-5.module-text h1 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-5.module-text h2 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-5.module-text h3:not(.module-title) { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-5.module-text h4 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-5.module-text h5 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-5.module-text h6 { color: #c2c2c2;  } 
+.themify_builder .text-2551-0-0-5.module-text a { color: #e6e6e6;  } 
+.themify_builder .text-2551-0-0-5.module-text a:hover { color: #8a8a8a;  } 

@@ -1,0 +1,114 @@
+/* .themify_builder_2592_row.module_row_0 Style */
+.themify_builder_2592_row.module_row_0.module_row {
+	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/close-up-drum-1024x567.png);
+	padding-top : 7%;
+	padding-bottom : 7%
+}
+.themify_builder_2592_row.module_row_0.module_row>.builder_row_cover {
+	background:
+}
+.themify_builder_2592_row.module_row_0.module_row> div > .builder_row_cover {
+	background:
+}
+
+@media screen and (max-width: 414px) {/* .themify_builder_2592_row.module_row_0 Style */
+.themify_builder_2592_row.module_row_0.module_row {
+	padding-top : 20%;
+	padding-bottom : 8%
+}
+
+}
+.themify_builder .text-2592-0-0-0.module-text { text-align: center;  } 
+.themify_builder .text-2592-0-0-0.module.module-text h1 { color: #ffffff; font-size: 48px; line-height: 60px;  } 
+@media screen and (max-width: 414px) {.themify_builder .text-2592-0-0-0.module.module-text h1 { font-size: 38px; line-height: 50px;  } 
+}
+/* .themify_builder_2592_row.module_row_1 Style */
+.themify_builder_2592_row.module_row_1.module_row {
+	
+	background-color: rgba(48,48,54, 1);
+	
+	color: rgba(255,255,255, 1.00);
+	padding-top : 6%;
+	padding-bottom : 4%
+}
+.themify_builder_2592_row.module_row_1.module_row h1 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2592_row.module_row_1.module_row h2 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2592_row.module_row_1.module_row h3:not(.module-title) {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2592_row.module_row_1.module_row h4 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2592_row.module_row_1.module_row h5 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2592_row.module_row_1.module_row h6 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+
+.themify_builder .contact-2592-1-0-0.module-contact { margin-top: 20px; margin-bottom: 20px;  } 
+/* .module_row_1 .module_column_1.tb_2592_column Style */
+.module_row_1 .module_column_1.tb_2592_column.module_column {
+	
+	border-left: rgba(227,227,227,  1.00) 1px solid
+}
+
+@media screen and (max-width: 414px) {/* .module_row_1 .module_column_1.tb_2592_column Style */
+.module_row_1 .module_column_1.tb_2592_column.module_column {
+	
+	border-left: rgba(255,255,255,  1.00) 1px solid
+}
+
+}
+@media (min-width: 1025px) {
+	.themify_builder_row.module_row_1 .module_column_0.tb_2592_column{ width: 63.8549% !important; }
+	.themify_builder_row.module_row_1 .module_column_1.tb_2592_column{ width: 32.9454% !important; }
+	
+}
+.themify_builder .feature-2592-1-1-0.module-feature { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature h1 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature h2 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature h3 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature h4 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature h5 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature h6 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature .module-feature-title { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module.module-feature .module-title { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-0.module-feature .module-feature-title:not(.module-title) { color: #ffffff; font-size: 24px; line-height: 44px;  } 
+.themify_builder .feature-2592-1-1-0.module-feature .module-feature-title a { color: #ffffff;  } 
+@media screen and (max-width: 716px) {.themify_builder .feature-2592-1-1-0.module-feature .module-feature-title:not(.module-title) { font-size: 24px; line-height: 30px;  } 
+}
+.themify_builder .feature-2592-1-1-1.module-feature { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature h1 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature h2 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature h3 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature h4 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature h5 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature h6 { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature .module-feature-title { color: #ffffff;  } 
+.themify_builder .feature-2592-1-1-1.module-feature .module-feature-title:not(.module-title) { color: #ffffff; font-size: 24px; line-height: 44px;  } 
+.themify_builder .feature-2592-1-1-1.module-feature .module-feature-title a { color: #ffffff;  } 
+@media screen and (max-width: 716px) {.themify_builder .feature-2592-1-1-1.module-feature .module-feature-title:not(.module-title) { font-size: 24px; line-height: 30px;  } 
+}
+.themify_builder .feature-2592-1-1-2.module-feature { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature h1 { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature h2 { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature h3 { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature h4 { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature h5 { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature h6 { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature .module-feature-title { color: #808080;  } 
+.themify_builder .feature-2592-1-1-2.module-feature .module-feature-title:not(.module-title) { color: #ffffff; font-size: 24px; line-height: 44px;  } 
+.themify_builder .feature-2592-1-1-2.module-feature .module-feature-title a { color: #ffffff;  } 
+@media screen and (max-width: 716px) {.themify_builder .feature-2592-1-1-2.module-feature .module-feature-title:not(.module-title) { font-size: 24px; line-height: 30px;  } 
+}

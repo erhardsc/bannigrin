@@ -1,0 +1,32 @@
+.footer-block #footer {
+	position: absolute;
+    bottom: 0;
+}
+
+#main-nav .menu-item a {
+	color: white !important;
+}
+
+#main-nav ul {
+	background: transparent;
+	border: 1px solid #fef;
+}
+
+#text-2551-0-0-2 h2 a, #main-nav .menu-item a:hover, #main-nav ul li:hover {
+	color: #8c2121;
+	text-decoration: none;
+}
+
+#text-2551-0-0-2 h2 a:hover {
+	letter-spacing: 1px;
+}
+
+#site-logo {
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+	transition:         transform .8s ease-in-out;
+}
+
+#site-logo a:hover {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}

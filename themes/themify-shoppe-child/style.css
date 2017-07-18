@@ -1,0 +1,40 @@
+/*
+Theme Name: Themify Shoppe Child
+Description: Child theme for Shoppe theme
+Author: Sumner Erhard
+Template: themify-shoppe
+*/
+
+/*** Sumner Styles Start ***/
+
+
+
+@media only screen and (max-width: 716px) {
+	
+	.home-banner {
+		background: url("../themify-shoppe-child/images/bannigrinMobile.png") no-repeat center bottom;
+	}
+	
+}
+
+.transparent-header #headerwrap.fixed-header {
+	background-color: rgba(41,41,43,.9) !important;
+}
+
+@media only screen and (min-width: 716px) {
+	
+	
+	
+}
+
+.themify_builder .module_row_2764-0.module_row {
+	background-position: 50% 50% !important;
+}
+
+/*
+.home-banner,
+.home-banner video.vjs-tech {
+	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+*/
+
