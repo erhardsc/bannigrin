@@ -7,8 +7,6 @@ Template: themify-shoppe
 
 /*** Sumner Styles Start ***/
 
-
-
 @media only screen and (max-width: 716px) {
 	
 	.home-banner {
@@ -43,10 +41,44 @@ a, u {
 	color: white !important;
 }
 
-/*
-.home-banner,
-.home-banner video.vjs-tech {
-	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+.right-up-slant,
+.right-up-slant .builder_row_cover
+/* .right-up-slant video.vjs-tech */ {
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 3vw), 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
-*/
 
+.right-down-slant,
+.right-down-slant .row_inner_wrapper {
+	-webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+}
+
+.top-slant,
+#footerwrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+	tab-size: 4;
+	width: 100%;
+	left: 0;
+	position: relative;
+	max-width: 100vw;
+	-webkit-clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);
+	clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);
+}
+
+#footerwrap {
+	margin-top: -3%;
+}
+
+.slant {
+	overflow-x: auto;
+	overflow-y: hidden;
+	tab-size: 4;
+	width: 100%;
+	left: 0;
+	position: relative;
+	max-width: 100vw;
+	-webkit-clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+	clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+}

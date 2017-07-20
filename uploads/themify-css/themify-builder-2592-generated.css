@@ -1,8 +1,11 @@
 /* .themify_builder_2592_row.module_row_0 Style */
 .themify_builder_2592_row.module_row_0.module_row {
-	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/close-up-drum-1024x567.png);
-	padding-top : 7%;
-	padding-bottom : 7%
+	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/close-up-drum-1024x567.png);
+	padding-top : 20%;
+	padding-bottom : 20%
+}
+.themify_builder_2592_row.module_row_0 a {
+	text-decoration: underline
 }
 .themify_builder_2592_row.module_row_0.module_row>.builder_row_cover {
 	background:
@@ -19,17 +22,22 @@
 
 }
 .themify_builder .text-2592-0-0-0.module-text { text-align: center;  } 
-.themify_builder .text-2592-0-0-0.module.module-text h1 { color: #ffffff; font-size: 48px; line-height: 60px;  } 
+.themify_builder .text-2592-0-0-0.module-text a { text-decoration: underline;  } 
+.themify_builder .text-2592-0-0-0.module.module-text h1 { color: #ffffff; font-size: 5em; line-height: 60px;  } 
 @media screen and (max-width: 414px) {.themify_builder .text-2592-0-0-0.module.module-text h1 { font-size: 38px; line-height: 50px;  } 
 }
 /* .themify_builder_2592_row.module_row_1 Style */
 .themify_builder_2592_row.module_row_1.module_row {
 	
-	background-color: rgba(48,48,54, 1);
+	background-color: rgba(48,48,54, 1.00);
 	
 	color: rgba(255,255,255, 1.00);
 	padding-top : 6%;
-	padding-bottom : 4%
+	padding-bottom : 4%;
+	margin-top : -3%
+}
+.themify_builder_2592_row.module_row_1 a {
+	text-decoration: underline
 }
 .themify_builder_2592_row.module_row_1.module_row h1 {
 	

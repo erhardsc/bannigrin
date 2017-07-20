@@ -1,8 +1,11 @@
 /* .themify_builder_2764_row.module_row_0 Style */
 .themify_builder_2764_row.module_row_0.module_row {
 	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/recording-board-1024x511.png);
-	padding-top : 7%;
-	padding-bottom : 7%
+	padding-top : 20%;
+	padding-bottom : 20%
+}
+.themify_builder_2764_row.module_row_0 a {
+	text-decoration: underline
 }
 .themify_builder_2764_row.module_row_0.module_row>.builder_row_cover {
 	background:
@@ -41,7 +44,8 @@
 	background-color: rgba(31,31,31, 1.00);
 	text-align: center;
 	padding-top : 3%;
-	padding-bottom : 7%
+	padding-bottom : 7%;
+	margin-top : -3.1%
 }
 .themify_builder_2764_row.module_row_2 a {
 	text-decoration: underline
@@ -62,7 +66,7 @@
 /* .themify_builder_2764_row.module_row_3 Style */
 .themify_builder_2764_row.module_row_3.module_row {
 	
-	background-color: rgba(77,77,77, 1);
+	background-color: rgba(77,77,77, 1.00);
 	
 	color: rgba(255,255,255, 1.00);
 	padding-top : 7%;
