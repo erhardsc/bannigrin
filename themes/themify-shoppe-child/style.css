@@ -53,7 +53,7 @@ a, u {
 	-webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
 clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
 }
-
+/* to server */
 .top-slant,
 #footerwrap {
 	overflow-x: auto;
