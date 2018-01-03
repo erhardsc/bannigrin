@@ -1,11 +1,11 @@
-<?php $scoials = themify_get_footer_banners();?>
-<?php if(!empty($scoials)):?>
+<?php $socials = themify_get_footer_banners();?>
+<?php if(!empty($socials)):?>
 	<div class="footer-social-wrap">
 		<?php 
 			$styles ='';
 			$key = 'settings-footer_banner_';
 		?>
-		<?php foreach($scoials as $k=>$v):?>
+		<?php foreach($socials as $k=>$v):?>
 			<?php $input=$key.$k;?>
 			<?php if(themify_check($input)):?>
 				<?php 

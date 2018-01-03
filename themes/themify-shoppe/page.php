@@ -75,24 +75,20 @@ global $themify; ?>
 		/////////////////////////////////////////////
 		// Query Category
 		/////////////////////////////////////////////
-		?>
-		<?php if($themify->query_category != ''): ?>
-			<?php if ( themify_theme_is_product_query() ) : ?>
+		if( $themify->query_category != '' ) :
+			if ( themify_theme_is_product_query() ) :
+				themify_get_ecommerce_template( 'includes/query-product', 'page' );
+			else :
+				// Query posts action based on global $themify options
+				do_action( 'themify_custom_query_posts' );
 
-				<?php themify_get_ecommerce_template( 'includes/query-product', 'page' ); ?>
-				
-			<?php else:?>
-				<?php query_posts( apply_filters( 'themify_query_posts_page_args', 'cat='.$themify->query_category.'&posts_per_page='.$themify->posts_per_page.'&paged='.$themify->paged.'&order='.$themify->order.'&orderby='.$themify->orderby ) ); ?>
-
-				<?php if(have_posts()): ?>
+				if( have_posts() ) : ?>
 
 					<!-- loops-wrapper -->
 					<div id="loops-wrapper" class="loops-wrapper <?php esc_attr_e(themify_theme_query_classes()); ?>">
 
 						<?php while ( have_posts() ) : the_post(); ?>
-
 							<?php get_template_part( 'includes/loop', $themify->query_post_type ); ?>
-
 						<?php endwhile; ?>
 
 					</div>

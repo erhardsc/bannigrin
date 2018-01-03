@@ -168,3 +168,21 @@ if( 'infinite' == themify_get('setting-more_posts') || '' == themify_get('settin
 	};
 	add_action('woocommerce_after_shop_loop', 'themify_shop_infinite_scroll');
 }
+
+/**
+ * Set variation custom image size
+ */
+add_filter( 'woocommerce_available_variation', 'themify_variation_image_size', 10 );
+
+if( is_plugin_active( 'woocommerce-additional-variation-images/woocommerce-additional-variation-images.php' ) ) {
+	add_filter( 'wc_additional_variation_images_custom_swap', '__return_true' );
+}
+
+/**
+ * Increase ajax variation limit
+ */
+add_filter( 'woocommerce_ajax_variation_threshold', 'themify_ajax_variation_threshold', 10, 2 );
+
+if( themify_theme_is_product_lightbox() ) {
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+}

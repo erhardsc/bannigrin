@@ -80,7 +80,12 @@ class Themify_Wishlist {
     }
 
     public static function wishlist_page() {
-        self::$is_wishlist_page = is_page() && get_the_ID() == self::get_wishlist_page(false);
+		$page_id = get_the_ID();
+		if( defined( 'ICL_LANGUAGE_CODE' ) ) {
+			$wpml_wishlist_page_id = apply_filters( 'wpml_object_id', self::get_wishlist_page(false), 'page' );
+			$wpml_wishlist_page_id === $page_id && ( $page_id = self::get_wishlist_page(false) );
+		}
+        self::$is_wishlist_page = is_page() && $page_id == self::get_wishlist_page(false);
         if (self::$is_wishlist_page) {
             add_filter('the_content', array(__CLASS__, 'wishlist_result'), 20, 1);
             add_filter('body_class', array(__CLASS__, 'body_class'), 10, 1);
@@ -122,8 +127,6 @@ class Themify_Wishlist {
             } else {
                 $result = '<p class="themify_wishlist_no_items">' . __("There is no wishlist item.", 'themify') . '</p>';
             }
-            // recalculate the items
-            self::setCookies($check_ids);
             wp_reset_postdata();
         } else {
             $result = '<p class="themify_wishlist_no_items">' . __("There is no wishlist item.", 'themify') . '</p>';

@@ -1016,6 +1016,60 @@ $themify_theme_config['panel']['styling']['tab']['footer'] = array(
 	)
 );
 
+$themify_theme_config['panel']['styling']['tab']['footer_navigation'] = array(
+	'title' => __('Footer Navigation', 'themify'),
+	'id' => 'footer_navigation',
+	'element' => array(		
+		array(
+			'title' => __('Footer Navigation Link', 'themify'),
+			'id' => 'footer_navigation_link',
+			'selector' => '#footer-nav a',
+			'module' => array(
+				'font-family',
+				'font-size',
+				'color',
+				'text-decoration',
+				'text-transform',
+				'divider',
+				'padding',
+				'background-color'
+			)
+		),
+
+		array(
+			'title' => __('Footer Navigation Hover', 'themify'),
+			'id' => 'footer_navigation_hover',
+			'selector' => '#footer-nav a:hover, #footer-nav li:hover > a',
+			'module' => array(
+				'color',
+				'text-decoration',
+				'background-color'
+			)
+		),
+
+		array(
+			'title' => __('Footer Navigation Active (current)', 'themify'),
+			'id' => 'footer_navigation_active',
+			'selector' => '#footer-nav .current_page_item a, #footer-nav .current-menu-item a',
+			'module' => array(
+				'color',
+				'background-color'
+			)
+		),
+
+		array(
+			'title' => __('Footer Navigation Active :hover', 'themify'),
+			'id' => 'footer_navigation_active_hover',
+			'selector' => '#footer-nav .current_page_item a:hover, #footer-nav .current-menu-item a:hover',
+			'module' => array(
+				'color',
+				'background-color'
+			)
+		)
+				
+	)
+);
+
 $themify_theme_config['panel']['styling']['tab']['custom_css'] = array(
 	'title' => __('Custom CSS', 'themify'),
 	'id' => 'custom_css',

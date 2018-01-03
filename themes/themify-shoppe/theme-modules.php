@@ -107,6 +107,17 @@ function themify_theme_design_controls( $data = array() ) {
 		);
 
 		/**
+		 * Exclude Cart Icon
+		 */
+		if( themify_is_woocommerce_active() ) {
+			$html .= sprintf('<p class="hide-if none pushlabel"><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" %2$s /> %3$s</label></p>',
+				'setting-exclude_cart',
+				checked( themify_get( 'setting-exclude_cart' ), 'on', false ),
+				__('Exclude Cart Icon.', 'themify')
+			);
+		}
+
+		/**
 		 * Exclude Search Form
 		 */
 		$html .= sprintf('<p class="hide-if none pushlabel"><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" %2$s /> %3$s</label></p>',
@@ -190,6 +201,14 @@ function themify_theme_design_controls( $data = array() ) {
 			__('Exclude Footer Widgets.', 'themify')
 		);
 
+		/**
+		 * Exclude Menu Navigation
+		 */
+		$html .= sprintf('<p class="hide-if none pushlabel"><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" %2$s /> %3$s</label></p>',
+			$key . 'footer_menu_navigation',
+			checked( themify_get( $key . 'footer_menu_navigation' ), 'on', false ),
+			__('Exclude Menu Navigation.', 'themify')
+		);
 
 		/**
 		 * Exclude Footer Texts
@@ -510,6 +529,18 @@ function themify_default_layout( $data = array() ){
 						themify_options_module($default_display_options, $prefix.'layout_display').'
 					</select>
 				</p>';
+
+	/**
+	 * Excerpt length
+	 */
+	$output .= '<p style="display:none">
+					<span class="pushlabel vertical-grouped">
+						<label>
+							<input class="width2" type="text" value="' . ( isset( $data[ $prefix . 'excerpt_length' ] ) ? esc_attr( $data[ $prefix . 'excerpt_length' ] ) : '' ) . '" name="' . esc_attr( $prefix ) . 'excerpt_length"> '
+							. __( 'Excerpt length (enter number of words)', 'themify' ) . '
+						</label>
+					</span>
+				</p>';
 	
 	/**
 	 * More Text
@@ -632,9 +663,12 @@ if (!function_exists('themify_pagination_infinite')) {
 		//Infinite Scroll
 		$output .= '<input ' . checked( themify_check( 'setting-more_posts' ) ? themify_get( 'setting-more_posts' ) : 'infinite', 'infinite', false ) . ' type="radio" id="setting-more_posts_infinite" name="setting-more_posts" value="infinite" /> ';
 		$output .= __('Infinite Scroll (posts are loaded on the same page)', 'themify');
+		$output .= '<div class="pushlabel disable-autoinfinite" data-show-if-element="[name=setting-more_posts]:checked" data-show-if-value="infinite">';
+		$output .= '<label for="setting-autoinfinite"><input type="checkbox" id="setting-autoinfinite" name="setting-autoinfinite" '.checked( themify_get( 'setting-autoinfinite' ), 'on', false ).'/> ' . __('Disable automatic infinite scroll', 'themify').'</label>';
 		$output .= '<br/>';
-		$output .= '<label data-show-if-element="[name=setting-more_posts]:checked" data-show-if-value="infinite" for="setting-autoinfinite"><input class="disable-autoinfinite" type="checkbox" id="setting-autoinfinite" name="setting-autoinfinite" '.checked( themify_get( 'setting-autoinfinite' ), 'on', false ).'/> ' . __('Disable automatic infinite scroll', 'themify').'</label>';
-		$output .= '<br/><br/>';
+		$output .= '<label for="setting-infinite-url"><input type="checkbox" id="setting-infinite-url" name="setting-infinite-url" '.checked( themify_get( 'setting-infinite-url' ), 'on', false ).'/> ' . __('Disable page number updates on address URL on scrolling', 'themify').'</label>';
+		$output .= '</div>';
+		$output .= '<br/>';
 
 		//Numbered pagination
 		$output .= '<span class="pushlabel"><input ' . checked( themify_get( 'setting-more_posts' ), 'pagination', false ) . ' type="radio" id="setting-more_posts_pagination" name="setting-more_posts" value="pagination" /> ';

@@ -37,6 +37,19 @@ var FixedHeader = {}, LayoutAndFilter = {};
             if ($('#gallery-controller').length > 0) {
                 this.hasHeaderSlider = true;
             }
+			
+			// Sticky header logo customizer
+			if(themifyScript.sticky_header) {
+				var img = '<img id="sticky_header_logo" src="' + themifyScript.sticky_header.src + '"';
+					if(themifyScript.sticky_header.imgwidth){
+						img+=' width="'+themifyScript.sticky_header.imgwidth+'"';
+					}
+					if(themifyScript.sticky_header.imgheight){
+						img+=' height="'+themifyScript.sticky_header.imgheight+'"';
+					}
+					img+='/>';
+				$('#site-logo a').prepend(img);
+			}
 
         },
         activate: function () {
@@ -126,7 +139,7 @@ var FixedHeader = {}, LayoutAndFilter = {};
 			},
 			bufferPx: 50,
 			pixelsFromNavToBottom:  $('#sidebar').length>0 && $(window).width()<680?$('#sidebar').height()+$('#footerwrap').height():$('#footerwrap').height()
-		}, function (newElements) {
+		}, function (newElements, instance, url) {
 			// call Isotope for new elements
 			var $newElems = $(newElements);
 
@@ -154,6 +167,10 @@ var FixedHeader = {}, LayoutAndFilter = {};
 
 				if ($container.hasClass('auto_tiles') && $('body').hasClass('tile_enable')) {
 					$container.trigger('infiniteloaded.themify', [$newElems]);
+				}
+
+				if (history.pushState && !+themifyScript.infiniteURL) {
+					history.pushState(null, null, url);
 				}
 
 				$('#infscr-loading').fadeOut('normal');
@@ -613,7 +630,7 @@ var FixedHeader = {}, LayoutAndFilter = {};
 				$insertWrapper = $('#main-nav-wrap');
 
             // Move menu into side panel on small screens /////////////////////////
-            if (viewport > 1183) {
+            if (viewport > tf_mobile_menu_trigger_point) {
                 $sidePanel.before($swapWrap);
             } else {
                 $insertWrapper.before($swapWrap);

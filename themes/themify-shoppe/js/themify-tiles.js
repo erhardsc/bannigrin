@@ -60,6 +60,8 @@
                 }
                 else if ($item_heigth > $item_width) {
                     $(this).addClass('tiled-portrait');
+					var imgUrl = $(this).find('img').prop('src');
+					$(this).children('.product-image').css('background-image', 'url(' + imgUrl + ')');
                 }
             }
             else if ($item_width > $small) {

@@ -30,6 +30,9 @@ HEADER BLOCK
 	padding: 0;
 	margin: 0;
 }
+#headerwrap #site-description {
+	background: none;
+}
 #site-description:before {
 	display: none;
 }

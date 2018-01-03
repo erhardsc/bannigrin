@@ -75,6 +75,7 @@
 							</div>
 						</div>
 						
+						
 						<!-- /footer-logo-wrap -->
 						<?php if ($footer_widgets) : ?>
 						
@@ -92,6 +93,19 @@
 								<!-- /.footer-text -->
 							<?php endif;?>
 						<?php endif;?>
+
+						<?php if ( themify_theme_show_area( 'footer_menu_navigation' ) ) : ?>
+							<div class="footer-nav-wrap">
+								<?php wp_nav_menu( array(
+									'theme_location' => 'footer-nav',
+									'fallback_cb' => '',
+									'container'  => '',
+									'menu_id' => 'footer-nav',
+									'menu_class' => 'footer-nav',
+								)); ?>
+							</div>
+							<!-- /.footer-nav-wrap -->
+						<?php endif; // exclude menu navigation ?>
 						
 					</div>
 					

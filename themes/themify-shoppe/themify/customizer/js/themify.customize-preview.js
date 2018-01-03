@@ -96,13 +96,15 @@
 
 	var apiResponsiveControl = {
 		init: function() {
-			$(document).on('themify-responsive-preview-background', this.controlBackground)
-			.on('themify-responsive-preview-color-control', this.controlColor)
-			.on('themify-responsive-preview-fonts-control', this.controlFonts)
-			.on('themify-responsive-preview-border-control', this.controlBorder)
-			.on('themify-responsive-preview-margin-control', this.controlMargin)
-			.on('themify-responsive-preview-padding-control', this.controlMargin) // use same control handler as margin
-			.on('themify-responsive-preview-logo-control', this.controlLogo)
+			$(document)
+				.on( 'themify-responsive-preview-background', this.controlBackground )
+				.on( 'themify-responsive-preview-color-control', this.controlColor )
+				.on( 'themify-responsive-preview-fonts-control', this.controlFonts )
+				.on( 'themify-responsive-preview-border-control', this.controlBorder )
+				.on( 'themify-responsive-preview-margin-control', this.controlMargin )
+				.on( 'themify-responsive-preview-padding-control', this.controlMargin ) // use same control handler as margin
+				.on( 'themify-responsive-preview-logo-control', this.controlLogo )
+				.on( 'themify-responsive-preview-width-control', this.controlWidth )
 		},
 
 		controlBackground: function( event, model, currentData ) {
@@ -164,11 +166,14 @@
 
 			apiResponsiveControl._inputChange( $('.font_line_num', model.container), values, 'linenum' );
 			apiResponsiveControl._dropdownChange( $('.font_line_unit', model.container), values, 'lineunit' );
+			apiResponsiveControl._inputChange( $('.letter_spacing', model.container), values, 'letterspacing' );
+			apiResponsiveControl._dropdownChange( $('.letter_spacing_unit', model.container), values, 'letterspacingunit' );
 			apiResponsiveControl._dropdownChange( $('.font_weight_select', model.container), values, 'weight' );
 		},
 
 		controlBorder: function( event, model, currentData ) {
 			var values = themifyParseJSON( currentData, model.getCurrentDevice() );
+
 			apiResponsiveControl._hideComponentSameChange( $('.same', model.container), model, values );
 			apiResponsiveControl._borderColorChange( model, values );
 			apiResponsiveControl._dropdownBorderSameChange( $('.border-style', model.container), model, values );
@@ -186,8 +191,21 @@
 
 		controlLogo: function( event, model, currentData ) {
 			var values = themifyParseJSON( currentData, model.getCurrentDevice() );
+
 			apiResponsiveControl._colorChange( model, values );
 			apiResponsiveControl._logoMode( model, values );
+		},
+
+		controlWidth: function( event, model, currentData ) {
+			var values = themifyParseJSON( currentData, model.getCurrentDevice() ), context;
+
+			context = typeof model.params.label !== 'undefined'
+				? $( '[data-customize-setting-link="' + model.id.slice( 0, -5 ) + '"]', model.container ).parent()
+				: model.container;
+
+			apiResponsiveControl._dimensionChange( $('.dimension-width', context), model, values );
+			apiResponsiveControl._dropdownChange( $('.dimension-unit', context), values, 'unit' );
+			apiResponsiveControl._autoChange( $('.auto-prop', context), model, values );
 		},
 
 		_colorChange: function( model, values ) {
@@ -272,13 +290,15 @@
 
 		_dropdownChange: function( $selector, values, key ) {
 			var selected = values[ key ] && ! _.isEmpty( values[ key ] ) ? values[ key ] : '',
-				$element = $selector.find('option[value="'+ selected +'"]');
-			
+				$element = $selector.find('option[value="' + selected + '"]');
+
 			if ( $element.length ) {
-				$element.prop('selected', true);
+				$element.prop( 'selected', true );
 			} else {
-				$selector.find('option').prop('selected', false);
+				$selector.find('option').prop( 'selected', false );
 			}
+
+			$selector.trigger( 'change' );
 		},
 
 		_dropdownSameChange: function( $selector, values, key ) {
@@ -355,6 +375,21 @@
 			});
 		},
 
+		_dimensionChange: function( $selector, model, values ) {
+			$selector.each( function() {
+				var modelVal = model.value[model.id],
+					device = model.getCurrentDevice();
+
+				if ( model.isResponsiveStyling() ) {
+					_.isUndefined( modelVal[device] ) && ( modelVal[device] = {} );
+					modelVal[device].width = values.width;
+					model.setting.set( JSON.stringify( modelVal ) );
+				}
+
+				$( this ).val( values.width );
+			});
+		},
+
 		_dimensionSameChange: function( $selector, model, values ) {
 			var $same = $('.same', model.container);
 			$selector.each(function(){
@@ -371,6 +406,15 @@
 				}
 
 				$(this).val( values[side].width );
+			});
+		},
+
+		_autoChange: function( $selectors, model, values ) {
+			$selectors.each(function(){
+				var hide = $(this).data( 'hide' );
+
+				$( this ).prop( 'checked', 'auto' === values.auto );
+				$( '.' + hide, model.container ).toggleClass( 'hide-horizontally', 'auto' === values.auto );
 			});
 		},
 
@@ -603,8 +647,8 @@
 		if (controls) {
 			$.each(controls, function (index, selector) {
 				var model = parent_api.control.instance( index + '_ctrl');
+
 				if ( ! _.isEmpty( model.setting.get() ) ) {
-					
 					var currentData = model.setting.get();
 					$.event.trigger( key, [ model, currentData ]);
 				}
@@ -629,20 +673,26 @@
 
 	});
 
-	parent_api.previewedDevice.bind('change', function(device){ 
+	parent_api.previewedDevice.bind( 'change', function( device ) {
 		responsive_trigger_event( themifyCustomizer.backgroundControls, 'themify-responsive-preview-background' );
 		responsive_trigger_event( themifyCustomizer.colorControls, 'themify-responsive-preview-color-control' );
 		responsive_trigger_event( themifyCustomizer.fontControls, 'themify-responsive-preview-fonts-control' );
-		responsive_trigger_event( themifyCustomizer.borderControls, 'themify-responsive-preview-border-control');
-		responsive_trigger_event( themifyCustomizer.marginControls, 'themify-responsive-preview-margin-control');
-		responsive_trigger_event( themifyCustomizer.paddingControls, 'themify-responsive-preview-padding-control');
-		responsive_trigger_event( themifyCustomizer.logoControls, 'themify-responsive-preview-logo-control');
-	});
+		responsive_trigger_event( themifyCustomizer.borderControls, 'themify-responsive-preview-border-control' );
+		responsive_trigger_event( themifyCustomizer.marginControls, 'themify-responsive-preview-margin-control' );
+		responsive_trigger_event( themifyCustomizer.paddingControls, 'themify-responsive-preview-padding-control' );
+		responsive_trigger_event( themifyCustomizer.logoControls, 'themify-responsive-preview-logo-control' );
+		responsive_trigger_event( themifyCustomizer.widthControls, 'themify-responsive-preview-width-control' );
+	} );
 	
 	// Remove stylesheets when clearAll
 	$( window ).on( 'message', function( event ) {
 		if ( event.originalEvent && event.originalEvent.data && ! _.isEmpty( event.originalEvent.data ) ) {
-			var data = $.parseJSON( event.originalEvent.data ) || {};
+			try {
+				var data = $.parseJSON( event.originalEvent.data ) || {};
+			}
+			catch( error ) {
+				var data = {};
+			}
 			if ( 'themify-customize-clearall' === data.id ) {
 				styles = [];
 				$('#themify-customize').remove(); // remove the css
@@ -724,6 +774,9 @@
 			}
 			if (font.sizenum > 0) {
 				styles[$id]['font-size'] = font.sizenum + (font.sizeunit ? font.sizeunit : 'px');
+			}
+			if (font.letterspacing) {
+				styles[$id]['letter-spacing'] = font.letterspacing + (font.letterspacingunit ? font.letterspacingunit : 'px');
 			}
 			if (font.linenum > 0) {
 				styles[$id]['line-height'] = font.linenum + (font.lineunit ? font.lineunit : 'px');
@@ -1138,8 +1191,9 @@
 		$.each(themifyCustomizer.widthControls, function (index, selector) {
 			api(index, function (value) {
 				value.bind(function (widthData) {
-					var values = $.parseJSON(widthData),
-							$id = getStyleId(selector);
+					var values = themifyParseJSON( widthData ),
+						$id = getStyleId(selector);
+
 					if (!styles[$id]) {
 						styles[$id] = [];
 					}

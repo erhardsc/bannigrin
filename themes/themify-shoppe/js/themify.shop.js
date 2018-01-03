@@ -42,22 +42,65 @@ function getParameterByName(name, url) {
             $('body').addClass('woocommerce woocommerce-page');
         }
         var first_image = $('.images img').first().prop('src');
-        $('.variations_form').on( 'woocommerce_update_variation_values',function(e){
+        $( 'body' ).on( 'woocommerce_update_variation_values', '.variations_form',function(e){
            
             if($('.swiper-wrapper').length>0){
                 setTimeout(function(){
                     var $current = $('.swiper-wrapper img').first().prop('src');
-                        console.log(first_image,$current)
                     if($current!==first_image){
                         first_image = $current;
                         $('.product-images-carousel img').first().data('zoom-image',first_image);
                         
                         $('.thumbnails img').first().prop('src',first_image);
-                        $('.product-images-carousel').data('swiper').slideTo(0,1000, false);
+                        if( $('.product-images-carousel').data('swiper') ) {
+                            $('.product-images-carousel').data('swiper').slideTo(0,1000, false);
+                        }
                     }
                 },100);
             }
         } );
+
+        // Variation zoom carousel fix for Additional Variation Images by WooCommerce
+        if( typeof $.wc_additional_variation_images_frontend === 'object' ) {
+            $( 'form.variations_form' ).on( 'wc_additional_variation_images_frontend_image_swap_callback', function( e, response ) {
+                themifyProductCarousel( response.main_images );
+            } );
+
+            function themifyProductCarousel( response ) {
+                var $images = $( response ).find( 'img' );
+                if( $images.length ) {
+                    var newCarousel = '<div class="swiper-container"><div class="swiper-wrapper"></div></div>',
+                        $imgCarousel = '',
+                        $thumbCarousel = '';
+
+                    $( '.product-images-carousel, .product-thumbnails-carousel' ).remove();
+                    $imgCarousel = $( newCarousel ).addClass( 'product-images-carousel' ).appendTo( '.woocommerce-product-gallery__wrapper' );
+                    $thumbCarousel = $( newCarousel ).addClass( 'product-thumbnails-carousel' ).appendTo( '.woocommerce-product-gallery__wrapper' );
+
+                    $images.each( function( i ) {
+                        var $this = $( this ),
+                            $imgCarouselItem = $( '<div data-zoom-image="' + $this.attr('data-large_image') + '" class="swiper-slide woocommerce-main-image woocommerce-product-gallery__image zoom post-image"></div>' );
+
+                        if( i === 0 ) {
+                            $imgCarouselItem.append( this.outerHTML );
+                        } else {
+                            $imgCarouselItem.append( '<div class="default_img" style="width:' + $this.attr('width') + 'px; " data-width="' + $this.attr('width') + '" data-height="' + $this.attr('height') + '" data-src="' + $this.attr('src') + '" data-title="' + $this.attr('title') + '" data-alt="' + $this.attr('alt') + '">' );
+                        }
+
+                        $imgCarousel.find( '.swiper-wrapper' ).append( $imgCarouselItem );
+                        $thumbCarousel.find( '.swiper-wrapper' ).append( '<li class="zoom swiper-slide post-image">' + this.outerHTML + '</li>' )
+                    } );
+
+                    InitGallery();
+                    themify_zoom_image();
+                }
+            }
+
+        }
+
+       
+
+
         /////////////////////////////////////////////
         // Check is_mobile
         /////////////////////////////////////////////
@@ -103,9 +146,9 @@ function getParameterByName(name, url) {
 
                                     var top_items = '',
                                         thumb_items = '',
-										url = $this.data('product-link')?$this.data('product-link'):false;
+                                        url = $this.data('product-link')?$this.data('product-link'):false,
                                         big = $this.find('.swiper-container-big').children('.swiper-wrapper'),
-                                            thumbs = $this.find('.swiper-container-thumbs').children('.swiper-wrapper');
+                                        thumbs = $this.find('.swiper-container-thumbs').children('.swiper-wrapper');
 				
                                     for (var i in result.big) {
                                         top_items += '<div  class="swiper-slide">';
@@ -224,6 +267,15 @@ function getParameterByName(name, url) {
                     galleryTop.params.control = galleryThumbs;
                     galleryThumbs.params.control = galleryTop;
                 });
+
+                // Variation product slide to right image
+                $( '.product-thumbnails-carousel img' ).on( 'click', function() {
+                    var swiperData = $( '.product-thumbnails-carousel' ).data( 'swiper' );
+
+                    if( swiperData ) {
+                        swiperData.slideTo( $( '.product-thumbnails-carousel li' ).index( $( this ).parent() ) );
+                    }
+                } );
             }
             ;
             if ($('.swiper-container .swiper-slide').length > 0) {
@@ -277,40 +329,18 @@ function getParameterByName(name, url) {
         /////////////////////////////////////////////
         if (woocommerce_params.option_ajax_add_to_cart == 'yes') {
 
-            // Ajax add to cart
-            var $loadingIcon;
+            // Ajax add to cart   
             $('body').on('adding_to_cart', function (e, $button, data) {
                 add_to_cart_spark($button);
-                var cart = $('#cart-wrap');
-                // hide cart wrap
-                cart.hide();
-                // This loading icon
-                $loadingIcon = $('.loading-product', $button.closest('.product')).first();
-                $loadingIcon.show();
             }).on('added_to_cart removed_from_cart', function (e, fragments, cart_hash) {
                 $('.is_mobile #cart-wrap').show();
-
-                if (typeof $loadingIcon !== 'undefined') {
-                    // Hides loading animation
-                    $loadingIcon.hide(300, function () {
-                        $(this).addClass('loading-done');
-                    });
-                    $loadingIcon
-                            .fadeIn()
-                            .delay(500)
-                            .fadeOut(300, function () {
-                                $(this).removeClass('loading-done');
-                            });
-                }
-
                 // close lightbox
                 if ($.fn.prettyPhoto && $('.pp_inline').is(':visible')) {
                     $.prettyPhoto.close();
                 }
-				if ($('.mfp-content.themify_product_ajax').is(':visible')) {
-					$.magnificPopup.close();
-				}
-                $('form.cart').find(':submit').removeAttr('disabled');
+                if ($('.mfp-content.themify_product_ajax').is(':visible')) {
+                    $.magnificPopup.close();
+                }
             });
 
             // remove item ajax
@@ -325,23 +355,9 @@ function getParameterByName(name, url) {
                 $thisbutton.addClass('themify_spinner');
                 // Ajax action
                 $.post(woocommerce_params.ajax_url, data, function (response) {
-
-                    var this_page = window.location.toString();
-                    this_page = this_page.replace('add-to-cart', 'added-to-cart');
-
-                    fragments = response.fragments;
+                    var fragments = response.fragments,
                     cart_hash = response.cart_hash;
-
-                    // Block fragments class
-                    if (fragments) {
-                        $.each(fragments, function (key, value) {
-                            $(key).addClass('updating');
-                        });
-                    }
-
-                    // Block widgets and fragments
-                    $('.shop_table.cart, .updating, .cart_totals, .widget_shopping_cart').fadeTo('400', '0.6').block({message: null, overlayCSS: {background: 'transparent url(' + woocommerce_params.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6}});
-
+                   
                     // Changes button classes
                     if ($thisbutton.parent().find('.added_to_cart').size() == 0)
                         $thisbutton.addClass('added');
@@ -349,26 +365,9 @@ function getParameterByName(name, url) {
                     // Replace fragments
                     if (fragments) {
                         $.each(fragments, function (key, value) {
-                            $(key).replaceWith(value);
+                            $(key).addClass('updating').replaceWith(value);
                         });
                     }
-
-                    // Unblock
-                    $('.widget_shopping_cart, .updating').stop(true).css('opacity', '1').unblock();
-
-                    // Cart page elements
-                    $('.shop_table.cart').load(this_page + ' .shop_table.cart:eq(0) > *', function () {
-
-                        $('div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)').addClass('buttons_added').append('<input type="button" value="+" id="add1" class="plus" />').prepend('<input type="button" value="-" id="minus1" class="minus" />');
-
-                        $('.shop_table.cart').stop(true).css('opacity', '1').unblock();
-
-                        $('body').trigger('cart_page_refreshed');
-                    });
-
-                    $('.cart_totals').load(this_page + ' .cart_totals:eq(0) > *', function () {
-                        $('.cart_totals').stop(true).css('opacity', '1').unblock();
-                    });
 
                     // Trigger event so themes can refresh other areas
                     $('body').trigger('removed_from_cart', [fragments, cart_hash]);
@@ -418,87 +417,43 @@ function getParameterByName(name, url) {
 
         /*function ajax add to cart in single page */
         function ajax_add_to_cart_single_page() {
-            var submitClicked = false;
-            $(document).on('click', '.single_add_to_cart_button', function (event) {
-                if (!$(this).closest('.product').hasClass('product-type-external')) {
-                    event.preventDefault();
-                    submitClicked = true;
-                    $('form.cart').submit();
-                }
-
-
-            }).on('submit', 'form.cart', function (event) {
-                if (submitClicked) {
-                    // This loading icon
-                    var $loadingIcon = $(this).closest('.product').find('.loading-product').first();
-                    $loadingIcon.show();
-
-                    var data = $(this).serializeObject(),
-						data2 = {action: 'theme_add_to_cart'};
-					if($(this).find('input[name="add-to-cart"]').length===0){
-						data2['add-to-cart'] = $(this).find('[name="add-to-cart"]').val();
+            $(document).on('submit', 'form.cart', function (e) {
+                    e.preventDefault();
+                 
+					var data = new FormData(this);
+					if( $(this).find('input[name="add-to-cart"]').length===0 ){
+						data.append( 'add-to-cart', $(this).find('[name="add-to-cart"]').val() );
 					}
-                    $.extend(true, data, data2);
+					data.append( 'action', 'theme_add_to_cart' );
+					$('body').trigger('adding_to_cart', [$(this).find('[type="submit"]'), data])
+					// Ajax action
+					$.ajax( {
+						url: woocommerce_params.ajax_url,
+						type: "POST",
+						data: data,
+						contentType: false,
+						cache: false,
+						processData: false,
+						success: function ( response ) {
+							if (!response) { return; }
+							if (themifyShop.redirect) {
+								window.location.href = themifyShop.redirect;
+								return;
+							}
+							var fragments = response.fragments,
+							cart_hash = response.cart_hash;
+							
+							// Block fragments class
+							if (fragments) {
+								$.each(fragments, function (key, value) {
+									$(key).addClass('updating').replaceWith(value);
+								});
+							}
 
-                    // Trigger event
-                    $('body').trigger('adding_to_cart', [$(this), data]);
-
-                    // Ajax action
-                    $.post(woocommerce_params.ajax_url, data, function (response) {
-
-                        submitClicked = false;
-
-                        if (!response)
-                            return;
-                        if (themifyShop.redirect) {
-                            window.location.href = themifyShop.redirect;
-                        }
-                        var this_page = window.location.toString();
-                        this_page = this_page.replace('add-to-cart', 'added-to-cart');
-
-                        fragments = response.fragments;
-                        cart_hash = response.cart_hash;
-
-                        // Block fragments class
-                        if (fragments) {
-                            $.each(fragments, function (key, value) {
-                                $(key).addClass('updating');
-                            });
-                        }
-
-                        // Block widgets and fragments
-                        $('.shop_table.cart, .updating, .cart_totals, .widget_shopping_cart').fadeTo('400', '0.6').block({message: null, overlayCSS: {background: 'transparent url(' + woocommerce_params.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6}});
-
-                        // Replace fragments
-                        if (fragments) {
-                            $.each(fragments, function (key, value) {
-                                $(key).replaceWith(value);
-                            });
-                        }
-
-                        // Unblock
-                        $('.widget_shopping_cart, .updating').stop(true).css('opacity', '1').unblock();
-
-                        // Cart page elements
-                        $('.shop_table.cart').load(this_page + ' .shop_table.cart:eq(0) > *', function () {
-
-                            $("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").addClass('buttons_added').append('<input type="button" value="+" id="add1" class="plus" />').prepend('<input type="button" value="-" id="minus1" class="minus" />');
-
-                            $('.shop_table.cart').stop(true).css('opacity', '1').unblock();
-
-                            $('body').trigger('cart_page_refreshed');
-                        });
-
-                        $('.cart_totals').load(this_page + ' .cart_totals:eq(0) > *', function () {
-                            $('.cart_totals').stop(true).css('opacity', '1').unblock();
-                        });
-
-                        // Trigger event so themes can refresh other areas
-                        $('body').trigger('added_to_cart', [fragments, cart_hash]);
-
-                    });
-                    return false;
-                }
+							// Trigger event so themes can refresh other areas
+							$('body').trigger('added_to_cart', [fragments, cart_hash]);
+						}
+					} );
             });
         }
 
@@ -537,7 +492,7 @@ function getParameterByName(name, url) {
             }
         }
 
-		if ( themifyScript.variableLightbox ) {
+        if ( themifyScript.variableLightbox ) {
             ajax_variation_lightbox(document);
             // Ajax variation lightbox for infinite scroll items
             $(document).on('newElements', function () {
@@ -550,7 +505,7 @@ function getParameterByName(name, url) {
         /////////////////////////////////////////////
         var $body = $('body');
         /* Initialize Themibox */
-        if ($('.quick-look').length > 0) {
+        if ( $( '.product' ).length ) {
             if ('undefined' === typeof Themibox) {
                 Themify.LoadAsync(themifyScript.theme_url + '/js/themibox.js', function () {
                     Themibox.init();
@@ -590,6 +545,12 @@ function getParameterByName(name, url) {
                 InitGallery();
             }
             themify_zoom_image();
+
+            if( typeof themifyShop !== 'undefined' && themifyShop.is_default_gallery && $.fn.wc_product_gallery ) {
+                $( '.woocommerce-product-gallery' ).each( function() {
+                    $( this ).wc_product_gallery();
+                } );
+            }
         });
 
         $body.on('themiboxclosed themiboxcanceled', function (e) {
@@ -612,13 +573,14 @@ function getParameterByName(name, url) {
             $('#post-lightbox-wrap').addClass('lightbox-message');
             $postLightboxContainer.slideUp(400, function () {
                 var $self = $(this);
-                $('.close-themibox', $lightboxAdded).on('click', function (e) {
-                    Themibox.closeLightBox(e);
-                });
                 $self.empty();
                 $lightboxAdded.appendTo($self).show();
                 $self.slideDown();
                 themify_remove_image_zoom();
+            });
+
+            $body.one('click', $( '.close-themibox', $lightboxAdded ), function (e) {
+                Themibox.closeLightBox(e);
             });
 
             $('.added_to_cart:not(.button)').addClass('button');
@@ -636,7 +598,7 @@ function getParameterByName(name, url) {
                     }, 1000);
                 }
             }
-			$body.removeClass('wc-cart-empty');
+                    $body.removeClass('wc-cart-empty');
         });
 
         // Routines for single product
@@ -697,39 +659,51 @@ function getParameterByName(name, url) {
                 $('.woocommerce-main-image.zoom img').trigger('zoom.destroy');
             }
         }
+
+        function themify_zoom_init( el, url ) {
+            var productZoom = el.find( '.product_zoom' );
+
+            if( url === undefined ) {
+                url = el.data('zoom-image');
+            }
+
+            if( ! productZoom.length ) {
+                productZoom = $('<span class="product_zoom"></span>').prependTo( el );
+            }
+
+            productZoom.one('click', function (e) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                el.addClass('zoom_progress');
+                var $zoom = $(this);
+                $zoom.after('<span class="themify_spinner"></span>');
+                el.prop('href','javascript:void(0)');
+                el.zoom({
+                    on: 'click',
+                    url: url,
+                    callback: function () {
+                        $zoom.next('.themify_spinner').remove();
+                        el.removeClass('zoom_progress').trigger('click.zoom');
+                        $(this).css({'top':-($(this).height()/2)+120,'left':-($(this).width()/2)+120});
+                    },
+                    onZoomIn: function () {
+                        $zoom.addClass('zoomed')
+                    },
+                    onZoomOut: function () {
+                        $zoom.removeClass('zoomed');
+                    }
+                }).trigger('click.zoom');
+            });
+        }
+
         function themify_zoom_image() {
 
             function themify_zoom_image_callback() {
                 var $link = $('.woocommerce-main-image.zoom');
                 $link.each(function () {
                     var $this = $(this);
-                    $('<span class="product_zoom"></span>')
-                            .prependTo($this)
-                            .one('click', function (e) {
-                                e.preventDefault();
-                                e.stopImmediatePropagation();
-                                $this.addClass('zoom_progress');
-                                var $zoom = $(this);
-                                $zoom.after('<span class="themify_spinner"></span>');
-                                $this.prop('href','javascript:void(0)');
-                                $this.zoom({
-                                    on: 'click',
-                                    url: $this.data('zoom-image'),
-                                    callback: function () {
-                                        $zoom.next('.themify_spinner').remove();
-                                        $this.removeClass('zoom_progress').trigger('click.zoom');
-                                        $(this).css({'top':-($(this).height()/2)+120,'left':-($(this).width()/2)+120});
-                                    },
-                                    onZoomIn: function () {
-                                        $zoom.addClass('zoomed')
-                                    },
-                                    onZoomOut: function () {
-                                        $zoom.removeClass('zoomed');
-                                    }
-                                }).trigger('click.zoom');
-                            });
+                    themify_zoom_init( $this );
                 });
-
             }
             if (!$.fn.zoom) {
                 Themify.LoadAsync(themifyShop.theme_url + '/js/jquery.zoom.min.js', themify_zoom_image_callback, themifyShop.version, null, function () {
@@ -743,178 +717,65 @@ function getParameterByName(name, url) {
         }
 
 
-        /* function ajax variation callback */
-        function ajax_variation_callback() {
-            var themify_product_variations = $('.variations_form.cart').data( 'product_variations' );
+		/* function ajax variation callback */
+		function ajax_variation_callback() {
+			var forms = $('.variations_form');
+			if( forms.length ) {
+				Themify.LoadAsync( themify_vars.includesURL + 'js/underscore.min.js', function () {
+					Themify.LoadAsync( themify_vars.includesURL + 'js/wp-util.min.js', function () {
+						Themify.LoadAsync( themifyShop.wc_variation_url, function() {
+							if( typeof wc_add_to_cart_variation_params === 'undefined' ) {
+								wc_add_to_cart_variation_params = themifyShop.variations_text;
+							}
+							forms.wc_variation_form();
+						}, themifyShop.wc_version, null, function () {
+							return ('undefined' !== typeof $.fn.wc_variation_form);
+						});
+					}, null, null, function () {
+						return ('undefined' !== typeof window._wpUtilSettings);
+					});
+				}, null, null, function () {
+					return ('undefined' !== typeof window._);
+				});
+			}
+		}
 
-            //check if two arrays of attributes match
-            function variations_match(attrs1, attrs2) {
-                var match = true;
-                for (name in attrs1) {
-                    var val1 = attrs1[name];
-                    var val2 = attrs2[name];
+        /* Variation fix */
+        ( function() {
+            var variationImage = $( '.images .woocommerce-main-image.zoom' ).eq(0),
+                zoomImage, originalImage;
 
-                    if (val1.length != 0 && val2.length != 0 && val1 != val2) {
-                        match = false;
-                    }
-                }
-                return match;
-            }
-
-            //show single variation details (price, stock, image)
-            function show_variation(variation) {
-                var img = $('div.images img:eq(0)');
-                var link = $('div.images a.zoom:eq(0)');
-                var o_src = $(img).attr('original-src');
-                var o_link = $(link).attr('original-href');
-
-                var variation_image = variation.image_src;
-                var variation_link = variation.image_link;
-
-                if (true == variation.is_in_stock) {
-                    $('.variations_button').show();
-                } else {
-                    $('.variations_button').hide();
-                }
-                $('.single_variation').html(variation.price_html + variation.availability_html);
-
-                if (!o_src) {
-                    $(img).attr('original-src', $(img).attr('src'));
+            $( 'body' ).on( 'found_variation', '.variations_form', function (e, v) {
+                if( ! variationImage.length ) {
+                    variationImage = $( '.images .woocommerce-main-image.zoom' ).eq(0);
                 }
 
-                if (!o_link) {
-                    $(link).attr('original-href', $(link).attr('href'));
+                zoomImage = variationImage.find( '.zoomImg' );
+
+                if( ! originalImage ) {
+                    originalImage = variationImage.data( 'zoom-image' );
                 }
 
-                if (variation_image && variation_image.length > 1) {
-                    $(img).attr('src', variation_image);
-                    $(link).attr('href', variation_link);
-                } else {
-                    $(img).attr('src', o_src);
-                    $(link).attr('href', o_link);
-                }
+                if( typeof v.image.full_src === 'string' ) {
+                    variationImage.attr( 'data-zoom-image', v.image.full_src );
 
-                if (variation.sku) {
-                    $('.product_meta').find('.sku').text(variation.sku);
-                } else {
-                    $('.product_meta').find('.sku').text('');
-                }
-                $('.single_variation_wrap').slideDown('200').trigger('variationWrapShown').trigger('show_variation');
-            }
-
-            //disable option fields that are unavaiable for current set of attributes
-            function update_variation_values(variations) {
-
-                // Loop through selects and disable/enable options based on selections
-                $('.variations select').each(function (index, el) {
-
-                    current_attr_select = $(el);
-
-                    // Disable all
-                    current_attr_select.find('option:gt(0)').attr('disabled', 'disabled');
-
-                    // Get name
-                    var current_attr_name = current_attr_select.attr('name');
-
-                    // Loop through variations
-                    for (num in variations) {
-                        var attributes = variations[num].attributes;
-
-                        for (attr_name in attributes) {
-                            var attr_val = attributes[attr_name];
-
-                            if (attr_name == current_attr_name) {
-                                if (attr_val) {
-
-                                    // Decode entities
-                                    attr_val = $("<div/>").html(attr_val).text();
-
-                                    // Add slashes
-                                    attr_val = attr_val.replace(/'/g, "\\'");
-                                    attr_val = attr_val.replace(/"/g, "\\\"");
-
-                                    // Compare the meercat
-                                    current_attr_select.find('option[value="' + attr_val + '"]').removeAttr('disabled');
-
-                                } else {
-                                    current_attr_select.find('option').removeAttr('disabled');
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-
-            //search for matching variations for given set of attributes
-            function find_matching_variations(settings) {
-                var matching = [];
-
-                for (var i = 0; i < themify_product_variations.length; i++) {
-                    var variation = themify_product_variations[i];
-                    if (variations_match(variation.attributes, settings)) {
-                        matching.push(variation);
-                    }
-                }
-                return matching;
-            }
-
-            //when one of attributes is changed - check everything to show only valid options
-            function check_variations(exclude) {
-                var all_set = true;
-                var current_settings = {};
-
-                $('.variations select').each(function () {
-
-                    if (exclude && $(this).attr('name') == exclude) {
-
-                        all_set = false;
-                        current_settings[$(this).attr('name')] = '';
-
-                    } else {
-                        if ($(this).val().length == 0)
-                            all_set = false;
-
-                        // Add to settings array
-                        current_settings[$(this).attr('name')] = $(this).val();
+                    if( zoomImage.length ) {
+                        zoomImage.remove();
                     }
 
-                });
-
-                var matching_variations = find_matching_variations(current_settings);
-
-                if (all_set) {
-                    var variation = matching_variations.pop();
-                    if (variation) {
-                        $('form input[name="variation_id"]').val(variation.variation_id);
-                        show_variation(variation);
-                    } else {
-                        // Nothing found - reset fields
-                        $('.variations select').val('');
-                    }
-                } else {
-                    update_variation_values(matching_variations);
+                    variationImage.find( '.product_zoom' ).remove();
+                    themify_zoom_init( variationImage, v.image.full_src );
                 }
-            }
+            } ).on( 'hide_variation', function() {
+                zoomImage = variationImage.find( '.zoomImg' );
 
-            $('body').off('change', '.variations select');
-
-            $('body').on('change', '.variations select', function (e) {
-                $('form input[name="variation_id"]').val('');
-                $('.single_variation_wrap').hide();
-                $('.single_variation').text('');
-                check_variations();
-                $(this).blur();
-                if ($().uniform && $.isFunction($.uniform.update)) {
-                    $.uniform.update();
+                if( originalImage ) {
+                    zoomImage.remove();
+                    themify_zoom_init( variationImage, originalImage );
+                    originalImage = '';
                 }
-            });
-
-            $('.variations select').change();
-
-            $("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").addClass('buttons_added').append('<input type="button" value="+" id="add1" class="plus" />').prepend('<input type="button" value="-" id="minus1" class="minus" />');
-
-        }
-
+            } );
+        } )();
     });
 
 }(jQuery));

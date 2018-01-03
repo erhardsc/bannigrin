@@ -43,6 +43,7 @@ class Themify {
 	public $page_image_width = 1160;
 	public $query_category = '';
 	public $paged = '';
+	public $query_all_post_types;
 
 	////////////////////////////////////////////
 	// Product Variables
@@ -146,9 +147,14 @@ class Themify {
 		$this->orderby = themify_check('setting-index_orderby')? themify_get('setting-index_orderby'): 'date';
 
 		$this->display_content = themify_get('setting-default_layout_display');
+		$this->excerpt_length = themify_get( 'setting-default_excerpt_length' );
 		$this->avatar_size = apply_filters('themify_author_box_avatar_size', 96);
 		
 		add_action('template_redirect', array(&$this, 'template_redirect'));
+
+		if( $this->display_content === 'excerpt' && ! empty( $this->excerpt_length ) ) {
+			add_filter( 'excerpt_length', array( $this, 'custom_except_length' ), 999 );
+		}
 	}
 
 	function template_redirect() {
@@ -166,6 +172,10 @@ class Themify {
 			}
 			$post_image_width = themify_get('image_width');
 			$post_image_height = themify_get('image_height');
+
+			if( themify_get( 'query_all_post_types' ) ) {
+				$this->query_all_post_types = themify_get( 'query_all_post_types' ) === 'yes';
+			}
 		}
 		if(!is_numeric($post_image_width)){
 			$post_image_width = themify_get('setting-image_post_width');
@@ -477,6 +487,10 @@ class Themify {
 			$this->image_align = themify_get('setting-image_post_align');
 			$this->image_setting = 'setting=image_post&';
 		}
+	}
+
+	function custom_except_length() {
+		return apply_filters( 'themify_custom_excerpt_length', $this->excerpt_length );
 	}
 
 	/**

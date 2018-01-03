@@ -101,13 +101,13 @@ body.page-loaded.fixed-header #headerwrap {
 	-webkit-transform-origin: left;
 	-moz-transform-origin: left;
 	transform-origin: left;
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg) translateY(50%);
+	-moz-transform: rotate(-90deg) translateY(50%);
+	transform: rotate(-90deg) translateY(50%);
 	position: fixed;
 	bottom: -3px;
 	margin: 0;
-	margin-left: 7px;
+	left: 5px;
 	z-index: 99991;
 }
 #site-logo {
@@ -408,11 +408,11 @@ body.page-loaded.fixed-header #headerwrap {
 	font-size: .8em;
 	display: none;
 }
+#headerwrap .top-icon-wrap li #cart-wrap a {
+	text-align: inherit;
+}
 #cart-wrap .product-title {
 	letter-spacing: -0.06em;
-}
-#cart-wrap .product-title a {
-	text-align: left;
 }
 .sidemenu-off .top-icon-wrap li:hover #cart-wrap {
 	left: 100%;
@@ -740,7 +740,7 @@ body:not(.mobile-menu-visible).admin-bar #headerwrap .search-button {
 		padding: .4em;
 	}
 	.logo-wrap {
-		margin-left: 19px;
+		left: 0;
 	}
 	#headerwrap #site-logo {
 		font-size: 1.4em;

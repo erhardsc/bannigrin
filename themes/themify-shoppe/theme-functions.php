@@ -71,8 +71,8 @@ function themify_theme_enqueue_scripts() {
 	if( themify_is_woocommerce_active() ) {
 		
 		// Load WooCommerce PrettyPhoto resources to fix image gallery in product lightbox
-		if(themify_get_gallery_type()==='default'){
-			if(version_compare(WOOCOMMERCE_VERSION,'3.0.0','>=' ) || get_option( 'woocommerce_enable_lightbox' ) === 'yes'){
+		if( themify_get_gallery_type() === 'default' ) {
+			if( version_compare( WOOCOMMERCE_VERSION, '3.0.0', '>=' ) ) {
 				wp_enqueue_script('flexslider');
 				wp_enqueue_script('photoswipe-ui-default');
 				wp_enqueue_script('zoom');
@@ -112,15 +112,27 @@ function themify_theme_enqueue_scripts() {
 					'themibox' => array(
 						'close' => '<a href="#" class="close-lightbox"><i class="icon-flatshop-close"></i></a>',
 					),
-					'cartUrl' => WC()->cart->get_cart_url(),
-					'redirect'=> get_option( 'woocommerce_cart_redirect_after_add' ) === 'yes'?WC()->cart->get_cart_url():false,
-					'theme_url'=>THEME_URI,
-					'version'=>$theme_version
+					'cartUrl' => wc_get_cart_url(),
+					'redirect'=> get_option( 'woocommerce_cart_redirect_after_add' ) === 'yes' ? wc_get_cart_url() : false,
+					'theme_url' => THEME_URI,
+					'wc_variation_url' => str_replace( array( 'http:', 'https:' ), '', WC()->plugin_url() ) . '/assets/js/frontend/add-to-cart-variation.min.js',
+					'wc_version' => WC()->version,
+					'version' => $theme_version,
+					'placeholder' => wc_placeholder_img_src(),
+					'variations_text' => array(
+						'i18n_no_matching_variations_text' => esc_attr__( 'Sorry, no products matched your selection. Please choose a different combination.', 'woocommerce' ),
+						'i18n_make_a_selection_text'       => esc_attr__( 'Please select some product options before adding this product to your cart.', 'woocommerce' ),
+						'i18n_unavailable_text'            => esc_attr__( 'Sorry, this product is unavailable. Please choose a different combination.', 'woocommerce' ),
+					)
 				)
 			)
 		);
 	
 		wp_enqueue_script('theme-shop');
+		// Variation scripts
+		if( is_shop() ) {
+			themify_get_gallery_type() === 'default' && wp_enqueue_script( 'wc-single-product' );
+		}
 	}
 	
 	if( $header != '' && $header != 'default' && $header != 'header-none'  && $header != 'header-logo-center'  ) {
@@ -150,11 +162,13 @@ function themify_theme_enqueue_scripts() {
 		'lightboxContext' => apply_filters( 'themify_lightbox_context', '#pagewrap' ),
 		'ajax_url' => admin_url( 'admin-ajax.php' ),
 		'theme_url'=>THEME_URI,
+		'sticky_header'=>themify_theme_sticky_logo(),
 		'menuInSidePanel' => false,
 		'events' => $is_mobile || themify_is_touch() ? 'click' : 'mouseenter',
 		'loadingImg'   	=> THEME_URI . '/images/loading.gif',
 		'maxPages'	   	=> $wp_query->max_num_pages,
 		'autoInfinite' 	=> themify_check( 'setting-autoinfinite' ) ? 'no': 'auto',
+		'infiniteURL' => themify_check( 'setting-infinite-url' ) ? 1 : 0,
 		 // auto tiles
 		'tiledata' => array(
 			'grids' => array(
@@ -236,7 +250,7 @@ function themify_theme_fixed_header() {
 	if(is_null($header_fixed)){
 		$header = themify_area_design( 'header', array(
 		'values'  => wp_list_pluck( themify_theme_header_design_options(), 'value' ), ) );
-		if ( in_array( $header, array( 'none', 'header-boxed-content' ) ) ) {
+		if ( in_array( $header, array( 'none', 'header-boxed-content', 'header-left-pane', 'header-right-pane', 'header-minbar-left', 'header-minbar-right' ) ) ) {
 			$header_fixed = 'no-fixed-header';
 		}
 		elseif ( is_singular( array( 'post', 'page', 'product' ) ) ) {
@@ -794,7 +808,8 @@ if ( ! function_exists( 'themify_register_custom_nav' ) ) {
 	function themify_register_custom_nav() {
 		register_nav_menus( array(
 			'main-nav' => __( 'Main Navigation', 'themify' ),
-			'icon-menu'=>__('Icon Navigation','themify')
+			'icon-menu'=>__('Icon Navigation','themify'),
+			'footer-nav' => __( 'Footer Navigation', 'themify' )
 		));
 	}
 }
@@ -1359,7 +1374,7 @@ add_action( 'wp_head', 'themify_theme_custom_post_css', 77 );
  * @since 1.0.0
  */
 function themify_theme_query_classes() {
-	global $themify;
+	global $themify, $wp_query;
 	$class = array();
 	$is_product_query_page =  themify_theme_is_product_query();
 	if(!isset($themify->builder_args['is_product']) || $is_product_query_page){
@@ -1368,7 +1383,17 @@ function themify_theme_query_classes() {
 			$class[] = $themify->query_post_type;
 		}
 		$queried_object = get_queried_object();
-		$is_product_query = themify_is_product_search() || (is_object($queried_object)?(is_array($queried_object->name)?in_array('product',$queried_object->name):$queried_object->name==='product'):false);
+		$post_type = $wp_query->get( 'post_type' );
+		$is_product_query = themify_is_product_search()
+			|| ( is_object( $queried_object )
+				? ( is_array( $queried_object->name )
+					? in_array( 'product', $queried_object->name )
+					: $queried_object->name === 'product' )
+				: false )
+			|| ( !empty( $post_type )
+				&& is_array( $post_type )
+					? in_array( 'product', $post_type )
+					: $post_type === 'product' );
 		
 		if (themify_is_query_page() || is_archive() || is_search() || is_tax() || is_home() || $is_product_query || $is_product_query_page){
 			
@@ -1692,12 +1717,14 @@ function themify_get_product_slider($product){
 	return $images;
 }
 
-function themify_get_gallery($product){
-	if(version_compare(WOOCOMMERCE_VERSION,'3.0.0','>=' )){
-		return  $product->get_gallery_image_ids();
-	}
-	else{
-		return $product->get_gallery_attachment_ids();
+function themify_get_gallery($product) {
+	if( ! empty( $product ) ) {
+		if(version_compare(WOOCOMMERCE_VERSION,'3.0.0','>=' )){
+			return  $product->get_gallery_image_ids();
+		}
+		else{
+			return $product->get_gallery_attachment_ids();
+		}
 	}
 }
 
@@ -1945,7 +1972,8 @@ function themify_get_footer_banners() {
         'pinterest' => __('Pinterest', 'themify'),
         'youtube' => __('Youtube', 'themify'),
         'linkedin' => __('Linkedin', 'themify'),
-        'google' => __('Google+', 'themify')
+        'google' => __('Google+', 'themify'),
+        'instagram' => __('Instagram', 'themify')
     );
     return apply_filters('themify_footer_banners', $socials);
 }
@@ -1999,3 +2027,28 @@ function themify_theme_bonus_addons_update( $match, $subs ) {
 	return $match;
 }
 add_filter( 'themify_builder_validate_login', 'themify_theme_bonus_addons_update', 10, 2 );
+
+function themify_theme_sticky_logo(){
+     if(themify_theme_fixed_header()){
+        global $themify_customizer;
+        $logo = json_decode($themify_customizer->get_cached_mod('sticky_header_imageselect'));
+        return isset($logo->src) && '' != $logo->src?$logo:false;
+     }
+     else{
+         return false;
+     }
+}
+
+/**
+ * Themibox helper, is default gallery
+ */
+if( ! function_exists( 'localize_variation_product' ) ):
+function localize_variation_product( $args ) {
+	if( themify_is_woocommerce_active() ) {
+		$args[ 'is_default_gallery' ] = themify_get_gallery_type() === 'default';
+	}
+
+	return $args;
+}
+endif;
+add_filter( 'themify_shop_js_vars', 'localize_variation_product' );

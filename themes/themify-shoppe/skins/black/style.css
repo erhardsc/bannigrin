@@ -587,6 +587,10 @@ body:not(.header-left-pane):not(.header-right-pane) #site-description:before,
 .woocommerce table.shop_table td {
     border-top-color: rgba(255,255,255,.1);
 }
+.select2-container--default .select2-selection--single {
+	border-color: rgba(256,256,256,.2);
+	background: #000;
+}
 
 /* background color */
 #main-nav .has-mega-column .product-categories li:hover .count,

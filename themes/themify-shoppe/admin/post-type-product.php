@@ -419,9 +419,8 @@ function themify_single_product($data=array()){
 	 * Gallery Type
 	 */	
 	$gallery_type = themify_get('setting-product_gallery_type');
-	if(!$gallery_type){
-		$gallery_type = 'zoom';
-	}
+	if( ! $gallery_type ) $gallery_type = 'zoom';
+
 	$output .= '<p>
 					<span class="label">' . __('Product Gallery', 'themify') . '</span>  
 					<label><input type="radio" name="setting-product_gallery_type" value="zoom" '.checked($gallery_type,'zoom',false).'/> ' . __('Zoom Image', 'themify') . '</label>
@@ -442,7 +441,20 @@ function themify_single_product($data=array()){
 	$output .= '<p><span class="label">' . __('Hide Shop Breadcrumbs', 'themify') . '</span>
 				<label for="setting-hide_shop_single_breadcrumbs"><input type="checkbox" id="setting-hide_shop_single_breadcrumbs" name="setting-hide_shop_single_breadcrumbs" '.checked( themify_get( 'setting-hide_shop_single_breadcrumbs' ), 'on', false ).' /> ' . __('Check to hide shop breadcrumbs', 'themify') . '</label></p>';
 
-				
+	/**
+	 * Hide Product SKU
+	 * @var String
+	 */
+	$output .= '<p><span class="label">' . __('Product SKU', 'themify') . '</span>
+				<label for="setting-hide_shop_single_sku"><input type="checkbox" id="setting-hide_shop_single_sku" name="setting-hide_shop_single_sku" '.checked( themify_get( 'setting-hide_shop_single_sku' ), 'on', false ).' /> ' . __('Hide product SKU', 'themify') . '</label></p>';
+
+	/**
+	 * Hide Product tags
+	 * @var String
+	 */
+	$output .= '<p><span class="label">' . __('Product Tags', 'themify') . '</span>
+				<label for="setting-hide_shop_single_tags"><input type="checkbox" id="setting-hide_shop_single_tags" name="setting-hide_shop_single_tags" '.checked( themify_get( 'setting-hide_shop_single_tags' ), 'on', false ).' /> ' . __('Hide product tags', 'themify') . '</label></p>';
+
 	/**
 	 * Product Reviews
 	 */
@@ -789,7 +801,7 @@ function themify_theme_lightbox_added() {
 		<div class="lightbox-added" style="display:none;">
 			<h2><?php _e('Added to Cart', 'themify'); ?></h2>
 			<a href="#" rel="nofollow" class="button outline close-themibox"><?php _e('Keep Shopping', 'themify'); ?></a>
-			<button type="submit" class="button checkout" onClick="document.location.href='<?php echo esc_url( $woocommerce->cart->get_checkout_url() ); ?>'; return false;"><?php _e('Checkout', 'themify')?></button>
+			<button type="submit" class="button checkout" onClick="document.location.href='<?php echo esc_url( wc_get_checkout_url() ); ?>'; return false;"><?php _e('Checkout', 'themify')?></button>
 		</div>
 	<?php endif;
 

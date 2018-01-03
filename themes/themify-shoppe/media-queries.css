@@ -61,28 +61,47 @@ body:not(.header-minbar-left):not(.header-minbar-right):not(.header-left-pane):n
 .mobile_menu_active #menu-icon:after {
 	top: 50%;
 }
-.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon {
-	z-index: 99999;
-	border: none;
-	left: auto;
-	right: 10px;
-	position: fixed;
+
+/* slide menu icon close */
+.mobile_menu_active #menu-icon-close {
+	display: block;
+	position: absolute;
+	text-decoration: none;
+	top: 1em;
+	right: 1em;
+	min-width: 2em;
+	min-height: 2em;
+	transform-origin: center;
+	transition: all .3s linear;
+	transition-property: transform;
 }
-.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon:before,
-.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon:after {
-	top: 50%;
-}
-.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon:before {
+.mobile_menu_active #menu-icon-close:before,
+.mobile_menu_active #menu-icon-close:after {
+	content: '';
+	display: block;
 	border-top: 1px solid;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+}
+.mobile_menu_active #menu-icon-close:before {
 	-webkit-transform: rotateZ(-45deg);
 	-moz-transform: rotateZ(-45deg);
 	transform: rotateZ(-45deg);
 }
-.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon:after {
-	border-top: 1px solid;
+.mobile_menu_active #menu-icon-close:after {
 	-webkit-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
 	transform: rotateZ(45deg);
+}
+.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon-close:hover {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon {
+	display: none;
 }
 
 /* 
@@ -136,14 +155,17 @@ ICON MENU
 .mobile_menu_active .icon-menu .icon-menu-count {
 	left: 50%;
 }
-.mobile_menu_active .sidemenu-on #cart-wrap {
+.mobile_menu_active .sidemenu-on .wishlist + #cart-icon-count #cart-wrap {
 	left: 50%;
 	top: 100%;
-	margin-top: 5px;
 	width: 276px;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+.mobile_menu_active .sidemenu-on  #cart-wrap {
+	left: 6px;
+	width: 276px;
 }
 .mobile_menu_active #cart-wrap a {
 	text-align: left;
@@ -864,6 +886,7 @@ ADMIN BAR
 	}
 	#footerwrap .footer-widgets .col4-1:nth-child(2n+1) {
 		margin-left: 0 !important;
+		clear: left;
 	}
 	
 	/*

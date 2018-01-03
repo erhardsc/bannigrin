@@ -9,7 +9,7 @@ Required Plugins: builder-contact, builder-maps-pro, builder-audio, woocommerce,
 GENERAL
 *************************************************************************************/
 @font-face {
-	font-family: 'themify_theme_icon';
+	font-family: 'tf_shoppe_music_icon';
 	src: url('data:application/octet-stream;base64,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') format('woff');
 }
 body {
@@ -496,9 +496,9 @@ BUILDER
 .module.module-audio .album-playlist .tracklist .track-title {
 	margin-left: 3em;
 }
-.module-audio .mejs__container, 
-.module-audio .mejs__container .mejs__controls, 
-.module-audio .mejs__embed, .mejs__embed body {
+.module-audio .mejs-container, 
+.module-audio .mejs-container .mejs-controls, 
+.module-audio .mejs-embed, .mejs-embed body {
 	background: transparent;	
 }
 .out-now-audio {
@@ -507,41 +507,52 @@ BUILDER
 .module-audio.out-now-audio .album-playlist .tracklist .track {
 	border-bottom: none;
 }
-.mejs__play:before {
+.module.module-audio .album-playlist .mejs-container .mejs-controls .mejs-time {
+	top: 5px;
+}
+.mejs-playpause-button button {
+	box-shadow: none;
+}
+.mejs-playpause-button button:before {
+	border: none !important;
+}
+.mejs-playpause-button button:before,
+.mejs-play:before {
     content: "\e800"; /* ti-control-play */
-    font: 2.8em 'themify_theme_icon';
+    font: 2.5em 'tf_shoppe_music_icon';
     color: #434789;
     cursor: pointer;
 }
-.mejs__play:hover:before,
-.mejs__pause:hover:before {
+.mejs-play:hover:before,
+.mejs-pause:hover:before {
 	color: #a97ae3;
 }
-.mejs__pause:before {
+.mejs-pause:before {
     content: "\e801"; /* ti-control-pause */
-    font: 2.8em 'themify_theme_icon';
+    font: 2.8em 'tf_shoppe_music_icon';
     color: #434789;
     cursor: pointer;
 }
-.module-audio .mejs__controls {
+.module-audio .mejs-controls {
 	padding: 0;
 }
-.module-audio .album-playlist .tracklist .track {
+.module.module-audio .album-playlist .tracklist .track {
 	border-bottom: 1px solid #ddd;
+	padding: 12px 30px 16px 0;
 }
 .module-audio .album-playlist .tracklist .track:last-child{
 	border-bottom: none;
 }
-.module-audio .mejs__play > button,
-.module-audio .mejs__pause > button,
-.module-audio .mejs__time.mejs__currenttime-container,
-.module-audio .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total,
-.module-audio .mejs__controls .mejs__time-rail .mejs__time-total,
-.module-audio .mejs__volume-button,
-.module-audio .mejs__controls a.mejs__horizontal-volume-slider {
+.module-audio .mejs-play > button,
+.module-audio .mejs-pause > button,
+.module-audio .mejs-time.mejs-currenttime-container,
+.module-audio .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.module-audio .mejs-controls .mejs-time-rail .mejs-time-total,
+.module-audio .mejs-volume-button,
+.module-audio .mejs-controls a.mejs-horizontal-volume-slider {
 	display: none;
 }
-.module-audio .mejs__time {
+.module-audio .mejs-time {
 	color: #808080;
     float: right;
     font: 400 1em 'Poppins', sans-serif;

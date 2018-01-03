@@ -10,8 +10,10 @@ function themify_get_product_image($urlonly=false,$src=false,$is_singular=false)
 	global $post,$product, $themify,$woocommerce_loop;
 	$is_singular = $is_singular || is_singular('product');
 	$post_image = '';
-	$related = $is_singular && !empty($woocommerce_loop['name']) && $woocommerce_loop['name']==='related';
-	if($is_singular && !$related){
+	$is_loopname_singular = $is_singular && ! empty( $woocommerce_loop['name'] );
+	$related = $is_loopname_singular && $woocommerce_loop['name'] === 'related';
+	$up_sells = $is_loopname_singular && $woocommerce_loop['name'] === 'up-sells';
+	if($is_singular && !$related && !$up_sells){
 		$size = 'shop_single';
 		$cl = $slider = '';
 	}
@@ -21,7 +23,7 @@ function themify_get_product_image($urlonly=false,$src=false,$is_singular=false)
 		if(!empty($slider)){
 			$cl = ' product-slider';
 			$slider = 'data-product-slider="'.esc_attr($slider).'"';
-			if((!$is_singular || $related) && 'yes' != $themify->unlink_product_image ){
+			if((!$is_singular || $related || $up_sells) && 'yes' != $themify->unlink_product_image ){
 				$slider.=' data-product-link="'.get_the_permalink().'"';
 			}
 		}
@@ -31,7 +33,7 @@ function themify_get_product_image($urlonly=false,$src=false,$is_singular=false)
 		}
 	}
 	$html = '';
-	if(!$urlonly && (!$is_singular || $related)){
+	if(!$urlonly && (!$is_singular || $related || $up_sells)){
 		$onsale = $product->is_on_sale()?apply_filters('woocommerce_sale_flash', '<span class="onsale">'.__( 'Sale!', 'woocommerce' ).'</span>', $post, $product):'';
 		$html = '<figure '.$slider.' class="post-image product-image'.$cl.'">'.$onsale;
 		if( 'yes' != $themify->unlink_product_image ){
@@ -93,7 +95,7 @@ function themify_get_product_image($urlonly=false,$src=false,$is_singular=false)
 		
 	}
 	$html.=$post_image;
-	if(!$urlonly && (!$is_singular || $related)){
+	if(!$urlonly && (!$is_singular || $related || $up_sells)){
 		if( 'yes' != $themify->unlink_product_image ){
 			$html.='</a>';
 		}
@@ -389,13 +391,8 @@ function themify_single_post_lightbox() {
 			
 		}
 		add_filter('woocommerce_product_tabs', '__return_false',100);
-		// remove admin bar inside iframe
-		add_filter( 'show_admin_bar', '__return_false' );
-
-		$templatefilename = 'single-lightbox.php';
-
-		$return_template = locate_template( $templatefilename );
-		wp_enqueue_script('wc-single-product');
+		$return_template = locate_template( 'single-lightbox.php' );
+                wc_get_template( 'single-product/add-to-cart/variation.php' );
 		themify_do_theme_redirect($return_template);
 	}
 }
@@ -472,8 +469,14 @@ function themif_link_to_post($title){
 }
 
 // Get Gallery Type 
-function themify_get_gallery_type(){
-	return version_compare(WOOCOMMERCE_VERSION,'3.0.0','>=' ) || get_option( 'woocommerce_enable_lightbox' ) === 'yes'?themify_get('setting-product_gallery_type'):false;
+function themify_get_gallery_type() {
+	$type = themify_get( 'setting-product_gallery_type' );
+
+	if( empty( $type ) ) $type = 'default';
+	if( $type === 'default' && version_compare( WOOCOMMERCE_VERSION,'3.0.0','<' ) )
+		$type = false;
+
+	return $type;
 }
 
 
@@ -483,9 +486,9 @@ function themify_get_gallery_type(){
 function themify_swipe_main_image_html( $img, $attachment_id ) {
 	global $product, $post;
 
-	$html = '<div class="themify_spinner"></div><div class="swiper-container product-images-carousel"><div class="swiper-wrapper">';
 	$attachment_ids = themify_get_gallery( $product );
 
+	$html = '<div class="themify_spinner"></div><div class="swiper-container product-images-carousel"><div class="swiper-wrapper">';
 	if ( has_post_thumbnail() ) {
 		$props = wc_get_product_attachment_props( $attachment_id, $post );
 		$image = themify_get_product_image( false, $props['url'] );
@@ -527,7 +530,9 @@ function themify_swipe_main_image_html( $img, $attachment_id ) {
 
 function themify_swipe_image_thumbnail_html(){
 	global $post, $product;
+
 	$attachment_ids = themify_get_gallery($product);
+
 	if ( $attachment_ids) {
 		$html='<div class="swiper-container product-thumbnails-carousel"><ul class="swiper-wrapper flex-control-nav">';
 		if(has_post_thumbnail()){
@@ -565,35 +570,56 @@ function themify_get_cart_style() {
     return $cart_style;
 }
 
-//check Quick Look
+//Check Quick Look
 function themify_hide_quick_look() {
-    static $quick_look = null;
-	if(is_null($quick_look)){
-		if(themify_theme_is_product_query()){
-			$quick_look =  themify_theme_get('quick_look');
-			$quick_look = $quick_look==='yes'?false:($quick_look==='no'?true:null);
+	static $quick_look = null;
+
+	if( is_null( $quick_look ) ) {
+		if( themify_theme_is_product_query() ) {
+			$quick_look = themify_theme_get( 'quick_look' );
+			$quick_look = $quick_look === 'yes' ? false : ( $quick_look === 'no' ? true : null );
 		}
-		if(is_null($quick_look)){
-			$quick_look =  !themify_check('setting-hide_shop_more_info');
+		if( is_null( $quick_look ) ) {
+			$quick_look = ! themify_check( 'setting-hide_shop_more_info' );
 		}
 	}
-    return $quick_look;
+
+	return $quick_look;
 }
 
-//check Social Shar
+//Check Social Share
 function themify_hide_social_share() {
-    static $social = null;
-	if(is_null($social)){
-		if(is_product()){
-			$social =  !themify_check('setting-single_hide_shop_share');
+	$social = null;
+
+	if( is_null( $social ) ) {
+		if( is_product() ){
+			$social = ! themify_check('setting-single_hide_shop_share');
+		} elseif( themify_theme_is_product_query() ) {
+			$social = themify_theme_get( 'social_share' );
+			$social = $social === 'yes' ? false : ( $social ==='no' ? true : null );
 		}
-		elseif(themify_theme_is_product_query()){
-			$social =  themify_theme_get('social_share');
-			$social = $social==='yes'?false:($social==='no'?true:null);
-		}
-		if(is_null($social)){
-			$social =  !themify_check('setting-hide_shop_share');
+		if( is_null( $social ) ) {
+			$social = ! themify_check( 'setting-hide_shop_share' );
 		}
 	}
-    return $social;
+
+	return $social;
 }
+
+// Variation Custom Image Size
+function themify_variation_image_size( $data ) {
+	if( ! empty( $data[ 'image' ] ) ) {
+		$image = themify_get_product_image( true, $data[ 'image' ][ 'full_src' ] );
+
+		if( ! empty( $image[ 'width' ] ) && ! empty( $image[ 'height' ] ) ) {
+			$data[ 'image' ][ 'src' ] = $image[ 'html' ];
+			$data[ 'image' ][ 'src_w' ] = $image[ 'width' ];
+			$data[ 'image' ][ 'src_h' ] = $image[ 'height' ];
+		}
+	}
+
+	return $data;
+}
+
+// Set AJAX variation limit
+function themify_ajax_variation_threshold( $qty, $product ) { return 500; }

@@ -117,6 +117,26 @@ function themify_theme_query_post_meta_box($args = array()) {
 			'type'		=> 'query_category',
 			'meta'		=> array()
 		),
+		// Query All Post Types
+		array(
+			'name' => 'query_all_post_types',
+			'type' => 'dropdown',
+			'title' => __( 'Query All Post Types', 'themify'),
+			'meta' =>array(
+				array(
+				'value' => '',
+				'name' => '',
+				),
+				array(
+				'value' => 'yes',
+				'name' => 'Yes',
+				),
+				array(
+				'value' => 'no',
+				'name' => 'No',
+				),
+			)
+		),
 		// Descending or Ascending Order for Posts
 		array(
 			'name' 		=> 'order',
@@ -1101,7 +1121,7 @@ function themify_theme_page_theme_design_meta_box( $args = array() ) {
 					),
 					// Show Cart Icon
 					array(
-						'name' 	=> 'exclude_cart',
+						'name'	=> 'exclude_cart',
 						'description' => '',
 						'title' => __( 'Cart Icon', 'themify' ),
 						'type' 	=> 'dropdownbutton',
@@ -1111,6 +1131,7 @@ function themify_theme_page_theme_design_meta_box( $args = array() ) {
 							) ),
 						'class' => 'hide-if none',
 						'after' => '<div class="clear"></div>',
+						'display_callback' => 'themify_is_woocommerce_active'
 					),
 					// Show Wishlist Icon
 					array(
@@ -1124,6 +1145,7 @@ function themify_theme_page_theme_design_meta_box( $args = array() ) {
 							) ),
 						'class' => 'hide-if none',
 						'after' => '<div class="clear"></div>',
+						'display_callback' => 'themify_is_woocommerce_active'
 					),
 					// Show Icon Menu Links
 					array(

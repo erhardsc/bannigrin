@@ -63,22 +63,21 @@
 											<?php endif; ?>
 										<?php endif; ?>
 										<?php if ( themify_theme_show_area( 'cart' ) ) : ?>
-											<?php if (! themify_check( 'setting-exclude_cart' )) : global $woocommerce; ?>
-												<?php 
-													$total = $woocommerce->cart->get_cart_contents_count();
-													$cart_is_dropdown = themify_get_cart_style()==='dropdown';
-												?>
-												<li id="cart-icon-count" class="cart">
-													<a <?php if(!$cart_is_dropdown):?>id="cart-link"<?php endif; ?> href="<?php echo $cart_is_dropdown?$woocommerce->cart->get_cart_url():'#slide-cart';?>">
-														<i class="ti-shopping-cart"></i>
-														<span class="icon-menu-count<?php if($total<=0):?> cart_empty<?php endif; ?>"><?php echo $total; ?></span> 
-														<span class="tooltip"><?php _e('Cart','themify')?></span>
-													</a>
-													<?php if($cart_is_dropdown):?>
-														<?php themify_get_ecommerce_template( 'includes/shopdock' ); ?>
-													<?php endif;?>
-												</li>
-											<?php endif; ?>
+											<?php
+												global $woocommerce;
+												$total = $woocommerce->cart->get_cart_contents_count();
+												$cart_is_dropdown = themify_get_cart_style()==='dropdown';
+											?>
+											<li id="cart-icon-count" class="cart">
+												<a <?php if(!$cart_is_dropdown):?>id="cart-link"<?php endif; ?> href="<?php echo $cart_is_dropdown ? wc_get_cart_url() : '#slide-cart';?>">
+													<i class="ti-shopping-cart"></i>
+													<span class="icon-menu-count<?php if($total<=0):?> cart_empty<?php endif; ?>"><?php echo $total; ?></span> 
+													<span class="tooltip"><?php _e('Cart','themify')?></span>
+												</a>
+												<?php if($cart_is_dropdown):?>
+													<?php themify_get_ecommerce_template( 'includes/shopdock' ); ?>
+												<?php endif;?>
+											</li>
 										<?php endif; ?>
 									</ul>
 								<?php endif; ?>

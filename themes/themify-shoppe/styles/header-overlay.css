@@ -548,6 +548,9 @@ body.page-loaded #headerwrap {
 .mobile_menu_active .top-icon-wrap li {
 	float: left;
 }
+.mobile_menu_active .top-icon-wrap li a {
+	line-height: inherit;
+}
 .mobile_menu_active .top-icon-wrap .search-button {
 	margin-top: 1em;
 }
@@ -556,6 +559,7 @@ body:not(.mobile_menu_active).mobile-menu-visible #headerwrap #menu-icon {
 }
 .mobile_menu_active.mobile-menu-visible #headerwrap #menu-icon {
 	position: absolute;
+	display: block;
 }
 
 /* NICESCROLL */
@@ -579,9 +583,5 @@ body:not(.mobile_menu_active).mobile-menu-visible #headerwrap #menu-icon {
 	.mobile_menu_active.admin-bar #slide-cart,
 	.mobile_menu_active.admin-bar #headerwrap {
 		top: 46px;
-	}
-	.mobile_menu_active.admin-bar #headerwrap #menu-icon,
-	.mobile_menu_active.admin-bar.mobile-menu-visible #headerwrap #menu-icon {
-		top: 65px;
 	}
 }

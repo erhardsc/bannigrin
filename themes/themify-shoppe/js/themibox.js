@@ -42,19 +42,24 @@ var Themibox = {};
                     .prependTo('body');
         },
         clickLightBox: function (e) {
-            e.preventDefault();
-            if (Themibox.isFrameLoading) {
-                return false;
-            }
-            var url = $(this).prop('href'),
-                    img = $(this).closest('.product').find('.product-image img'),
-					img = img.length>0?img.prop('src'):$(this).data('image'),
-                    container = $('#post-lightbox-container'),
-                    wrap = $("#post-lightbox-wrap"),
-                    width = 960,
-                    $body = $('body'),
-                    item = $(this).closest('.post').find('.product-image'),
-                    w = item.outerWidth(true) < 180 ? item.outerWidth(true) : 180;
+			e.preventDefault();
+			
+			if (Themibox.isFrameLoading) return false;
+
+			var url = $(this).prop('href'),
+				img = $(this).closest('.product').find('.product-image img'),
+				container = $('#post-lightbox-container'),
+				wrap = $("#post-lightbox-wrap"),
+				width = 960,
+				$body = $('body'),
+				item = $(this).closest('.post').find('.product-image'),
+				w;
+
+			img = img.length ? img.prop( 'src' ) : $( this ).data( 'image' );
+			img = typeof img !== 'undefined' ? img : themifyShop.placeholder;
+			item = item.length ? item : $( this ).closest( '.post' );
+			w = item.outerWidth( true ) < 180 ? item.outerWidth( true ) : 180;
+
             $('.themibox-clicked').removeClass('themibox-clicked');
             $(this).addClass('themibox-clicked');
             Themibox.isFrameLoading = true;
@@ -145,8 +150,11 @@ var Themibox = {};
                     }
                     else {
 
-                        var item = $('.themibox-clicked').closest('.post').find('.product-image'),
-                                thumb = $('.post-lightbox-main-image');
+						var item = $('.themibox-clicked').closest('.post').find('.product-image'),
+							thumb = $('.post-lightbox-main-image');
+
+						item = item.length ? item : $( '.themibox-clicked' ).closest( '.post' );
+
                         wrap.addClass('animate_start post-lightbox-prepare animate_closing').animate({
                             'width': item.outerWidth(true),
                             'height': item.outerHeight(true),

@@ -201,6 +201,11 @@ body:not(.mobile-menu-visible).mobile_menu_active #headerwrap {
 #headerwrap .sidemenu .top-icon-wrap:hover #cart-wrap {
 	z-index: 11;
 }
+.mobile_menu_active .sidemenu-on .wishlist + #cart-icon-count #cart-wrap {
+    left: 0;
+    right: 0;
+    transform: none;
+}
 
 .header-icons {
 	display: -webkit-box;
@@ -589,8 +594,9 @@ body:not(.mobile-menu-visible).mobile_menu_active #headerwrap {
 	outline-style: none;
 	background-color: transparent;
 }
+
 .mobile_menu_active #menu-icon-close {
-	display: none;
+	top: 5px;
 }
 
 /* NICESCROLL */

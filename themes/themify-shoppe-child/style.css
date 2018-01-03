@@ -33,9 +33,9 @@ a, u {
 	text-decoration: none;
 }
 
-#menu-item-2722 a {
-	color: white !important;
-}
+/*#menu-item-2722 a {*/
+	/*color: white !important;*/
+/*}*/
 
 #site-logo a:hover {
 	color: white !important;
@@ -51,9 +51,9 @@ a, u {
 .right-down-slant,
 .right-down-slant .row_inner_wrapper {
 	-webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
 }
-/* to server */
+
 .top-slant,
 #footerwrap {
 	overflow-x: auto;
@@ -81,4 +81,29 @@ clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
 	max-width: 100vw;
 	-webkit-clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
 	clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+}
+
+/*#text-2551-0-0-0 h1 {*/
+	/*-webkit-text-fill-color: white;*/
+    /*-webkit-text-stroke-width: 2px;*/
+    /*-webkit-text-stroke-color: black;*/
+/*}*/
+
+.home .module_column_2551-1-0 .sub_row_1-0-0 {
+    -webkit-box-shadow: 0px 6px 29px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 29px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 29px 0px rgba(0,0,0,0.75);
+}
+
+.footer-block .footer-text-outer {
+    border-top: none !important;
+}
+
+.module-audio .album-playlist .tracklist .track {
+    border-bottom: none !important;
+}
+
+.module-audio .tracklist .track-title {
+    position: relative !important;
+    color: white !important;
 }

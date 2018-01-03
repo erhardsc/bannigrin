@@ -26,7 +26,7 @@
 			<div class="cart-total-checkout-wrap">
 				<p class="cart-total">
 					<span class="amount"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
-					<a id="view-cart" href="<?php echo esc_url(WC()->cart->get_cart_url()) ?>">
+					<a id="view-cart" href="<?php echo esc_url( wc_get_cart_url() ) ?>">
 						<?php _e('view cart', 'themify') ?>
 					</a>
 				</p>
@@ -34,7 +34,7 @@
 				<?php themify_checkout_start(); //hook ?>
 
 				<p class="checkout-button">
-					<button type="submit" class="button checkout white flat" onClick="document.location.href = '<?php echo esc_url(WC()->cart->get_checkout_url()); ?>';
+					<button type="submit" class="button checkout white flat" onClick="document.location.href = '<?php echo esc_url( wc_get_checkout_url() ); ?>';
 								return false;"><?php _e('Checkout', 'themify') ?></button>
 				</p>
 				<!-- /checkout-botton -->

@@ -1,6 +1,6 @@
 /* .themify_builder_2764_row.module_row_0 Style */
 .themify_builder_2764_row.module_row_0.module_row {
-	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/recording-board-1024x511.png);
+	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/09/8-cropped.png);
 	padding-top : 20%;
 	padding-bottom : 20%
 }
@@ -70,7 +70,7 @@
 	
 	color: rgba(255,255,255, 1.00);
 	padding-top : 7%;
-	padding-bottom : 7%
+	padding-bottom : 3%
 }
 .themify_builder_2764_row.module_row_3 a {
 	text-decoration: underline
@@ -100,10 +100,12 @@
 	color: rgba(255,255,255, 1.00)
 }
 
+.themify_builder .audio-2764-3-1-0.module-audio .track-buy { text-decoration: underline;  } 
 /* .themify_builder_2764_row.module_row_4 Style */
 .themify_builder_2764_row.module_row_4.module_row {
 	
-	background-color: rgba(77,77,77, 1)
+	background-color: rgba(77,77,77, 1.00);
+	margin-top : -1px
 }
 .themify_builder_2764_row.module_row_4 a {
 	text-decoration: underline
@@ -112,11 +114,11 @@
 /* .themify_builder_2764_row.module_row_5 Style */
 .themify_builder_2764_row.module_row_5.module_row {
 	
-	background-color: rgba(77,77,77, 1);
+	background-color: rgba(77,77,77, 1.00);
 	
 	color: rgba(255,255,255, 1.00);
-	padding-top : 7%;
-	padding-bottom : 7%
+	padding-top : 3%;
+	padding-bottom : 3%
 }
 .themify_builder_2764_row.module_row_5 a {
 	text-decoration: underline
@@ -146,20 +148,24 @@
 	color: rgba(255,255,255, 1.00)
 }
 
+.themify_builder .audio-2764-5-1-0.module-audio .track-buy { text-decoration: underline;  } 
 /* .themify_builder_2764_row.module_row_6 Style */
 .themify_builder_2764_row.module_row_6.module_row {
 	
-	background-color: rgba(31,31,31, 1)
+	background-color: rgba(77,77,77, 1)
+}
+.themify_builder_2764_row.module_row_6 a {
+	text-decoration: underline
 }
 
 /* .themify_builder_2764_row.module_row_7 Style */
 .themify_builder_2764_row.module_row_7.module_row {
 	
-	background-color: rgba(48,48,54, 1.00);
+	background-color: rgba(77,77,77, 1.00);
 	
 	color: rgba(255,255,255, 1.00);
-	padding-top : 7%;
-	padding-bottom : 7%
+	padding-top : 3%;
+	padding-bottom : 3%
 }
 .themify_builder_2764_row.module_row_7 a {
 	text-decoration: underline
@@ -189,6 +195,7 @@
 	color: rgba(255,255,255, 1.00)
 }
 
+.themify_builder .audio-2764-7-1-0.module-audio .track-buy { text-decoration: underline;  } 
 /* .themify_builder_2764_row.module_row_8 Style */
 .themify_builder_2764_row.module_row_8.module_row {
 	
@@ -198,11 +205,11 @@
 /* .themify_builder_2764_row.module_row_9 Style */
 .themify_builder_2764_row.module_row_9.module_row {
 	
-	background-color: rgba(194,174,109, 1.00);
+	background-color: rgba(48,48,54, 1.00);
 	
 	color: rgba(255,255,255, 1.00);
-	padding-top : 7%;
-	padding-bottom : 7%
+	padding-top : 3%;
+	padding-bottom : 3%
 }
 .themify_builder_2764_row.module_row_9 a {
 	text-decoration: underline
@@ -228,6 +235,147 @@
 	color: rgba(255,255,255, 1.00)
 }
 .themify_builder_2764_row.module_row_9.module_row h6 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+
+.themify_builder .image-2764-9-0-0.module-image a { text-decoration: underline;  } 
+.themify_builder .audio-2764-9-1-0.module-audio .track-buy { text-decoration: underline;  } 
+/* .themify_builder_2764_row.module_row_10 Style */
+.themify_builder_2764_row.module_row_10.module_row {
+	
+	background-color: rgba(48,48,54, 1)
+}
+.themify_builder_2764_row.module_row_10 a {
+	text-decoration: underline
+}
+
+/* .themify_builder_2764_row.module_row_11 Style */
+.themify_builder_2764_row.module_row_11.module_row {
+	
+	background-color: rgba(48,48,54, 1.00);
+	
+	color: rgba(255,255,255, 1.00);
+	padding-top : 3%;
+	padding-bottom : 3%
+}
+.themify_builder_2764_row.module_row_11 a {
+	text-decoration: underline
+}
+.themify_builder_2764_row.module_row_11.module_row h1 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_11.module_row h2 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_11.module_row h3:not(.module-title) {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_11.module_row h4 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_11.module_row h5 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_11.module_row h6 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+
+.themify_builder .audio-2764-11-0-0.module-audio { padding-right: 15%; padding-left: 15%;  } 
+.themify_builder .audio-2764-11-0-0.module-audio .track-buy { text-decoration: underline;  } 
+/* .themify_builder_2764_row.module_row_12 Style */
+.themify_builder_2764_row.module_row_12.module_row {
+	
+	background-color: rgba(48,48,54, 1)
+}
+.themify_builder_2764_row.module_row_12 a {
+	text-decoration: underline
+}
+
+/* .themify_builder_2764_row.module_row_13 Style */
+.themify_builder_2764_row.module_row_13.module_row {
+	
+	background-color: rgba(48,48,54, 1.00);
+	
+	color: rgba(255,255,255, 1.00);
+	padding-top : 3%;
+	padding-bottom : 3%
+}
+.themify_builder_2764_row.module_row_13 a {
+	text-decoration: underline
+}
+.themify_builder_2764_row.module_row_13.module_row h1 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_13.module_row h2 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_13.module_row h3:not(.module-title) {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_13.module_row h4 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_13.module_row h5 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_13.module_row h6 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+
+.themify_builder .audio-2764-13-0-0.module-audio { padding-right: 15%; padding-left: 15%;  } 
+.themify_builder .audio-2764-13-0-0.module-audio .track-buy { text-decoration: underline;  } 
+/* .themify_builder_2764_row.module_row_14 Style */
+.themify_builder_2764_row.module_row_14.module_row {
+	
+	background-color: rgba(31,31,31, 1)
+}
+
+/* .themify_builder_2764_row.module_row_15 Style */
+.themify_builder_2764_row.module_row_15.module_row {
+	
+	background-color: rgba(194,174,109, 1.00);
+	
+	color: rgba(255,255,255, 1.00);
+	padding-top : 3%;
+	padding-bottom : 3%
+}
+.themify_builder_2764_row.module_row_15 a {
+	text-decoration: underline
+}
+.themify_builder_2764_row.module_row_15.module_row h1 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_15.module_row h2 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_15.module_row h3:not(.module-title) {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_15.module_row h4 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_15.module_row h5 {
+	
+	color: rgba(255,255,255, 1.00)
+}
+.themify_builder_2764_row.module_row_15.module_row h6 {
 	
 	color: rgba(255,255,255, 1.00)
 }
