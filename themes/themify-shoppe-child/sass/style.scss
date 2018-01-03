@@ -1,0 +1,107 @@
+@import 'compass';
+
+// Utilities
+@import 'utilities/_variables';
+@import 'utilities/_mixins';
+
+// Layout
+@import 'layout/_footer';
+@import 'layout/_header';
+
+// Components
+@import 'components/_buttons';
+@import 'components/_icons';
+@import 'components/_images';
+
+// Grayson Styles
+@import "grayson/grayson";
+
+@media only screen and (max-width: 716px) {
+	
+	.home-banner {
+		background: url("../themify-shoppe-child/images/bannigrinMobile.png") no-repeat center bottom;
+	}
+	
+}
+.transparent-header #headerwrap.fixed-header {
+	background-color: rgba(41,41,43,.9) !important;
+}
+
+@media only screen and (min-width: 716px) {
+	
+	
+	
+}
+
+.themify_builder .module_row_2764-0.module_row {
+	background-position: 50% 50% !important;
+}
+
+a, u {
+	text-decoration: none;
+}
+
+#site-logo a:hover {
+	color: white !important;
+}
+
+.right-up-slant,
+.right-up-slant .builder_row_cover
+/* .right-up-slant video.vjs-tech */ {
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 3vw), 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+.right-down-slant,
+.right-down-slant .row_inner_wrapper {
+	-webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+}
+
+.top-slant,
+#footerwrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+	tab-size: 4;
+	width: 100%;
+	left: 0;
+	position: relative;
+	max-width: 100vw;
+	-webkit-clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);
+	clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);
+}
+
+#footerwrap {
+	margin-top: -3%;
+}
+
+.slant {
+	overflow-x: auto;
+	overflow-y: hidden;
+	tab-size: 4;
+	width: 100%;
+	left: 0;
+	position: relative;
+	max-width: 100vw;
+	-webkit-clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+	clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+}
+
+.home .module_column_2551-1-0 .sub_row_1-0-0 {
+    -webkit-box-shadow: 0px 6px 29px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 29px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 29px 0px rgba(0,0,0,0.75);
+}
+
+.footer-block .footer-text-outer {
+    border-top: none !important;
+}
+
+.module-audio .album-playlist .tracklist .track {
+    border-bottom: none !important;
+}
+
+.module-audio .tracklist .track-title {
+    position: relative !important;
+    color: white !important;
+}

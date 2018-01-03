@@ -1,0 +1,135 @@
+/*
+.footer-block #footer {
+	position: absolute;
+    bottom: 0;
+}
+*/
+/* line 8, ../sass/grayson/grayson.scss */
+#main-nav .menu-item a {
+  color: white !important;
+}
+
+/* line 12, ../sass/grayson/grayson.scss */
+#main-nav ul {
+  background: transparent;
+  border: 1px solid #fef;
+}
+
+/*
+#text-2551-0-0-2 h2 a, #main-nav .menu-item a:hover, #main-nav ul li:hover {
+	color: #8c2121;
+	text-decoration: none;
+}
+*/
+/* line 24, ../sass/grayson/grayson.scss */
+#text-2551-0-0-2 h2 a:hover {
+  letter-spacing: 1px;
+}
+
+/* line 28, ../sass/grayson/grayson.scss */
+#site-logo {
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+
+/* line 33, ../sass/grayson/grayson.scss */
+#site-logo a:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 716px) {
+  /* line 21, ../sass/style.scss */
+  .home-banner {
+    background: url("../themify-shoppe-child/images/bannigrinMobile.png") no-repeat center bottom;
+  }
+}
+/* line 26, ../sass/style.scss */
+.transparent-header #headerwrap.fixed-header {
+  background-color: rgba(41, 41, 43, 0.9) !important;
+}
+
+/* line 36, ../sass/style.scss */
+.themify_builder .module_row_2764-0.module_row {
+  background-position: 50% 50% !important;
+}
+
+/* line 40, ../sass/style.scss */
+a, u {
+  text-decoration: none;
+}
+
+/* line 44, ../sass/style.scss */
+#site-logo a:hover {
+  color: white !important;
+}
+
+/* line 48, ../sass/style.scss */
+.right-up-slant,
+.right-up-slant .builder_row_cover
+ {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 3vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+/* line 55, ../sass/style.scss */
+.right-down-slant,
+.right-down-slant .row_inner_wrapper {
+  -webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+}
+
+/* line 61, ../sass/style.scss */
+.top-slant,
+#footerwrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  tab-size: 4;
+  width: 100%;
+  left: 0;
+  position: relative;
+  max-width: 100vw;
+  -webkit-clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+}
+
+/* line 74, ../sass/style.scss */
+#footerwrap {
+  margin-top: -3%;
+}
+
+/* line 78, ../sass/style.scss */
+.slant {
+  overflow-x: auto;
+  overflow-y: hidden;
+  tab-size: 4;
+  width: 100%;
+  left: 0;
+  position: relative;
+  max-width: 100vw;
+  -webkit-clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
+  clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+/* line 90, ../sass/style.scss */
+.home .module_column_2551-1-0 .sub_row_1-0-0 {
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* line 96, ../sass/style.scss */
+.footer-block .footer-text-outer {
+  border-top: none !important;
+}
+
+/* line 100, ../sass/style.scss */
+.module-audio .album-playlist .tracklist .track {
+  border-bottom: none !important;
+}
+
+/* line 104, ../sass/style.scss */
+.module-audio .tracklist .track-title {
+  position: relative !important;
+  color: white !important;
+}
