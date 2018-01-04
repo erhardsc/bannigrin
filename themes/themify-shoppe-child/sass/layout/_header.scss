@@ -1,5 +1,27 @@
 #headerwrap {
+
   background-color: rgba(41,41,43,.9) !important;
+
+  #main-nav a{
+    font-size: 1.2em;
+  }
+
+  .header-on-scroll #main-nav a {
+    font-size: 1em;
+  }
+
+  #menu-icon {
+    color: white;
+  }
+
+  #mobile-menu {
+    background-color: #1F1F1F;
+    @include shadow-dark;
+  }
+
+  #menu-icon-close {
+    color: #fff !important;
+  }
 
   // Grayson styles start
   #site-logo {

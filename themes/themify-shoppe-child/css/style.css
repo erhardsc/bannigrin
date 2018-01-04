@@ -1,4 +1,20 @@
-/* line 1, ../sass/base/_base.scss */
+/* line 26, ../sass/utilities/_mixins.scss */
+h1::after, h2::after {
+  content: "";
+  border-top: 2px solid;
+  width: 2em;
+  display: block;
+  margin: .2em auto;
+}
+
+@media (min-width: 768px) {
+  /* line 5, ../sass/base/_base.scss */
+  h1 {
+    font-size: 6em;
+  }
+}
+
+/* line 11, ../sass/base/_base.scss */
 a, u {
   text-decoration: none;
 }
@@ -26,15 +42,38 @@ a, u {
   background-color: rgba(41, 41, 43, 0.9) !important;
 }
 /* line 5, ../sass/layout/_header.scss */
+#headerwrap #main-nav a {
+  font-size: 1.2em;
+}
+/* line 9, ../sass/layout/_header.scss */
+#headerwrap .header-on-scroll #main-nav a {
+  font-size: 1em;
+}
+/* line 13, ../sass/layout/_header.scss */
+#headerwrap #menu-icon {
+  color: white;
+}
+/* line 17, ../sass/layout/_header.scss */
+#headerwrap #mobile-menu {
+  background-color: #1F1F1F;
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+}
+/* line 22, ../sass/layout/_header.scss */
+#headerwrap #menu-icon-close {
+  color: #fff !important;
+}
+/* line 27, ../sass/layout/_header.scss */
 #headerwrap #site-logo {
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
 }
-/* line 10, ../sass/layout/_header.scss */
+/* line 32, ../sass/layout/_header.scss */
 #headerwrap #main-nav .menu-item a {
   color: white !important;
 }
-/* line 14, ../sass/layout/_header.scss */
+/* line 36, ../sass/layout/_header.scss */
 #headerwrap #main-nav ul {
   background: transparent;
   border: 1px solid #fef;
@@ -47,14 +86,117 @@ a, u {
   }
 }
 
-/* line 10, ../sass/layout/_containers.scss */
-.floating-box .module_subrow {
+/* line 9, ../sass/layout/_containers.scss */
+.shadow-dark img {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
 }
+/* line 11, ../sass/layout/_containers.scss */
+.shadow-dark img:hover {
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
+  box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
+  transform: scale(1.01);
+}
 
-/* line 16, ../sass/layout/_containers.scss */
+/* line 21, ../sass/layout/_containers.scss */
+.floating-div .row_inner {
+  padding: 4em 0 4em 0;
+}
+@media (min-width: 768px) {
+  /* line 21, ../sass/layout/_containers.scss */
+  .floating-div .row_inner {
+    padding: 0 4em 0 4em;
+  }
+}
+/* line 29, ../sass/layout/_containers.scss */
+.floating-div .tb-column-inner {
+  margin: auto;
+}
+/* line 33, ../sass/layout/_containers.scss */
+.floating-div .image-2551-sub_row_1-0-0-1-0 img {
+  margin: auto;
+  display: block;
+}
+@media (max-width: 575px) {
+  /* line 38, ../sass/layout/_containers.scss */
+  .floating-div .subrow_inner {
+    padding: 4em;
+  }
+}
+@media (min-width: 576px) {
+  /* line 38, ../sass/layout/_containers.scss */
+  .floating-div .subrow_inner {
+    padding: 4em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 38, ../sass/layout/_containers.scss */
+  .floating-div .subrow_inner {
+    padding: 2em;
+  }
+}
+/* line 52, ../sass/layout/_containers.scss */
+.floating-div .module_subrow {
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  /* line 52, ../sass/layout/_containers.scss */
+  .floating-div .module_subrow {
+    top: -200px;
+  }
+}
+
+/* line 65, ../sass/layout/_containers.scss */
+.lessons-div h1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+@media (min-width: 768px) {
+  /* line 65, ../sass/layout/_containers.scss */
+  .lessons-div h1 {
+    padding-top: 0;
+  }
+}
+/* line 73, ../sass/layout/_containers.scss */
+.lessons-div .lesson {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+@media (min-width: 768px) {
+  /* line 73, ../sass/layout/_containers.scss */
+  .lessons-div .lesson {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+/* line 82, ../sass/layout/_containers.scss */
+.lessons-div .beginner::before, .lessons-div .intermediate::before, .lessons-div .advanced::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -60px;
+  z-index: 11;
+}
+/* line 91, ../sass/layout/_containers.scss */
+.lessons-div .beginner::before {
+  content: url("../../../uploads/2018/01/beginnerSticks.png");
+}
+/* line 98, ../sass/layout/_containers.scss */
+.lessons-div .intermediate::before {
+  content: url("../../../uploads/2018/01/intermediateSticks.png");
+}
+/* line 105, ../sass/layout/_containers.scss */
+.lessons-div .advanced::before {
+  content: url("../../../uploads/2018/01/advancedSticks.png");
+}
+
+/* line 114, ../sass/layout/_containers.scss */
 .right-up-slant {
   overflow-x: auto;
   overflow-y: hidden;
@@ -67,7 +209,7 @@ a, u {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 
-/* line 23, ../sass/layout/_containers.scss */
+/* line 121, ../sass/layout/_containers.scss */
 .slant {
   overflow-x: auto;
   overflow-y: hidden;

@@ -1,80 +1,35 @@
-.themify_builder_2551_row.module_row_0.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2017/07/close-up-drum.png"); background-color:#474747; padding-top:2%; }
-.themify_builder_2551_row.module_row_0.module_row>.builder_row_cover:before{background-image:-webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.35) 0%,rgba(255, 255, 255, 0.07) 98%);
-background-image:-moz-linear-gradient(180deg,rgba(0, 0, 0, 0.35) 0%,rgba(255, 255, 255, 0.07) 98%);
-background-image:-o-linear-gradient(180deg,rgba(0, 0, 0, 0.35) 0%,rgba(255, 255, 255, 0.07) 98%);
-background-image:-ms-linear-gradient(180deg,rgba(0, 0, 0, 0.35) 0%,rgba(255, 255, 255, 0.07) 98%);
-background-image:linear-gradient(180deg,rgba(0, 0, 0, 0.35) 0%,rgba(255, 255, 255, 0.07) 98%);
-}
-.themify_builder_2551_row.module_row_0 a{text-decoration: underline; }
-@media screen and (max-width: 1024px) {.themify_builder_2551_row.module_row_0.module_row{padding-top:7%; }
-}
-@media screen and (max-width: 716px) {.themify_builder_2551_row.module_row_0.module_row{padding-top:9%; }
-}
-@media screen and (max-width: 414px) {.themify_builder_2551_row.module_row_0.module_row{padding-top:20%; padding-bottom:0%; }
-}
+.themify_builder_2551_row.module_row_0.module_row{text-align: center; }
+.themify_builder .text-2551-0-0-0.module-text{background-repeat: repeat; }
 .themify_builder .text-2551-0-0-0.module-text,.themify_builder .text-2551-0-0-0.module-text h1,.themify_builder .text-2551-0-0-0.module-text h2,.themify_builder .text-2551-0-0-0.module-text h3:not(.module-title),.themify_builder .text-2551-0-0-0.module-text h4,.themify_builder .text-2551-0-0-0.module-text h5,.themify_builder .text-2551-0-0-0.module-text h6{color:#ffffff; }
-.themify_builder .text-2551-0-0-0.module-text{font-size:2em; text-align: center; }
-.themify_builder .text-2551-0-0-2.module-text{text-align: center; }
-.themify_builder .text-2551-0-0-2.module-text a{color:#bdbdbd; text-decoration: none; }
-.themify_builder .text-2551-0-0-2.module-text a:hover{color:#bd7979; }
-.themify_builder .text-2551-0-0-2.module.module-text h2{font-family: Maven Pro; }
-.themify_builder .text-2551-0-0-3.module-text,.themify_builder .text-2551-0-0-3.module-text h1,.themify_builder .text-2551-0-0-3.module-text h2,.themify_builder .text-2551-0-0-3.module-text h3:not(.module-title),.themify_builder .text-2551-0-0-3.module-text h4,.themify_builder .text-2551-0-0-3.module-text h5,.themify_builder .text-2551-0-0-3.module-text h6{color:#ffffff; }
-.themify_builder .text-2551-0-0-3.module-text{text-align: center; }
-.themify_builder .text-2551-0-0-5.module-text{text-align: center; }
-.themify_builder .text-2551-0-0-5.module-text a{color:#bdbdbd; text-decoration: none; }
-.themify_builder .text-2551-0-0-5.module-text a:hover{color:#bd7979; }
-.themify_builder .text-2551-0-0-5.module.module-text h2{font-family: Maven Pro; }
-.themify_builder .text-2551-0-0-5.module-text h2{font-size:1.5em; }
+.themify_builder .text-2551-0-0-1.module-text{background-repeat: repeat; }
+.themify_builder .text-2551-0-0-1.module-text,.themify_builder .text-2551-0-0-1.module-text h1,.themify_builder .text-2551-0-0-1.module-text h2,.themify_builder .text-2551-0-0-1.module-text h3:not(.module-title),.themify_builder .text-2551-0-0-1.module-text h4,.themify_builder .text-2551-0-0-1.module-text h5,.themify_builder .text-2551-0-0-1.module-text h6{color:#ffffff; }
+.themify_builder_2551_row.module_row_1.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2018/01/background.png"); }
 .themify_builder_2551_row.module_row_1 a{text-decoration: underline; }
-.themify_builder_2551_row.module_row_1.module_row{padding-top:2%; padding-bottom:2%; }
 .module_row_1 .module_column_0 .sub_row_1-0-0.module_subrow{background-color:#212121; }
 .module_row_1 .module_column_0 .sub_row_1-0-0 a{text-decoration: underline; }
-.sub_column_post_2551.sub_column_1-0-0-0.module_column{padding-top:20px; padding-right:0px; padding-bottom:20px; padding-left:28px; }
+.sub_column_post_2551.sub_column_1-0-0-0.module_column{text-align: center; }
 @media screen and (max-width: 716px) {.sub_column_post_2551.sub_column_1-0-0-0.module_column{padding-top:20px; padding-right:15px; padding-bottom:20px; padding-left:15px; }
 }
 @media screen and (max-width: 414px) {.sub_column_post_2551.sub_column_1-0-0-0.module_column{padding-top:20px; padding-right:15px; padding-bottom:20px; padding-left:10px; }
 }
-.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text a{text-decoration: underline; }
-.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text{padding-left:10px; }
-.themify_builder .text-2551-sub_row_1-0-0-0-0.module.module-text h2{color:#ffffff; }
-.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text h2{font-size:36px; margin-top:20px; margin-bottom:10px; }
-@media screen and (max-width: 414px) {.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:5px; }
-.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text h2{font-size:34px; }
-}
-.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h1,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h2,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h3:not(.module-title),.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h4,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h5,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h6{color:#cfcfcf; }
-.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text{font-size:1.2em; }
-.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text a{text-decoration: underline; }
-.themify_builder .buttons-2551-sub_row_1-0-0-0-2 div.module-buttons{text-align: center; margin-top:15%; }
-.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a{background-color:rgba(0,0,0, 0.00); color:#ffffff; border-top:2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff; border-left:2px solid #ffffff; }
-.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a:hover{background-color:#ffffff; color:#262626; }
-.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a span,.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a i{text-decoration: none; }
-.themify_builder .image-2551-sub_row_1-0-0-1-0.module-image a{text-decoration: underline; }
-.themify_builder_2551_row.module_row_2.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2017/07/Dark-ryan-drumming-1024x582.png"); background-color:#ffffff; text-align: center; padding-top:7%; padding-bottom:7%; }
+.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text{background-repeat: repeat; }
+.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text{background-repeat: repeat; font-size:1.2em; letter-spacing:1px; }
+.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h1,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h2,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h3:not(.module-title),.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h4,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h5,.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text h6{color:#ffffff; }
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2.module.module-buttons{background-repeat: repeat; }
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a{background-color:rgba(0,0,0, 0.00); color:#ffffff; border:1px solid #ffffff; }
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a:hover{background-color:#ffffff; color:#575757; }
+.themify_builder .image-2551-sub_row_1-0-0-1-0.module-image{background-repeat: repeat; }
+.themify_builder_2551_row.module_row_2.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2018/01/background.png"); text-align: center; padding-bottom:7%; margin-top:-5%; }
 .themify_builder_2551_row.module_row_2 a{text-decoration: underline; }
 @media screen and (max-width: 414px) {.themify_builder_2551_row.module_row_2.module_row{padding-top:50px; padding-bottom:50px; }
 }
-.themify_builder .fancy-heading-2551-2-0-0.module .sub-head{font-family: Maven Pro; color:#ededed; }
-.themify_builder .slider-2551-2-0-1.module-slider a{text-decoration: underline; }
-.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a{background-color:rgba(0,0,0, 0.00); color:#ffffff; border-top:2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff; border-left:2px solid #ffffff; }
-.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a:hover{background-color:#b8b8b8; }
-.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a span,.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a i{text-decoration: none; }
-.themify_builder_2551_row.module_row_3.module_row{background-color:#141414; text-align: center; padding-top:7%; padding-bottom:7%; margin-top:-5%; }
-.themify_builder_2551_row.module_row_3.module_row>.builder_row_cover:before{background-image:-webkit-linear-gradient(180deg,rgb(94, 94, 94) 0%,rgba(189, 189, 189, 0.08) 98%);
-background-image:-moz-linear-gradient(180deg,rgb(94, 94, 94) 0%,rgba(189, 189, 189, 0.08) 98%);
-background-image:-o-linear-gradient(180deg,rgb(94, 94, 94) 0%,rgba(189, 189, 189, 0.08) 98%);
-background-image:-ms-linear-gradient(180deg,rgb(94, 94, 94) 0%,rgba(189, 189, 189, 0.08) 98%);
-background-image:linear-gradient(180deg,rgb(94, 94, 94) 0%,rgba(189, 189, 189, 0.08) 98%);
-}
-.themify_builder_2551_row.module_row_3 a{text-decoration: underline; }
-@media screen and (max-width: 414px) {.themify_builder_2551_row.module_row_3.module_row{padding-top:50px; padding-bottom:50px; }
-}
-.themify_builder .fancy-heading-2551-3-0-0.module .sub-head{font-family: Maven Pro; color:#ededed; }
-.module_row_3 .module_column_0 .sub_row_3-0-1 a{text-decoration: underline; }
-.module_row_3 .module_column_0 .sub_row_3-0-1.module_subrow{padding-right:3%; padding-bottom:3%; padding-left:3%; }
-.themify_builder .image-2551-sub_row_3-0-1-0-0.module-image a{text-decoration: underline; }
-.themify_builder .image-2551-sub_row_3-0-1-1-0.module-image a{text-decoration: underline; }
-.themify_builder .image-2551-sub_row_3-0-1-2-0.module-image a{text-decoration: underline; }
-.themify_builder_2551_row.module_row_4.module_row{background-color:#613c3c; text-align: left; margin-top:-3%; }
-.themify_builder_2551_row.module_row_4.module_row,.themify_builder_2551_row.module_row_4 h1,.themify_builder_2551_row.module_row_4 h2,.themify_builder_2551_row.module_row_4 h3:not(.module-title),.themify_builder_2551_row.module_row_4 h4,.themify_builder_2551_row.module_row_4 h5,.themify_builder_2551_row.module_row_4 h6{color:#ffffff; }
-.themify_builder_2551_row.module_row_4 a{text-decoration: underline; }
-.themify_builder .widget-2551-4-0-0.module-widget a{text-decoration: underline; }
+.themify_builder .text-2551-2-0-0.module-text{background-repeat: repeat; text-align: center; }
+.themify_builder .text-2551-2-0-0.module-text,.themify_builder .text-2551-2-0-0.module-text h1,.themify_builder .text-2551-2-0-0.module-text h2,.themify_builder .text-2551-2-0-0.module-text h3:not(.module-title),.themify_builder .text-2551-2-0-0.module-text h4,.themify_builder .text-2551-2-0-0.module-text h5,.themify_builder .text-2551-2-0-0.module-text h6{color:#ffffff; }
+.module_row_2 .module_column_0 .sub_row_2-0-1 a{text-decoration: underline; }
+.module_row_2 .module_column_0 .sub_row_2-0-1.module_subrow{padding-right:3%; padding-bottom:3%; padding-left:3%; }
+.themify_builder .image-2551-sub_row_2-0-1-0-0.module-image{background-repeat: repeat; }
+.themify_builder .image-2551-sub_row_2-0-1-0-0.module-image a{text-decoration: underline; }
+.themify_builder .image-2551-sub_row_2-0-1-1-0.module-image{background-repeat: repeat; }
+.themify_builder .image-2551-sub_row_2-0-1-1-0.module-image a{text-decoration: underline; }
+.themify_builder .image-2551-sub_row_2-0-1-2-0.module-image{background-repeat: repeat; }
+.themify_builder .image-2551-sub_row_2-0-1-2-0.module-image a{text-decoration: underline; }

@@ -1,3 +1,13 @@
+h1, h2 {
+  @include underline;
+}
+
+h1 {
+  @include media-query('med'){
+    font-size: 6em;
+  }
+}
+
 a, u {
   text-decoration: none;
 }

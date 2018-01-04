@@ -6,10 +6,108 @@
 
 }
 
-.floating-box {
+.shadow-dark img {
+  @include shadow-dark;
+  &:hover {
+    @include shadow-light;
+    transform: scale(1.01);
+  }
+}
+
+// Floating Div - Home-page
+
+.floating-div {
+
+  .row_inner {
+    padding: 4em 0 4em 0;
+
+    @include media-query('med'){
+      padding: 0 4em 0 4em;
+    }
+  }
+
+  .tb-column-inner {
+    margin: auto;
+  }
+
+  .image-2551-sub_row_1-0-0-1-0 img {
+    margin: auto;
+    display: block;
+  }
+
+  .subrow_inner {
+    @include media-query('xs'){
+      padding: 4em
+    }
+
+    @include media-query('sm'){
+      padding: 4em
+    }
+
+    @include media-query('med'){
+      padding: 2em;
+    }
+  }
+
   .module_subrow {
     @include shadow-dark;
+    @include media-query('med'){
+      top: -200px;
+    }
+    border-radius: 20px;
+    z-index: 10;
   }
+}
+
+// Lessons Div - Home-page
+
+.lessons-div {
+  h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include media-query('med'){
+      padding-top: 0;
+    }
+  }
+
+  .lesson {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    @include media-query('med'){
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  %sticks-icon-position {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -60px;
+    z-index: 11;
+  }
+
+  .beginner {
+    &::before {
+      content: url("../../../uploads/2018/01/beginnerSticks.png");
+      @extend %sticks-icon-position;
+    }
+  }
+
+  .intermediate {
+    &::before {
+      content: url("../../../uploads/2018/01/intermediateSticks.png");
+      @extend %sticks-icon-position;
+    }
+  }
+
+  .advanced {
+    &::before {
+      content: url("../../../uploads/2018/01/advancedSticks.png");
+      @extend %sticks-icon-position;
+    }
+  }
+
 }
 
 // Only the bottom of the container will have slants
