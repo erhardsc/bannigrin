@@ -1,0 +1,17 @@
+#footerwrap {
+  margin-top: -3%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  tab-size: 4;
+  width: 100%;
+  left: 0;
+  position: relative;
+  max-width: 100vw;
+  -webkit-clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);
+  clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);
+
+  .footer-block .footer-text-outer {
+    border-top: none !important;
+  }
+
+}

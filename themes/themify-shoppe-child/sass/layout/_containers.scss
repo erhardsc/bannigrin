@@ -1,0 +1,27 @@
+.home-banner {
+
+  @include media-query('med') {
+    background: url("../themify-shoppe-child/images/bannigrinMobile.png") no-repeat center bottom;
+  }
+
+}
+
+.floating-box {
+  .module_subrow {
+    @include shadow-dark;
+  }
+}
+
+// Only the bottom of the container will have slants
+.right-up-slant {
+  @include slant;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 3vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+// Causes the top and bottom of contianer to have slants
+.slant {
+  @include slant;
+  -webkit-clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+  clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);
+}

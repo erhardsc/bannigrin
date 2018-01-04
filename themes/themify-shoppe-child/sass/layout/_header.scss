@@ -1,0 +1,20 @@
+#headerwrap {
+  background-color: rgba(41,41,43,.9) !important;
+
+  // Grayson styles start
+  #site-logo {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+  }
+
+  #main-nav .menu-item a {
+    color: white !important;
+  }
+
+  #main-nav ul {
+    background: transparent;
+    border: 1px solid #fef;
+  }
+  // Grayson styles end
+
+}
