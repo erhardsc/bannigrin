@@ -1,0 +1,190 @@
+/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/close-up-drum.png);
+	
+	background-color: rgba(71,71,71, 1.00);
+	padding-top : 2%
+}
+.themify_builder_2551_row.module_row_0 a {
+	text-decoration: underline
+}
+.themify_builder_2551_row.module_row_0.module_row>.builder_row_cover {
+	background:linear-gradient( 180deg, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0.07) 98% )
+}
+.themify_builder_2551_row.module_row_0.module_row> div > .builder_row_cover {
+	background:linear-gradient( 180deg, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0.07) 98% )
+}
+
+@media screen and (max-width: 1024px) {/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	padding-top : 7%
+}
+
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 716px) {/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	padding-top : 9%
+}
+
+}
+@media screen and (max-width: 414px) {
+}
+@media screen and (max-width: 414px) {/* .themify_builder_2551_row.module_row_0 Style */
+.themify_builder_2551_row.module_row_0.module_row {
+	padding-top : 20%
+}
+
+}
+.themify_builder .text-2551-0-0-0.module-text { color: #ffffff; font-size: 2em; text-align: center;  } 
+.themify_builder .text-2551-0-0-0.module-text h1 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h2 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h3:not(.module-title) { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h4 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h5 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-0.module-text h6 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-2.module-text { text-align: center;  } 
+.themify_builder .text-2551-0-0-2.module-text a { color: #bdbdbd; text-decoration: none;  } 
+.themify_builder .text-2551-0-0-2.module-text a:hover { color: #bd7979;  } 
+.themify_builder .text-2551-0-0-2.module.module-text h2 { font-family: Maven Pro;  } 
+.themify_builder .text-2551-0-0-3.module-text { color: #ffffff; text-align: center;  } 
+.themify_builder .text-2551-0-0-3.module-text h1 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h2 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h3:not(.module-title) { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h4 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h5 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-3.module-text h6 { color: #ffffff;  } 
+.themify_builder .text-2551-0-0-5.module-text { text-align: center;  } 
+.themify_builder .text-2551-0-0-5.module-text a { color: #bdbdbd; text-decoration: none;  } 
+.themify_builder .text-2551-0-0-5.module-text a:hover { color: #bd7979;  } 
+.themify_builder .text-2551-0-0-5.module.module-text h2 { font-family: Maven Pro; font-size: 1.5em;  } 
+/* .themify_builder_2551_row.module_row_1 Style */
+.themify_builder_2551_row.module_row_1.module_row {
+<<<<<<< HEAD
+	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/bannigrinBackground-1-997x1024.png);
+	margin-top : 5%;
+	margin-bottom : 5%
+=======
+	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/bannigirin-997x1024.png);
+	padding-top : 7%;
+	padding-bottom : 5%
+}
+.themify_builder_2551_row.module_row_1 a {
+	text-decoration: underline
+>>>>>>> de1b8cb2fefc061ebfbba5d79b64e721c5a76bfa
+}
+
+/* .module_row_1 .module_column_0 .sub_row_1-0-0 Style */
+.module_row_1 .module_column_0 .sub_row_1-0-0.module_subrow {
+	
+	background-color: rgba(255,255,255, 1.00);
+	margin-top : 5%
+}
+
+/* .sub_column_post_2551.sub_column_1-0-0-0 Style */
+.sub_column_post_2551.sub_column_1-0-0-0.sub_column {
+	padding-top : 20px;
+	padding-bottom : 20px;
+	padding-left : 28px
+}
+
+@media screen and (max-width: 716px) {/* .sub_column_post_2551.sub_column_1-0-0-0 Style */
+.sub_column_post_2551.sub_column_1-0-0-0.sub_column {
+	padding-top : 20px;
+	padding-right : 15px;
+	padding-bottom : 20px;
+	padding-left : 15px
+}
+
+}
+@media screen and (max-width: 414px) {/* .sub_column_post_2551.sub_column_1-0-0-0 Style */
+.sub_column_post_2551.sub_column_1-0-0-0.sub_column {
+	padding-top : 20px;
+	padding-right : 15px;
+	padding-bottom : 20px;
+	padding-left : 10px
+}
+
+}
+.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text { padding-left: 10px;  } 
+.themify_builder .text-2551-sub_row_1-0-0-0-0.module.module-text h2 { color: #434789; font-size: 36px; margin-top: 20px; margin-bottom: 10px;  } 
+@media screen and (max-width: 414px) {.themify_builder .text-2551-sub_row_1-0-0-0-0.module-text { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 5px;  } 
+.themify_builder .text-2551-sub_row_1-0-0-0-0.module.module-text h2 { font-size: 34px;  } 
+}
+.themify_builder .text-2551-sub_row_1-0-0-0-1.module-text { font-size: 1.2em;  } 
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 div.module-buttons { text-align: center;  } 
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2.module.module-buttons { margin-top: 15%;  } 
+<<<<<<< HEAD
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a span { text-decoration: underline;  } 
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a i { text-decoration: underline;  } 
+/* .themify_builder_2551_row.module_row_2 Style */
+.themify_builder_2551_row.module_row_2.module_row {
+	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/close-up-drum.png);
+=======
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a span { text-decoration: none;  } 
+.themify_builder .buttons-2551-sub_row_1-0-0-0-2 .module-buttons .module-buttons-item a i { text-decoration: none;  } 
+/* .themify_builder_2551_row.module_row_2 Style */
+.themify_builder_2551_row.module_row_2.module_row {
+	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/Dark-ryan-drumming-1024x582.png);
+	
+	background-color: rgba(255,255,255, 1.00);
+	text-align: center;
+	padding-top : 7%;
+	padding-bottom : 7%
+}
+.themify_builder_2551_row.module_row_2 a {
+	text-decoration: underline
+}
+.themify_builder_2551_row.module_row_2.module_row>.builder_row_cover {
+	background:linear-gradient( 180deg, rgba(0,0,0, 1) 0%, rgba(255,255,255,1) 100% )
+}
+.themify_builder_2551_row.module_row_2.module_row> div > .builder_row_cover {
+	background:linear-gradient( 180deg, rgba(0,0,0, 1) 0%, rgba(255,255,255,1) 100% )
+}
+
+@media screen and (max-width: 414px) {/* .themify_builder_2551_row.module_row_2 Style */
+.themify_builder_2551_row.module_row_2.module_row {
+	padding-top : 50px;
+	padding-bottom : 50px
+}
+
+}
+.themify_builder .fancy-heading-2551-2-0-0.module .sub-head { font-family: Maven Pro; color: #ededed;  } 
+.themify_builder .slider-2551-2-0-1.module-slider a { text-decoration: underline;  } 
+.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a { background-color: #000000; background-color: rgba(0,0,0, 0.00); color: #ffffff; border-top-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-right-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-bottom-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-left-color: #ffffff; border-left-width: 2px; border-left-style: solid;  } 
+.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a:hover { background-color: #b8b8b8;  } 
+.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a span { text-decoration: none;  } 
+.themify_builder .buttons-2551-2-0-2 .module-buttons .module-buttons-item a i { text-decoration: none;  } 
+/* .themify_builder_2551_row.module_row_3 Style */
+.themify_builder_2551_row.module_row_3.module_row {
+	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/close-up-drum.png);
+	text-align: center;
+>>>>>>> de1b8cb2fefc061ebfbba5d79b64e721c5a76bfa
+	padding-top : 7%;
+	padding-bottom : 7%;
+	margin-top : -5%
+}
+.themify_builder_2551_row.module_row_3 a {
+	text-decoration: underline
+}
+.themify_builder_2551_row.module_row_3.module_row>.builder_row_cover {
+	background:linear-gradient( 180deg, rgb(94, 94, 94) 0%, rgba(189, 189, 189, 0.08) 98% )
+}
+.themify_builder_2551_row.module_row_3.module_row> div > .builder_row_cover {
+	background:linear-gradient( 180deg, rgb(94, 94, 94) 0%, rgba(189, 189, 189, 0.08) 98% )
+}
+
+@media screen and (max-width: 414px) {/* .themify_builder_2551_row.module_row_3 Style */
+.themify_builder_2551_row.module_row_3.module_row {
+	padding-top : 50px;
+	padding-bottom : 50px
+}
+
+}
+.themify_builder .fancy-heading-2551-3-0-0.module .sub-head { font-family: Maven Pro; color: #ededed;  } 
+.themify_builder .slider-2551-3-0-1.module-slider a { text-decoration: underline;  } 
+.themify_builder .buttons-2551-3-0-2 .module-buttons .module-buttons-item a { background-color: #000000; background-color: rgba(0,0,0, 0.00); color: #ffffff; border-top-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-right-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-bottom-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-left-color: #ffffff; border-left-width: 2px; border-left-style: solid;  } 
+.themify_builder .buttons-2551-3-0-2 .module-buttons .module-buttons-item a:hover { background-color: #b8b8b8;  } 
+.themify_builder .buttons-2551-3-0-2 .module-buttons .module-buttons-item a span { text-decoration: none;  } 
+.themify_builder .buttons-2551-3-0-2 .module-buttons .module-buttons-item a i { text-decoration: none;  } 

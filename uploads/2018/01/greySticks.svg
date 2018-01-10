@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="133px" viewBox="0 0 114 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Drum Stick and background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-101.8%" y="-91.1%" width="297.6%" height="317.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M20.0166461,70.2402643 C20.2438956,70.9662261 20.4947387,71.4168049 20.7691755,71.5920005 C21.0436123,71.7671962 21.5970759,71.8572069 22.4295664,71.8620325 L55.4915171,14.9235341 L60.6753036,4.4336949 C61.425872,3.8823615 61.8522213,3.39229877 61.9543514,2.96350671 C62.0564815,2.53471465 61.8807379,2.09180844 61.4271204,1.63478809 C60.8163271,1.34841698 60.3032319,1.43708349 59.8878346,1.90078761 C59.4724374,2.36449173 59.292693,2.96416156 59.3486015,3.69979709 L52.6751636,13.9291428 L20.0166461,70.2402643 Z" id="path-2"></path>
+        <filter x="-114.4%" y="-56.8%" width="295.4%" height="216.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="-7" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M20.1491942,69.8297873 C20.3764437,70.5557491 20.6272868,71.0063278 20.9017236,71.1815235 C21.1761604,71.3567191 21.729624,71.4467298 22.5621145,71.4515554 L55.6240652,14.5130571 L60.8078517,4.02321785 C61.5408593,3.42280492 61.9584281,2.90820242 62.0605582,2.47941035 C62.1626883,2.05061829 61.9957251,1.63225185 61.5596685,1.22431104 C60.9488753,0.937939932 60.43578,1.02660644 60.0203828,1.49031056 C59.6049855,1.95401468 59.4252411,2.55368451 59.4811496,3.28932004 L52.8077118,13.5186657 L20.1491942,69.8297873 Z" id="path-4"></path>
+        <filter x="-73.9%" y="-28.4%" width="247.8%" height="188.1%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="11" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Drum-Stick-and-background" filter="url(#filter-1)" transform="translate(16.000000, 18.000000)">
+            <g id="Drum-Sticks">
+                <g id="Drum-Sticks---extreme" transform="translate(11.455882, 7.239669)" fill="#5B5B5B">
+                    <ellipse id="Oval" cx="29.5509294" cy="29.4226109" rx="28.9772387" ry="28.9138563"></ellipse>
+                </g>
+                <g id="Path" transform="translate(40.999575, 36.666410) rotate(-62.000000) translate(-40.999575, -36.666410) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="#FEFEFE" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <g id="Path" transform="translate(41.119412, 36.255933) rotate(3.000000) translate(-41.119412, -36.255933) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

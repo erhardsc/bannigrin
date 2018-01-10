@@ -1,0 +1,106 @@
+#slider {
+
+  h3 {
+    @include underline;
+  }
+
+  .fa-times-circle {
+    color: white;
+  }
+
+  label {
+    color: white;
+  }
+
+  #nf-field-9-wrap label:first-child {
+    font-size: 1.5em;
+    text-align: center;
+    @include underline;
+  }
+
+  .ninja-forms-req-symbol, .nf-form-fields-required {
+    display: none;
+  }
+
+  #nf-form-title-2 h3 {
+    text-align: center;
+    color: white;
+    font-size: 4em;
+  }
+
+  section#ninja_forms_widget-2 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 87%;
+
+    @include media-query('med'){
+      width: 82%
+    }
+
+  }
+
+
+  /* ///////////////////////////////
+  Primary styles for the input boxes
+  ////////////////////////////////*/
+
+  input,
+  textarea {
+    font-size: 2.8vw;
+    border-bottom: solid 1px white !important;
+    -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) !important;
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) !important;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #A89078 4%) !important;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #A89078 4%) !important;
+    background-position: -400px 0 !important;
+    background-size: 400px 100% !important;
+    background-repeat: no-repeat !important;
+    color: white !important;
+    font-weight: 200;
+    border: none;
+
+    @include media-query('med') {
+      font-size: 12px;
+    }
+
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    background-position: 0 0 !important;
+  }
+
+  /* ///////////////////////////////
+  Animate the placeholders on focus
+  ////////////////////////////////*/
+
+  input[type=text]:focus::-webkit-input-placeholder,
+  input[type=email]:focus::-webkit-input-placeholder,
+  textarea:focus::-webkit-input-placeholder {
+    font-size: 11px !important;
+    -webkit-transform: translateY(-10px) !important;
+    transform: translateY(-10px) !important;
+    visibility: visible !important;
+    color: white !important;
+  }
+
+  input[type=text]::-webkit-input-placeholder,
+  input[type=email]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-family: 'roboto', sans-serif;
+    -webkit-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
+    color: white !important;
+  }
+
+  .form-row:focus {
+    background: white !important;
+  }
+
+  textarea {
+    min-height: 20px;
+    height: 35px;
+  }
+}
