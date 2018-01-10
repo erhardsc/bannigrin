@@ -19,24 +19,6 @@ a, u {
   text-decoration: none;
 }
 
-/* line 1, ../sass/layout/_footer.scss */
-#footerwrap {
-  margin-top: -3%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  tab-size: 4;
-  width: 100%;
-  left: 0;
-  position: relative;
-  max-width: 100vw;
-  -webkit-clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
-}
-/* line 13, ../sass/layout/_footer.scss */
-#footerwrap .footer-block .footer-text-outer {
-  border-top: none !important;
-}
-
 /* line 1, ../sass/layout/_header.scss */
 #headerwrap {
   background-color: rgba(41, 41, 43, 0.9) !important;
@@ -77,6 +59,28 @@ a, u {
 #headerwrap #main-nav ul {
   background: transparent;
   border: 1px solid #fef;
+}
+
+/* line 1, ../sass/layout/_footer.scss */
+#footerwrap {
+  margin-top: -3%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  tab-size: 4;
+  width: 100%;
+  left: 0;
+  position: relative;
+  max-width: 100vw;
+  -webkit-clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+}
+/* line 13, ../sass/layout/_footer.scss */
+#footerwrap .footer-block .footer-text-outer {
+  border-top: none !important;
+}
+/* line 17, ../sass/layout/_footer.scss */
+#footerwrap .footer-column-wrap {
+  padding-top: 6.5em;
 }
 
 @media (min-width: 768px) {
@@ -180,23 +184,32 @@ a, u {
   position: absolute;
   left: 0;
   right: 0;
-  top: -60px;
+  top: -75px;
   z-index: 11;
 }
 /* line 91, ../sass/layout/_containers.scss */
 .lessons-div .beginner::before {
-  content: url("../../../uploads/2018/01/beginnerSticks.png");
+  content: url("../../../uploads/2018/01/beginnerSticks.svg");
 }
 /* line 98, ../sass/layout/_containers.scss */
 .lessons-div .intermediate::before {
-  content: url("../../../uploads/2018/01/intermediateSticks.png");
+  content: url("../../../uploads/2018/01/intermediateSticks.svg");
 }
 /* line 105, ../sass/layout/_containers.scss */
 .lessons-div .advanced::before {
-  content: url("../../../uploads/2018/01/advancedSticks.png");
+  content: url("../../../uploads/2018/01/advancedSticks.svg");
 }
 
-/* line 114, ../sass/layout/_containers.scss */
+/* line 116, ../sass/layout/_containers.scss */
+.follow-ryan::before {
+  content: url("../../../uploads/2018/01/greySticks.svg");
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -80px;
+}
+
+/* line 126, ../sass/layout/_containers.scss */
 .right-up-slant {
   overflow-x: auto;
   overflow-y: hidden;
@@ -209,7 +222,7 @@ a, u {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 
-/* line 121, ../sass/layout/_containers.scss */
+/* line 133, ../sass/layout/_containers.scss */
 .slant {
   overflow-x: auto;
   overflow-y: hidden;

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="152px" height="168px" viewBox="0 0 152 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Drum Stick and background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-34.2%" y="-34.0%" width="168.4%" height="178.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Drum-Stick-and-background" filter="url(#filter-1)" transform="translate(8.000000, 19.000000)">
+            <g id="Drum-Sticks">
+                <ellipse id="Oval" fill="#084890" cx="68.0111922" cy="59.3977663" rx="47.6116123" ry="48.0559334"></ellipse>
+                <path d="M33.5228947,115.205658 C33.8962814,116.412234 34.308434,117.161113 34.7593527,117.452295 C35.2102714,117.743477 36.1196505,117.893078 37.4874901,117.901099 L91.8105674,23.2671398 L100.327888,5.83262637 C101.561124,4.9162892 102.261645,4.10178622 102.429452,3.38911744 C102.597259,2.67644866 102.3085,1.94032162 101.563175,1.18073634 C100.559599,0.704776625 99.7165483,0.852143749 99.0340219,1.62283771 C98.3514954,2.39353167 98.0561629,3.39020583 98.1480244,4.61286018 L87.1831033,21.6144234 L33.5228947,115.205658 Z" id="Path" fill="#FEFEFE" transform="translate(67.999302, 59.404630) rotate(-60.000000) translate(-67.999302, -59.404630) "></path>
+                <path d="M33.7406805,114.52343 C34.1140671,115.730006 34.5262198,116.478885 34.9771384,116.770067 C35.4280571,117.061249 36.3374362,117.21085 37.7052758,117.21887 L92.0283531,22.5849113 L100.545674,5.15039783 C101.750056,4.1524886 102.436151,3.29719959 102.603957,2.58453081 C102.771764,1.87186202 102.497432,1.17652102 101.780961,0.498507803 C100.777385,0.022548091 99.9343341,0.169915215 99.2518076,0.940609176 C98.5692811,1.71130314 98.2739486,2.70797729 98.3658101,3.93063164 L87.4008891,20.9321949 L33.7406805,114.52343 Z" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

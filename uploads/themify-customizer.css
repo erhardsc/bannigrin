@@ -4,7 +4,7 @@
 	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/dark-ryan.png);
 	background-size: cover;
 	background-position: center center;
-	background-attachment: fixed; 
+	position:fixed;top:0;left:0;width:100%;height:100vh;pointer-events:none;z-index:-1; 
 }
 body {	background-image: url(http://localhost/bannigrin/wp-content/uploads/2017/07/dark-ryan.png);
 	background-size: cover;
@@ -17,7 +17,7 @@ h1, .col4-1 h1, .col4-2 h1, .col3-1 h1, .col2-1 h1, .page-title, .sidebar-none .
 h2 {	
 	color: #ffffff; 
 }
-#headerwrap {	
+#headerwrap {	background: none;
 	background-color: #474747; 
 }
 #site-logo {	
@@ -29,7 +29,10 @@ h2 {
 #site-logo a {		width: 75px;
 	color: #ffffff; 
 }
-@media screen and (max-width: 976px) { /* Themify Customize Styling */
+#footerwrap {	background: none;
+	background-color: #252526; 
+}
+@media screen and (max-width: 1024px) { /* Themify Customize Styling */
 #site-logo img {		width: 75px;
 	height: 75px; 
 }

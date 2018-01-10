@@ -83,31 +83,43 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -60px;
+    top: -75px;
     z-index: 11;
   }
 
   .beginner {
     &::before {
-      content: url("../../../uploads/2018/01/beginnerSticks.png");
+      content: url("../../../uploads/2018/01/beginnerSticks.svg");
       @extend %sticks-icon-position;
     }
   }
 
   .intermediate {
     &::before {
-      content: url("../../../uploads/2018/01/intermediateSticks.png");
+      content: url("../../../uploads/2018/01/intermediateSticks.svg");
       @extend %sticks-icon-position;
     }
   }
 
   .advanced {
     &::before {
-      content: url("../../../uploads/2018/01/advancedSticks.png");
+      content: url("../../../uploads/2018/01/advancedSticks.svg");
       @extend %sticks-icon-position;
     }
   }
 
+}
+
+// Follow Ryan - Home Page
+
+.follow-ryan {
+  &::before {
+    content: url("../../../uploads/2018/01/greySticks.svg");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -80px;
+  }
 }
 
 // Only the bottom of the container will have slants
