@@ -23,6 +23,11 @@
     color: #fff !important;
   }
 
+  #menu-item-3101 a { // Contact button
+    @include sexy-button;
+    padding: .3em 2em;
+  }
+
   // Grayson styles start
   #site-logo {
     -webkit-transition: -webkit-transform .8s ease-in-out;
@@ -30,7 +35,7 @@
   }
 
   #main-nav .menu-item a {
-    color: white !important;
+    color: #fff;
   }
 
   #main-nav ul {

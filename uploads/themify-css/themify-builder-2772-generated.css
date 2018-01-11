@@ -1,58 +1,20 @@
-/* .themify_builder_2772_row.module_row_0 Style */
-.themify_builder_2772_row.module_row_0.module_row {
-	background-image: url(http://bannigrin.com/wp-content/uploads/2017/07/ryan-live-1024x462.png);
-	padding-top : 5%;
-	padding-bottom : 5%
+.themify_builder_2772_row.module_row_0.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2018/01/ryan-drum.jpg"); padding-top:20%; padding-bottom:20%; }
+.themify_builder_2772_row.module_row_0.module_row>.builder_row_cover:before{background-image:-webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
+background-image:-moz-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
+background-image:-o-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
+background-image:-ms-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
+background-image:linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
 }
-.themify_builder_2772_row.module_row_0.module_row>.builder_row_cover {
-	background:
+.themify_builder_2772_row.module_row_0 a{text-decoration: underline; }
+@media screen and (max-width: 414px) {.themify_builder_2772_row.module_row_0.module_row{padding-top:20%; padding-bottom:8%; }
 }
-.themify_builder_2772_row.module_row_0.module_row> div > .builder_row_cover {
-	background:
+.themify_builder .text-2772-0-0-0.module-text{background-repeat: repeat; font-size:2em; text-align: center; }
+.themify_builder .text-2772-0-0-0.module-text a{text-decoration: underline; }
+.themify_builder .text-2772-0-0-0.module.module-text h1{color:#ffffff; }
+.themify_builder .text-2772-0-0-0.module-text h1{font-size:3em; line-height:60px; }
+@media screen and (max-width: 414px) {.themify_builder .text-2772-0-0-0.module-text h1{font-size:38px; line-height:50px; }
 }
-
-@media screen and (max-width: 414px) {/* .themify_builder_2772_row.module_row_0 Style */
-.themify_builder_2772_row.module_row_0.module_row {
-	padding-top : 20%;
-	padding-bottom : 8%
-}
-
-}
-.themify_builder .text-2772-0-0-0.module-text { text-align: center;  } 
-.themify_builder .text-2772-0-0-0.module.module-text h1 { color: #ffffff; font-size: 48px; line-height: 60px;  } 
-@media screen and (max-width: 414px) {.themify_builder .text-2772-0-0-0.module.module-text h1 { font-size: 38px; line-height: 50px;  } 
-}
-/* .themify_builder_2772_row.module_row_1 Style */
-.themify_builder_2772_row.module_row_1.module_row {
-	
-	background-color: rgba(48,48,54, 1);
-	
-	color: rgba(255,255,255, 1.00);
-	padding-top : 7%;
-	padding-bottom : 7%
-}
-.themify_builder_2772_row.module_row_1.module_row h1 {
-	
-	color: rgba(255,255,255, 1.00)
-}
-.themify_builder_2772_row.module_row_1.module_row h2 {
-	
-	color: rgba(255,255,255, 1.00)
-}
-.themify_builder_2772_row.module_row_1.module_row h3:not(.module-title) {
-	
-	color: rgba(255,255,255, 1.00)
-}
-.themify_builder_2772_row.module_row_1.module_row h4 {
-	
-	color: rgba(255,255,255, 1.00)
-}
-.themify_builder_2772_row.module_row_1.module_row h5 {
-	
-	color: rgba(255,255,255, 1.00)
-}
-.themify_builder_2772_row.module_row_1.module_row h6 {
-	
-	color: rgba(255,255,255, 1.00)
-}
-
+.themify_builder_2772_row.module_row_1.module_row{background-color:#303036; padding-top:7%; padding-bottom:7%; }
+.themify_builder_2772_row.module_row_1.module_row,.themify_builder_2772_row.module_row_1 h1,.themify_builder_2772_row.module_row_1 h2,.themify_builder_2772_row.module_row_1 h3:not(.module-title),.themify_builder_2772_row.module_row_1 h4,.themify_builder_2772_row.module_row_1 h5,.themify_builder_2772_row.module_row_1 h6{color:#ffffff; }
+.themify_builder_2772_row.module_row_2.module_row{background-color:#303036; padding-top:7%; padding-bottom:7%; }
+.themify_builder_2772_row.module_row_2.module_row,.themify_builder_2772_row.module_row_2 h1,.themify_builder_2772_row.module_row_2 h2,.themify_builder_2772_row.module_row_2 h3:not(.module-title),.themify_builder_2772_row.module_row_2 h4,.themify_builder_2772_row.module_row_2 h5,.themify_builder_2772_row.module_row_2 h6{color:#ffffff; }

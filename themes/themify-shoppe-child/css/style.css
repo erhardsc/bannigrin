@@ -46,16 +46,37 @@ a, u {
 #headerwrap #menu-icon-close {
   color: #fff !important;
 }
-/* line 27, ../sass/layout/_header.scss */
+/* line 26, ../sass/layout/_header.scss */
+#headerwrap #menu-item-3101 a {
+  border: solid 1px #ebebeb;
+  color: #ebebeb;
+  background: transparent;
+  border-radius: 5px;
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  padding: .3em 2em;
+}
+/* line 85, ../sass/utilities/_mixins.scss */
+#headerwrap #menu-item-3101 a:hover {
+  background-color: #fff;
+  color: #0b0b0b !important;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+}
+/* line 32, ../sass/layout/_header.scss */
 #headerwrap #site-logo {
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
 }
-/* line 32, ../sass/layout/_header.scss */
+/* line 37, ../sass/layout/_header.scss */
 #headerwrap #main-nav .menu-item a {
-  color: white !important;
+  color: #fff;
 }
-/* line 36, ../sass/layout/_header.scss */
+/* line 41, ../sass/layout/_header.scss */
 #headerwrap #main-nav ul {
   background: transparent;
   border: 1px solid #fef;
@@ -419,20 +440,20 @@ a, u {
 /* line 117, ../sass/plugins/slider-div/_form.scss */
 #slider .send .nf-field-element input {
   font-size: 1em;
+  padding: 1em 3em;
   border: solid 1px #ebebeb;
   color: #ebebeb;
   background: transparent;
-  padding: 1em 3em;
   border-radius: 5px;
   -webkit-transition: background-color .2s ease-out;
   -moz-transition: background-color .2s ease-out;
   -o-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
 }
-/* line 129, ../sass/plugins/slider-div/_form.scss */
+/* line 85, ../sass/utilities/_mixins.scss */
 #slider .send .nf-field-element input:hover {
   background-color: #fff;
-  color: #0b0b0b;
+  color: #0b0b0b !important;
   transform: scale(1.1);
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
