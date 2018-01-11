@@ -27,11 +27,11 @@ function initialize() {
 
   });
 
-	$('#read-more').unbind().click(function (e) {
+	$('#buttons-2551-sub_row_1-0-0-0-2').unbind().click(function (e) {
 
 		e.preventDefault();
 
-		view_slider($(window).width(), 'Read More', $(this));
+		view_slider($(window).width(), 'About', $(this));
 
 	});
 
@@ -43,15 +43,6 @@ function initialize() {
 
 	});
 
-  $('nav #menu-item-21').unbind().click(function (e) {
-
-    e.preventDefault();
-
-    view_slider($(window).width(), 'Your Next Step', $(this));
-
-  });
-
-	
 }
 
 
@@ -72,8 +63,8 @@ function view_slider(widthOfScreen, text, element) {
 	}
 
 
-	if (text == 'Read More') {
-		$('#slider #text-30').show();
+	if (text == 'About') {
+		$('#slider #custom_html-2').show();
 	} else if (text == 'Contact') {
 		$('#slider .widget_ninja_forms_widget').show();
 	} else if (text == 'cart') {
@@ -83,10 +74,10 @@ function view_slider(widthOfScreen, text, element) {
 
     autosize($('.wpforms-field-medium'));
 	} else if (text == 'checkout') {
-		
+
 		percentage = '-100%';
 		widthOfSlider = '100%';
-		
+
 		$('#slider .woocommerce-mini-cart__total').fadeOut();
 		$('#slider a.button.checkout.wc-forward').fadeOut();
 		$('#slider #sexy-woo-cart').show();
@@ -96,11 +87,8 @@ function view_slider(widthOfScreen, text, element) {
 			$('#slider #sexy-woo-cart').css({'width': '40%', 'float': 'left'});
 		}
 		$('#slider #sexy-woo-checkout').fadeIn();
-		
+
 	}
-	
-	
-// 	$('#slider').css({'width': widthOfSlider});
 	
 	$('#slider').show();
 	$('#slider section:first-of-type').fadeIn();

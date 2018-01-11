@@ -1,0 +1,19 @@
+#slider #custom_html-2 {
+  position: relative;
+  top: 7%;
+
+  .slide-about {
+    padding: 0 3em 3em 3em;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.2em;
+  }
+
+  .about-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

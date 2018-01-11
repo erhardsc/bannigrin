@@ -1,0 +1,10 @@
+.owl-carousel {
+
+  .owl-wrapper {
+    padding: 2em 0;
+  }
+
+  .owl-item .box img {
+    @include shadow-dark;
+  }
+}

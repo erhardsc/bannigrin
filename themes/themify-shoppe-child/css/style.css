@@ -83,20 +83,13 @@ a, u {
   padding-top: 6.5em;
 }
 
-@media (min-width: 768px) {
-  /* line 1, ../sass/layout/_containers.scss */
-  .home-banner {
-    background: url("../themify-shoppe-child/images/bannigrinMobile.png") no-repeat center bottom;
-  }
-}
-
-/* line 9, ../sass/layout/_containers.scss */
+/* line 1, ../sass/layout/_containers.scss */
 .shadow-dark img {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 11, ../sass/layout/_containers.scss */
+/* line 3, ../sass/layout/_containers.scss */
 .shadow-dark img:hover {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
   -moz-box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
@@ -104,44 +97,49 @@ a, u {
   transform: scale(1.01);
 }
 
-/* line 21, ../sass/layout/_containers.scss */
+/* line 10, ../sass/layout/_containers.scss */
+.big-video-wrap video {
+  position: absolute;
+}
+
+/* line 18, ../sass/layout/_containers.scss */
 .floating-div .row_inner {
   padding: 4em 0 4em 0;
 }
 @media (min-width: 768px) {
-  /* line 21, ../sass/layout/_containers.scss */
+  /* line 18, ../sass/layout/_containers.scss */
   .floating-div .row_inner {
     padding: 0 4em 0 4em;
   }
 }
-/* line 29, ../sass/layout/_containers.scss */
+/* line 26, ../sass/layout/_containers.scss */
 .floating-div .tb-column-inner {
   margin: auto;
 }
-/* line 33, ../sass/layout/_containers.scss */
+/* line 30, ../sass/layout/_containers.scss */
 .floating-div .image-2551-sub_row_1-0-0-1-0 img {
   margin: auto;
   display: block;
 }
 @media (max-width: 575px) {
-  /* line 38, ../sass/layout/_containers.scss */
+  /* line 35, ../sass/layout/_containers.scss */
   .floating-div .subrow_inner {
     padding: 4em;
   }
 }
 @media (min-width: 576px) {
-  /* line 38, ../sass/layout/_containers.scss */
+  /* line 35, ../sass/layout/_containers.scss */
   .floating-div .subrow_inner {
     padding: 4em;
   }
 }
 @media (min-width: 768px) {
-  /* line 38, ../sass/layout/_containers.scss */
+  /* line 35, ../sass/layout/_containers.scss */
   .floating-div .subrow_inner {
     padding: 2em;
   }
 }
-/* line 52, ../sass/layout/_containers.scss */
+/* line 49, ../sass/layout/_containers.scss */
 .floating-div .module_subrow {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
@@ -150,36 +148,36 @@ a, u {
   z-index: 10;
 }
 @media (min-width: 768px) {
-  /* line 52, ../sass/layout/_containers.scss */
+  /* line 49, ../sass/layout/_containers.scss */
   .floating-div .module_subrow {
     top: -200px;
   }
 }
 
-/* line 65, ../sass/layout/_containers.scss */
+/* line 62, ../sass/layout/_containers.scss */
 .lessons-div h1 {
   padding-top: 1em;
   padding-bottom: 1em;
 }
 @media (min-width: 768px) {
-  /* line 65, ../sass/layout/_containers.scss */
+  /* line 62, ../sass/layout/_containers.scss */
   .lessons-div h1 {
     padding-top: 0;
   }
 }
-/* line 73, ../sass/layout/_containers.scss */
+/* line 70, ../sass/layout/_containers.scss */
 .lessons-div .lesson {
   margin-top: 5em;
   margin-bottom: 5em;
 }
 @media (min-width: 768px) {
-  /* line 73, ../sass/layout/_containers.scss */
+  /* line 70, ../sass/layout/_containers.scss */
   .lessons-div .lesson {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-/* line 82, ../sass/layout/_containers.scss */
+/* line 79, ../sass/layout/_containers.scss */
 .lessons-div .beginner::before, .lessons-div .intermediate::before, .lessons-div .advanced::before {
   position: absolute;
   left: 0;
@@ -187,20 +185,20 @@ a, u {
   top: -75px;
   z-index: 11;
 }
-/* line 91, ../sass/layout/_containers.scss */
+/* line 88, ../sass/layout/_containers.scss */
 .lessons-div .beginner::before {
   content: url("../../../uploads/2018/01/beginnerSticks.svg");
 }
-/* line 98, ../sass/layout/_containers.scss */
+/* line 95, ../sass/layout/_containers.scss */
 .lessons-div .intermediate::before {
   content: url("../../../uploads/2018/01/intermediateSticks.svg");
 }
-/* line 105, ../sass/layout/_containers.scss */
+/* line 102, ../sass/layout/_containers.scss */
 .lessons-div .advanced::before {
   content: url("../../../uploads/2018/01/advancedSticks.svg");
 }
 
-/* line 116, ../sass/layout/_containers.scss */
+/* line 113, ../sass/layout/_containers.scss */
 .follow-ryan::before {
   content: url("../../../uploads/2018/01/greySticks.svg");
   position: absolute;
@@ -209,7 +207,7 @@ a, u {
   top: -80px;
 }
 
-/* line 126, ../sass/layout/_containers.scss */
+/* line 123, ../sass/layout/_containers.scss */
 .right-up-slant {
   overflow-x: auto;
   overflow-y: hidden;
@@ -222,7 +220,7 @@ a, u {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 
-/* line 133, ../sass/layout/_containers.scss */
+/* line 130, ../sass/layout/_containers.scss */
 .slant {
   overflow-x: auto;
   overflow-y: hidden;
@@ -265,16 +263,30 @@ a, u {
   z-index: 9999;
 }
 /* line 18, ../sass/plugins/slider-div/_slider-div.scss */
+#slider h3, #slider h4 {
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+}
+/* line 26, ../sass/utilities/_mixins.scss */
+#slider h3::after, #slider h4::after {
+  content: "";
+  border-top: 2px solid;
+  width: 2em;
+  display: block;
+  margin: .2em auto;
+}
+/* line 25, ../sass/plugins/slider-div/_slider-div.scss */
 #slider .woocommerce .col2-set .col-1, #slider #slider .woocommerce-page .col2-set .col-1 {
   width: 100%;
   float: none;
 }
-/* line 23, ../sass/plugins/slider-div/_slider-div.scss */
+/* line 30, ../sass/plugins/slider-div/_slider-div.scss */
 #slider section {
   width: 100%;
   display: none;
 }
-/* line 28, ../sass/plugins/slider-div/_slider-div.scss */
+/* line 35, ../sass/plugins/slider-div/_slider-div.scss */
 #slider section:first-of-type {
   margin-top: 0px;
   position: fixed;
@@ -297,67 +309,73 @@ a, u {
   Animate the placeholders on focus
   ////////////////////////////////*/
 }
-/* line 26, ../sass/utilities/_mixins.scss */
-#slider h3::after {
-  content: "";
-  border-top: 2px solid;
-  width: 2em;
-  display: block;
-  margin: .2em auto;
-}
-/* line 7, ../sass/plugins/slider-div/_form.scss */
+/* line 3, ../sass/plugins/slider-div/_form.scss */
 #slider .fa-times-circle {
   color: white;
 }
-/* line 11, ../sass/plugins/slider-div/_form.scss */
+/* line 7, ../sass/plugins/slider-div/_form.scss */
 #slider label {
   color: white;
 }
+/* line 11, ../sass/plugins/slider-div/_form.scss */
+#slider .widget_ninja_forms_widget {
+  max-width: 400px !important;
+}
 /* line 15, ../sass/plugins/slider-div/_form.scss */
-#slider #nf-field-9-wrap label:first-child {
+#slider #nf-field-9-wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 19, ../sass/plugins/slider-div/_form.scss */
+#slider #nf-field-9-wrap .nf-field-label:first-child {
   font-size: 1.5em;
-  text-align: center;
+  margin: 1em auto;
+  color: white;
 }
 /* line 26, ../sass/utilities/_mixins.scss */
-#slider #nf-field-9-wrap label:first-child::after {
+#slider #nf-field-9-wrap .nf-field-label:first-child::after {
   content: "";
   border-top: 2px solid;
   width: 2em;
   display: block;
   margin: .2em auto;
 }
-/* line 21, ../sass/plugins/slider-div/_form.scss */
+/* line 26, ../sass/plugins/slider-div/_form.scss */
+#slider #nf-field-9-wrap .nf-field-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 33, ../sass/plugins/slider-div/_form.scss */
+#slider .container {
+  margin: 0 auto;
+}
+/* line 37, ../sass/plugins/slider-div/_form.scss */
 #slider .ninja-forms-req-symbol, #slider .nf-form-fields-required {
   display: none;
 }
-/* line 25, ../sass/plugins/slider-div/_form.scss */
-#slider #nf-form-title-2 h3 {
-  text-align: center;
-  color: white;
-  font-size: 4em;
-}
-/* line 31, ../sass/plugins/slider-div/_form.scss */
+/* line 41, ../sass/plugins/slider-div/_form.scss */
 #slider section#ninja_forms_widget-2 {
-  position: absolute;
-  top: 15%;
-  left: 10%;
+  position: relative;
+  top: 7%;
+  margin: 0 auto;
   width: 87%;
 }
 @media (min-width: 768px) {
-  /* line 31, ../sass/plugins/slider-div/_form.scss */
+  /* line 41, ../sass/plugins/slider-div/_form.scss */
   #slider section#ninja_forms_widget-2 {
     width: 82%;
   }
 }
-/* line 48, ../sass/plugins/slider-div/_form.scss */
-#slider input,
+/* line 58, ../sass/plugins/slider-div/_form.scss */
+#slider input[type]:not([type=checkbox]):not([type=button]),
 #slider textarea {
-  font-size: 2.8vw;
+  font-size: 1.5em;
   border-bottom: solid 1px white !important;
   -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) !important;
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) !important;
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #A89078 4%) !important;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #a89078 4%) !important;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%) !important;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #ffffff 4%) !important;
   background-position: -400px 0 !important;
   background-size: 400px 100% !important;
   background-repeat: no-repeat !important;
@@ -365,20 +383,7 @@ a, u {
   font-weight: 200;
   border: none;
 }
-@media (min-width: 768px) {
-  /* line 48, ../sass/plugins/slider-div/_form.scss */
-  #slider input,
-  #slider textarea {
-    font-size: 12px;
-  }
-}
-/* line 69, ../sass/plugins/slider-div/_form.scss */
-#slider input:focus, #slider textarea:focus {
-  box-shadow: none !important;
-  outline: none !important;
-  background-position: 0 0 !important;
-}
-/* line 79, ../sass/plugins/slider-div/_form.scss */
+/* line 85, ../sass/plugins/slider-div/_form.scss */
 #slider input[type=text]:focus::-webkit-input-placeholder,
 #slider input[type=email]:focus::-webkit-input-placeholder,
 #slider textarea:focus::-webkit-input-placeholder {
@@ -388,7 +393,7 @@ a, u {
   visibility: visible !important;
   color: white !important;
 }
-/* line 89, ../sass/plugins/slider-div/_form.scss */
+/* line 95, ../sass/plugins/slider-div/_form.scss */
 #slider input[type=text]::-webkit-input-placeholder,
 #slider input[type=email]::-webkit-input-placeholder,
 #slider textarea::-webkit-input-placeholder {
@@ -397,12 +402,85 @@ a, u {
   transition: all 0.3s ease-in-out !important;
   color: white !important;
 }
-/* line 98, ../sass/plugins/slider-div/_form.scss */
+/* line 104, ../sass/plugins/slider-div/_form.scss */
 #slider .form-row:focus {
   background: white !important;
 }
-/* line 102, ../sass/plugins/slider-div/_form.scss */
+/* line 108, ../sass/plugins/slider-div/_form.scss */
 #slider textarea {
   min-height: 20px;
   height: 35px;
+  padding-bottom: 4em;
+}
+/* line 114, ../sass/plugins/slider-div/_form.scss */
+#slider .send .nf-field-element {
+  text-align: center;
+}
+/* line 117, ../sass/plugins/slider-div/_form.scss */
+#slider .send .nf-field-element input {
+  font-size: 1em;
+  border: solid 1px #ebebeb;
+  color: #ebebeb;
+  background: transparent;
+  padding: 1em 3em;
+  border-radius: 5px;
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+/* line 129, ../sass/plugins/slider-div/_form.scss */
+#slider .send .nf-field-element input:hover {
+  background-color: #fff;
+  color: #0b0b0b;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* line 5, ../sass/plugins/slider-div/_checkbox.scss */
+#slider input[type="checkbox"] {
+  margin-top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* line 14, ../sass/plugins/slider-div/_checkbox.scss */
+#slider input[type="checkbox"]:checked {
+  background: #3c3c50;
+}
+
+/* line 1, ../sass/plugins/slider-div/_about.scss */
+#slider #custom_html-2 {
+  position: relative;
+  top: 7%;
+}
+/* line 5, ../sass/plugins/slider-div/_about.scss */
+#slider #custom_html-2 .slide-about {
+  padding: 0 3em 3em 3em;
+}
+/* line 9, ../sass/plugins/slider-div/_about.scss */
+#slider #custom_html-2 p {
+  color: #fff;
+  font-size: 1.2em;
+}
+/* line 14, ../sass/plugins/slider-div/_about.scss */
+#slider #custom_html-2 .about-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 3, ../sass/plugins/enjoy-instagram-slider/_slider.scss */
+.owl-carousel .owl-wrapper {
+  padding: 2em 0;
+}
+/* line 7, ../sass/plugins/enjoy-instagram-slider/_slider.scss */
+.owl-carousel .owl-item .box img {
+  -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
 }

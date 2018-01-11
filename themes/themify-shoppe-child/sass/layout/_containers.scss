@@ -1,17 +1,14 @@
-.home-banner {
-
-  @include media-query('med') {
-    background: url("../themify-shoppe-child/images/bannigrinMobile.png") no-repeat center bottom;
-  }
-
-}
-
 .shadow-dark img {
   @include shadow-dark;
   &:hover {
     @include shadow-light;
     transform: scale(1.01);
   }
+}
+
+// video banner
+.big-video-wrap video {
+  position: absolute;
 }
 
 // Floating Div - Home-page

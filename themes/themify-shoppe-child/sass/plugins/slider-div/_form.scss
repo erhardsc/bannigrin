@@ -1,9 +1,5 @@
 #slider {
 
-  h3 {
-    @include underline;
-  }
-
   .fa-times-circle {
     color: white;
   }
@@ -12,26 +8,40 @@
     color: white;
   }
 
-  #nf-field-9-wrap label:first-child {
-    font-size: 1.5em;
-    text-align: center;
-    @include underline;
+  .widget_ninja_forms_widget {
+    max-width: 400px !important;
+  }
+
+  #nf-field-9-wrap {
+    width: 100%;
+    margin: 0 auto;
+
+    .nf-field-label:first-child {
+      font-size: 1.5em;
+      margin: 1em auto;
+      color: white;
+      @include underline;
+    }
+
+    .nf-field-element {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+  .container {
+    margin: 0 auto;
   }
 
   .ninja-forms-req-symbol, .nf-form-fields-required {
     display: none;
   }
 
-  #nf-form-title-2 h3 {
-    text-align: center;
-    color: white;
-    font-size: 4em;
-  }
-
   section#ninja_forms_widget-2 {
-    position: absolute;
-    top: 15%;
-    left: 10%;
+    position: relative;
+    top: 7%;
+    margin: 0 auto;
     width: 87%;
 
     @include media-query('med'){
@@ -45,14 +55,14 @@
   Primary styles for the input boxes
   ////////////////////////////////*/
 
-  input,
+  input[type]:not([type=checkbox]):not([type=button]),
   textarea {
-    font-size: 2.8vw;
+    font-size: 1.5em;
     border-bottom: solid 1px white !important;
     -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) !important;
     transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) !important;
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #A89078 4%) !important;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #A89078 4%) !important;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%) !important;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%) !important;
     background-position: -400px 0 !important;
     background-size: 400px 100% !important;
     background-repeat: no-repeat !important;
@@ -60,16 +70,12 @@
     font-weight: 200;
     border: none;
 
-    @include media-query('med') {
-      font-size: 12px;
-    }
+    //&:focus {
+    //  box-shadow: none !important;
+    //  outline: none !important;
+    //  background-position: 0 0 !important;
+    //}
 
-  }
-
-  input:focus, textarea:focus {
-    box-shadow: none !important;
-    outline: none !important;
-    background-position: 0 0 !important;
   }
 
   /* ///////////////////////////////
@@ -102,5 +108,31 @@
   textarea {
     min-height: 20px;
     height: 35px;
+    padding-bottom: 4em;
+  }
+
+  .send .nf-field-element {
+    text-align: center;
+
+    input {
+      font-size: 1em;
+      border: solid 1px #ebebeb;
+      color: #ebebeb;
+      background: transparent;
+      padding: 1em 3em;
+      border-radius: 5px;
+      -webkit-transition: background-color .2s ease-out;
+      -moz-transition: background-color .2s ease-out;
+      -o-transition: background-color .2s ease-out;
+      transition: background-color .2s ease-out;
+
+      &:hover {
+        background-color: #fff;
+        color: #0b0b0b;
+        transform: scale(1.1);
+        @include shadow-dark
+      }
+    }
+
   }
 }

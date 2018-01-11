@@ -15,6 +15,13 @@
   height:100vh;
   z-index: 9999;
 
+  h3, h4 {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    @include underline;
+  }
+
   .woocommerce .col2-set .col-1, #slider .woocommerce-page .col2-set .col-1 {
     width: 100%;
     float: none;

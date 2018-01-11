@@ -17,8 +17,13 @@
 @import 'components/_images';
 @import 'components/_audio';
 
-// Plugins
+// Plugins - Theme specific styles for any downloaded plugins
 
 ////////// Slider Div //////////////
 @import 'plugins/slider-div/_slider-div';
 @import 'plugins/slider-div/_form';
+@import 'plugins/slider-div/_checkbox';
+@import 'plugins/slider-div/_about';
+
+////////// Enjoy Insagram Slider //////////////
+@import 'plugins/enjoy-instagram-slider/_slider';
