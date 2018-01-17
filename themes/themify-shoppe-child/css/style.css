@@ -19,34 +19,38 @@ a, u {
   text-decoration: none;
 }
 
-/* line 1, ../sass/layout/_header.scss */
-#headerwrap {
+/* line 3, ../sass/layout/_header.scss */
+#headerwrap.fixed-header {
   background-color: rgba(41, 41, 43, 0.9) !important;
 }
-/* line 5, ../sass/layout/_header.scss */
+/* line 7, ../sass/layout/_header.scss */
 #headerwrap #main-nav a {
   font-size: 1.2em;
 }
-/* line 9, ../sass/layout/_header.scss */
+/* line 11, ../sass/layout/_header.scss */
 #headerwrap .header-on-scroll #main-nav a {
   font-size: 1em;
 }
-/* line 13, ../sass/layout/_header.scss */
+/* line 15, ../sass/layout/_header.scss */
+#headerwrap .current_page_item > a {
+  color: #9b9b9b !important;
+}
+/* line 19, ../sass/layout/_header.scss */
 #headerwrap #menu-icon {
   color: white;
 }
-/* line 17, ../sass/layout/_header.scss */
+/* line 23, ../sass/layout/_header.scss */
 #headerwrap #mobile-menu {
   background-color: #1F1F1F;
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 22, ../sass/layout/_header.scss */
+/* line 28, ../sass/layout/_header.scss */
 #headerwrap #menu-icon-close {
   color: #fff !important;
 }
-/* line 26, ../sass/layout/_header.scss */
+/* line 32, ../sass/layout/_header.scss */
 #headerwrap #menu-item-3101 a {
   border: solid 1px #ebebeb;
   color: #ebebeb;
@@ -67,16 +71,16 @@ a, u {
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 32, ../sass/layout/_header.scss */
+/* line 38, ../sass/layout/_header.scss */
 #headerwrap #site-logo {
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
 }
-/* line 37, ../sass/layout/_header.scss */
+/* line 43, ../sass/layout/_header.scss */
 #headerwrap #main-nav .menu-item a {
   color: #fff;
 }
-/* line 41, ../sass/layout/_header.scss */
+/* line 47, ../sass/layout/_header.scss */
 #headerwrap #main-nav ul {
   background: transparent;
   border: 1px solid #fef;
@@ -105,62 +109,64 @@ a, u {
 }
 
 /* line 1, ../sass/layout/_containers.scss */
-.shadow-dark img {
+.shadow-dark img,
+.video-div-shadow .shadow-dark {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 3, ../sass/layout/_containers.scss */
-.shadow-dark img:hover {
+/* line 4, ../sass/layout/_containers.scss */
+.shadow-dark img:hover,
+.video-div-shadow .shadow-dark:hover {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
   -moz-box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
   box-shadow: 0px 6px 29px 0px rgba(140, 140, 140, 0.5);
   transform: scale(1.01);
 }
 
-/* line 10, ../sass/layout/_containers.scss */
+/* line 12, ../sass/layout/_containers.scss */
 .big-video-wrap video {
   position: absolute;
 }
 
-/* line 18, ../sass/layout/_containers.scss */
+/* line 20, ../sass/layout/_containers.scss */
 .floating-div .row_inner {
   padding: 4em 0 4em 0;
 }
 @media (min-width: 768px) {
-  /* line 18, ../sass/layout/_containers.scss */
+  /* line 20, ../sass/layout/_containers.scss */
   .floating-div .row_inner {
     padding: 0 4em 0 4em;
   }
 }
-/* line 26, ../sass/layout/_containers.scss */
+/* line 28, ../sass/layout/_containers.scss */
 .floating-div .tb-column-inner {
   margin: auto;
 }
-/* line 30, ../sass/layout/_containers.scss */
+/* line 32, ../sass/layout/_containers.scss */
 .floating-div .image-2551-sub_row_1-0-0-1-0 img {
   margin: auto;
   display: block;
 }
 @media (max-width: 575px) {
-  /* line 35, ../sass/layout/_containers.scss */
+  /* line 37, ../sass/layout/_containers.scss */
   .floating-div .subrow_inner {
     padding: 4em;
   }
 }
 @media (min-width: 576px) {
-  /* line 35, ../sass/layout/_containers.scss */
+  /* line 37, ../sass/layout/_containers.scss */
   .floating-div .subrow_inner {
     padding: 4em;
   }
 }
 @media (min-width: 768px) {
-  /* line 35, ../sass/layout/_containers.scss */
+  /* line 37, ../sass/layout/_containers.scss */
   .floating-div .subrow_inner {
     padding: 2em;
   }
 }
-/* line 49, ../sass/layout/_containers.scss */
+/* line 51, ../sass/layout/_containers.scss */
 .floating-div .module_subrow {
   -webkit-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 29px 0px rgba(0, 0, 0, 0.75);
@@ -169,36 +175,36 @@ a, u {
   z-index: 10;
 }
 @media (min-width: 768px) {
-  /* line 49, ../sass/layout/_containers.scss */
+  /* line 51, ../sass/layout/_containers.scss */
   .floating-div .module_subrow {
     top: -200px;
   }
 }
 
-/* line 62, ../sass/layout/_containers.scss */
+/* line 64, ../sass/layout/_containers.scss */
 .lessons-div h1 {
   padding-top: 1em;
   padding-bottom: 1em;
 }
 @media (min-width: 768px) {
-  /* line 62, ../sass/layout/_containers.scss */
+  /* line 64, ../sass/layout/_containers.scss */
   .lessons-div h1 {
     padding-top: 0;
   }
 }
-/* line 70, ../sass/layout/_containers.scss */
+/* line 72, ../sass/layout/_containers.scss */
 .lessons-div .lesson {
   margin-top: 5em;
   margin-bottom: 5em;
 }
 @media (min-width: 768px) {
-  /* line 70, ../sass/layout/_containers.scss */
+  /* line 72, ../sass/layout/_containers.scss */
   .lessons-div .lesson {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-/* line 79, ../sass/layout/_containers.scss */
+/* line 81, ../sass/layout/_containers.scss */
 .lessons-div .beginner::before, .lessons-div .intermediate::before, .lessons-div .advanced::before {
   position: absolute;
   left: 0;
@@ -206,20 +212,20 @@ a, u {
   top: -75px;
   z-index: 11;
 }
-/* line 88, ../sass/layout/_containers.scss */
+/* line 90, ../sass/layout/_containers.scss */
 .lessons-div .beginner::before {
   content: url("../../../uploads/2018/01/beginnerSticks.svg");
 }
-/* line 95, ../sass/layout/_containers.scss */
+/* line 97, ../sass/layout/_containers.scss */
 .lessons-div .intermediate::before {
   content: url("../../../uploads/2018/01/intermediateSticks.svg");
 }
-/* line 102, ../sass/layout/_containers.scss */
+/* line 104, ../sass/layout/_containers.scss */
 .lessons-div .advanced::before {
   content: url("../../../uploads/2018/01/advancedSticks.svg");
 }
 
-/* line 113, ../sass/layout/_containers.scss */
+/* line 115, ../sass/layout/_containers.scss */
 .follow-ryan::before {
   content: url("../../../uploads/2018/01/greySticks.svg");
   position: absolute;
@@ -228,7 +234,7 @@ a, u {
   top: -80px;
 }
 
-/* line 123, ../sass/layout/_containers.scss */
+/* line 125, ../sass/layout/_containers.scss */
 .right-up-slant {
   overflow-x: auto;
   overflow-y: hidden;
@@ -241,7 +247,26 @@ a, u {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 
-/* line 130, ../sass/layout/_containers.scss */
+/* line 131, ../sass/layout/_containers.scss */
+.top-slant {
+  overflow-x: auto;
+  overflow-y: hidden;
+  tab-size: 4;
+  width: 100%;
+  left: 0;
+  position: relative;
+  max-width: 100vw;
+  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 3vh, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* line 137, ../sass/layout/_containers.scss */
+.bottom-slant {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 102vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 102vh, 0% 100%);
+}
+
+/* line 143, ../sass/layout/_containers.scss */
 .slant {
   overflow-x: auto;
   overflow-y: hidden;
@@ -254,13 +279,29 @@ a, u {
   clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 
+/* line 2, ../sass/components/_buttons.scss */
+.themify_builder_2764_row.module_row_2764-2 .tb-column-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 2, ../sass/components/_images.scss */
+#image-2764-2-1-0 {
+  position: relative;
+  top: 10px;
+}
+
 /* line 3, ../sass/components/_audio.scss */
 .module-audio .album-playlist .tracklist .track {
   border-bottom: none !important;
 }
 /* line 7, ../sass/components/_audio.scss */
-.module-audio .module-audio .tracklist .track-title {
-  position: relative !important;
+.module-audio .tracklist .track-title {
+  color: white !important;
+}
+/* line 11, ../sass/components/_audio.scss */
+.module-audio .mejs-pause:before, .module-audio .mejs-play:before {
   color: white !important;
 }
 

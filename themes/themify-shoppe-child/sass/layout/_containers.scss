@@ -1,10 +1,12 @@
-.shadow-dark img {
+.shadow-dark img,
+.video-div-shadow .shadow-dark{
   @include shadow-dark;
   &:hover {
     @include shadow-light;
     transform: scale(1.01);
   }
 }
+
 
 // video banner
 .big-video-wrap video {
@@ -124,6 +126,17 @@
   @include slant;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 3vw), 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+.top-slant {
+  @include slant;
+  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 3vh, 100% 0, 100% 100%, 0% 100%);
+}
+
+.bottom-slant {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 102vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 102vh, 0% 100%);
 }
 
 // Causes the top and bottom of contianer to have slants

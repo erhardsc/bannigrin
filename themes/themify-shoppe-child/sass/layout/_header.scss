@@ -1,6 +1,8 @@
 #headerwrap {
 
-  background-color: rgba(41,41,43,.9) !important;
+  &.fixed-header {
+    background-color: rgba(41, 41, 43, .9) !important;
+  }
 
   #main-nav a{
     font-size: 1.2em;
@@ -8,6 +10,10 @@
 
   .header-on-scroll #main-nav a {
     font-size: 1em;
+  }
+
+  .current_page_item > a {
+    color: #9b9b9b !important;
   }
 
   #menu-icon {

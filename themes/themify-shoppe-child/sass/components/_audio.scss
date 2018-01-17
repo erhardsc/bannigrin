@@ -4,8 +4,11 @@
     border-bottom: none !important;
   }
 
-  .module-audio .tracklist .track-title {
-    position: relative !important;
+  .tracklist .track-title {
+    color: white !important;
+  }
+
+  .mejs-pause:before, .mejs-play:before {
     color: white !important;
   }
 
