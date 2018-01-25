@@ -1,6 +1,12 @@
-.themify_builder_2764_row.module_row_0.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2017/09/8-cropped.png"); padding-top:20%; padding-bottom:20%; }
+.themify_builder_2764_row.module_row_0.module_row{background-image: url("http://bannigrin.com/wp-content/uploads/2018/01/24.jpg"); padding-top:20em; padding-bottom:20em; }
+.themify_builder_2764_row.module_row_0.module_row>.builder_row_cover:before{background-image:-webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.57) 0%,rgba(255, 255, 255, 0.35) 100%);
+background-image:-moz-linear-gradient(180deg,rgba(0, 0, 0, 0.57) 0%,rgba(255, 255, 255, 0.35) 100%);
+background-image:-o-linear-gradient(180deg,rgba(0, 0, 0, 0.57) 0%,rgba(255, 255, 255, 0.35) 100%);
+background-image:-ms-linear-gradient(180deg,rgba(0, 0, 0, 0.57) 0%,rgba(255, 255, 255, 0.35) 100%);
+background-image:linear-gradient(180deg,rgba(0, 0, 0, 0.57) 0%,rgba(255, 255, 255, 0.35) 100%);
+}
 .themify_builder_2764_row.module_row_0 a{text-decoration: underline; }
-@media screen and (max-width: 414px) {.themify_builder_2764_row.module_row_0.module_row{padding-top:20%; padding-bottom:8%; }
+@media screen and (max-width: 414px) {.themify_builder_2764_row.module_row_0 a{text-decoration: underline; }
 }
 .themify_builder .text-2764-0-0-0.module-text{background-repeat: repeat; font-size:2em; text-align: center; }
 .themify_builder .text-2764-0-0-0.module-text a{text-decoration: underline; }
@@ -8,68 +14,42 @@
 .themify_builder .text-2764-0-0-0.module-text h1{font-size:3em; line-height:60px; }
 @media screen and (max-width: 414px) {.themify_builder .text-2764-0-0-0.module-text h1{font-size:38px; line-height:50px; }
 }
-.themify_builder_2764_row.module_row_1.module_row{background-color:#1f1f1f; text-align: center; padding-top:7%; }
+.themify_builder_2764_row.module_row_1.module_row{background-color:#4d4d4d; padding-top:3%; padding-bottom:3%; }
+.themify_builder_2764_row.module_row_1.module_row,.themify_builder_2764_row.module_row_1 h1,.themify_builder_2764_row.module_row_1 h2,.themify_builder_2764_row.module_row_1 h3:not(.module-title),.themify_builder_2764_row.module_row_1 h4,.themify_builder_2764_row.module_row_1 h5,.themify_builder_2764_row.module_row_1 h6{color:#ffffff; }
 .themify_builder_2764_row.module_row_1 a{text-decoration: underline; }
-.themify_builder_2764_row.module_row_2.module_row{background-color:#1f1f1f; text-align: center; padding-top:3%; padding-bottom:7%; margin-top:-3.1%; }
+.themify_builder .audio-2764-1-1-0.module-audio .track-buy{text-decoration: underline; }
+.themify_builder_2764_row.module_row_2.module_row{background-color:#4d4d4d; margin-top:-1px; }
 .themify_builder_2764_row.module_row_2 a{text-decoration: underline; }
-.themify_builder .buttons-2764-2-0-0.module.module-buttons{background-repeat: repeat; }
-.themify_builder .buttons-2764-2-0-0 .module-buttons .module-buttons-item a{background-color:rgba(0,0,0, 0.00); color:#ffffff; border-top:2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff; border-left:2px solid #ffffff; }
-.themify_builder .buttons-2764-2-0-0 .module-buttons .module-buttons-item a:hover{background-color:#303036; }
-.themify_builder .buttons-2764-2-0-0 .module-buttons .module-buttons-item a span,.themify_builder .buttons-2764-2-0-0 .module-buttons .module-buttons-item a i{text-decoration: none; }
-.themify_builder .image-2764-2-1-0.module-image{background-repeat: repeat; }
-.themify_builder .buttons-2764-2-2-0.module.module-buttons{background-repeat: repeat; }
-.themify_builder .buttons-2764-2-2-0 .module-buttons .module-buttons-item a{background-color:rgba(0,0,0, 0.00); color:#ffffff; border-top:2px solid #ffffff; border-right:2px solid #ffffff; border-bottom:2px solid #ffffff; border-left:2px solid #ffffff; }
-.themify_builder .buttons-2764-2-2-0 .module-buttons .module-buttons-item a:hover{background-color:#c2ae6d; color:#ffffff; }
-.themify_builder .buttons-2764-2-2-0 .module-buttons .module-buttons-item a span,.themify_builder .buttons-2764-2-2-0 .module-buttons .module-buttons-item a i{text-decoration: none; }
-.themify_builder_2764_row.module_row_3.module_row{background-color:#4d4d4d; padding-top:7%; padding-bottom:3%; }
+.themify_builder_2764_row.module_row_3.module_row{background-color:#4d4d4d; padding-top:3%; padding-bottom:3%; }
 .themify_builder_2764_row.module_row_3.module_row,.themify_builder_2764_row.module_row_3 h1,.themify_builder_2764_row.module_row_3 h2,.themify_builder_2764_row.module_row_3 h3:not(.module-title),.themify_builder_2764_row.module_row_3 h4,.themify_builder_2764_row.module_row_3 h5,.themify_builder_2764_row.module_row_3 h6{color:#ffffff; }
 .themify_builder_2764_row.module_row_3 a{text-decoration: underline; }
+.themify_builder .image-2764-3-0-0.module-image{background-repeat: repeat; }
 .themify_builder .audio-2764-3-1-0.module-audio .track-buy{text-decoration: underline; }
-.themify_builder_2764_row.module_row_4.module_row{background-color:#4d4d4d; margin-top:-1px; }
+.themify_builder_2764_row.module_row_4.module_row{background-color:#4d4d4d; }
 .themify_builder_2764_row.module_row_4 a{text-decoration: underline; }
-.themify_builder_2764_row.module_row_5.module_row{background-color:#4d4d4d; padding-top:3%; padding-bottom:3%; }
+.themify_builder_2764_row.module_row_5.module_row{background-color:#4d4d4d; padding-top:7%; padding-bottom:3%; }
 .themify_builder_2764_row.module_row_5.module_row,.themify_builder_2764_row.module_row_5 h1,.themify_builder_2764_row.module_row_5 h2,.themify_builder_2764_row.module_row_5 h3:not(.module-title),.themify_builder_2764_row.module_row_5 h4,.themify_builder_2764_row.module_row_5 h5,.themify_builder_2764_row.module_row_5 h6{color:#ffffff; }
 .themify_builder_2764_row.module_row_5 a{text-decoration: underline; }
+.themify_builder .image-2764-5-0-0.module-image{background-repeat: repeat; }
 .themify_builder .audio-2764-5-1-0.module-audio .track-buy{text-decoration: underline; }
-.themify_builder_2764_row.module_row_6.module_row{background-color:#4d4d4d; }
-.themify_builder_2764_row.module_row_6 a{text-decoration: underline; }
-.themify_builder_2764_row.module_row_7.module_row{background-color:#4d4d4d; padding-top:3%; padding-bottom:3%; }
+.themify_builder_2764_row.module_row_6.module_row{background-color:#1f1f1f; }
+.themify_builder_2764_row.module_row_7.module_row{background-color:#303036; padding-top:3%; padding-bottom:3%; }
 .themify_builder_2764_row.module_row_7.module_row,.themify_builder_2764_row.module_row_7 h1,.themify_builder_2764_row.module_row_7 h2,.themify_builder_2764_row.module_row_7 h3:not(.module-title),.themify_builder_2764_row.module_row_7 h4,.themify_builder_2764_row.module_row_7 h5,.themify_builder_2764_row.module_row_7 h6{color:#ffffff; }
 .themify_builder_2764_row.module_row_7 a{text-decoration: underline; }
+.themify_builder .image-2764-7-0-0.module-image a{text-decoration: underline; }
 .themify_builder .audio-2764-7-1-0.module-audio .track-buy{text-decoration: underline; }
-.themify_builder_2764_row.module_row_8.module_row{background-color:#1f1f1f; }
+.themify_builder_2764_row.module_row_8.module_row{background-color:#303036; }
+.themify_builder_2764_row.module_row_8 a{text-decoration: underline; }
 .themify_builder_2764_row.module_row_9.module_row{background-color:#303036; padding-top:3%; padding-bottom:3%; }
 .themify_builder_2764_row.module_row_9.module_row,.themify_builder_2764_row.module_row_9 h1,.themify_builder_2764_row.module_row_9 h2,.themify_builder_2764_row.module_row_9 h3:not(.module-title),.themify_builder_2764_row.module_row_9 h4,.themify_builder_2764_row.module_row_9 h5,.themify_builder_2764_row.module_row_9 h6{color:#ffffff; }
 .themify_builder_2764_row.module_row_9 a{text-decoration: underline; }
+.themify_builder .image-2764-9-0-0.module-image{background-repeat: repeat; }
 .themify_builder .image-2764-9-0-0.module-image a{text-decoration: underline; }
-.themify_builder .audio-2764-9-1-0.module-audio .track-buy{text-decoration: underline; }
+.themify_builder .audio-2764-9-1-0.module-audio .track-buy{padding-right:15%; padding-left:15%; text-decoration: underline; }
 .themify_builder_2764_row.module_row_10.module_row{background-color:#303036; }
 .themify_builder_2764_row.module_row_10 a{text-decoration: underline; }
 .themify_builder_2764_row.module_row_11.module_row{background-color:#303036; padding-top:3%; padding-bottom:3%; }
 .themify_builder_2764_row.module_row_11.module_row,.themify_builder_2764_row.module_row_11 h1,.themify_builder_2764_row.module_row_11 h2,.themify_builder_2764_row.module_row_11 h3:not(.module-title),.themify_builder_2764_row.module_row_11 h4,.themify_builder_2764_row.module_row_11 h5,.themify_builder_2764_row.module_row_11 h6{color:#ffffff; }
 .themify_builder_2764_row.module_row_11 a{text-decoration: underline; }
+.themify_builder .image-2764-11-0-0.module-image{background-repeat: repeat; }
 .themify_builder .audio-2764-11-1-0.module-audio .track-buy{padding-right:15%; padding-left:15%; text-decoration: underline; }
-.themify_builder_2764_row.module_row_12.module_row{background-color:#303036; }
-.themify_builder_2764_row.module_row_12 a{text-decoration: underline; }
-.themify_builder_2764_row.module_row_13.module_row{background-color:#303036; padding-top:3%; padding-bottom:3%; }
-.themify_builder_2764_row.module_row_13.module_row,.themify_builder_2764_row.module_row_13 h1,.themify_builder_2764_row.module_row_13 h2,.themify_builder_2764_row.module_row_13 h3:not(.module-title),.themify_builder_2764_row.module_row_13 h4,.themify_builder_2764_row.module_row_13 h5,.themify_builder_2764_row.module_row_13 h6{color:#ffffff; }
-.themify_builder_2764_row.module_row_13 a{text-decoration: underline; }
-.themify_builder .audio-2764-13-1-0.module-audio .track-buy{padding-right:15%; padding-left:15%; text-decoration: underline; }
-.themify_builder_2764_row.module_row_14.module_row{background-color:#1f1f1f; }
-.themify_builder_2764_row.module_row_15.module_row{background-color:#c2ae6d; padding-top:3%; padding-bottom:3%; }
-.themify_builder_2764_row.module_row_15.module_row,.themify_builder_2764_row.module_row_15 h1,.themify_builder_2764_row.module_row_15 h2,.themify_builder_2764_row.module_row_15 h3:not(.module-title),.themify_builder_2764_row.module_row_15 h4,.themify_builder_2764_row.module_row_15 h5,.themify_builder_2764_row.module_row_15 h6{color:#ffffff; }
-.themify_builder_2764_row.module_row_15 a{text-decoration: underline; }
-.themify_builder_2764_row.module_row_16.module_row{background-color:#303036; padding-top:7%; padding-bottom:7%; }
-.themify_builder_2764_row.module_row_16.module_row,.themify_builder_2764_row.module_row_16 h1,.themify_builder_2764_row.module_row_16 h2,.themify_builder_2764_row.module_row_16 h3:not(.module-title),.themify_builder_2764_row.module_row_16 h4,.themify_builder_2764_row.module_row_16 h5,.themify_builder_2764_row.module_row_16 h6{color:#ffffff; }
-.themify_builder .text-2764-16-0-0.module-text{background-repeat: repeat; font-size:2em; text-align: center; padding-bottom:4em; }
-.themify_builder .text-2764-16-0-0.module-text a{text-decoration: underline; }
-.themify_builder .text-2764-16-0-0.module.module-text h1{color:#ffffff; }
-.themify_builder .text-2764-16-0-0.module-text h1{font-size:3em; line-height:60px; }
-@media screen and (max-width: 414px) {.themify_builder .text-2764-16-0-0.module-text h1{font-size:38px; line-height:50px; }
-}
-.themify_builder .video-2764-16-0-1.module-video .video-title,.themify_builder .video-2764-16-0-1.module-video .video-title a{font-family: Roboto; }
-.themify_builder .video-2764-16-0-1.module-video .video-title{font-size:2em; }
-.themify_builder_2764_row.module_row_17.module_row{background-color:#303036; padding-top:7%; padding-bottom:7%; }
-.themify_builder_2764_row.module_row_17.module_row,.themify_builder_2764_row.module_row_17 h1,.themify_builder_2764_row.module_row_17 h2,.themify_builder_2764_row.module_row_17 h3:not(.module-title),.themify_builder_2764_row.module_row_17 h4,.themify_builder_2764_row.module_row_17 h5,.themify_builder_2764_row.module_row_17 h6{color:#ffffff; }
-.themify_builder .video-2764-17-0-0.module-video .video-title,.themify_builder .video-2764-17-0-0.module-video .video-title a{font-family: Roboto; }
-.themify_builder .video-2764-17-0-0.module-video .video-title{font-size:2em; }

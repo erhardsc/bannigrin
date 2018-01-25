@@ -10,8 +10,11 @@ add_action( 'wp_enqueue_scripts', 'themify_custom_enqueue_child_theme_styles', 1
 
 function enqueue_child_theme_styles_scripts() {
 
+	//wp_enqueue_style( 'style', get_stylesheet_directory_uri() . 'style.css' );
+
   // To edit styles, go to the sass folder
   wp_enqueue_style( 'css', get_stylesheet_directory_uri() . '/css/style.css' );
+  
 
   wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/js/app.js', array('jquery'), true );
 

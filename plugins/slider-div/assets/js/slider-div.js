@@ -43,6 +43,14 @@ function initialize() {
 
 	});
 
+	$('#buttons-3235-2-0-0').unbind().click(function (e) {
+
+		e.preventDefault();
+
+		view_slider($(window).width(), 'Gear', $(this));
+
+	});
+
 }
 
 
@@ -67,6 +75,8 @@ function view_slider(widthOfScreen, text, element) {
 		$('#slider #custom_html-2').show();
 	} else if (text == 'Contact') {
 		$('#slider .widget_ninja_forms_widget').show();
+  } else if (text == 'Gear') {
+    $('#slider #text-1013').show();
 	} else if (text == 'cart') {
     $('#slider #sexy-woo-cart').show();
   } else if (text == 'Your Next Step'){

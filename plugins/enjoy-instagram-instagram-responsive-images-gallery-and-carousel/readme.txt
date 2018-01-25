@@ -4,8 +4,8 @@ Donate link: https://www.google.com/url?q=https%3A%2F%2Fwww.paypal.com%2Fcgi-bin
 Tags: Instagram, Instagram feed, Instagram grid, Instagram carousel, Widget Instagram, Embed Instagram, Embed Instagram feed, Instagram feed on website, responsive carousel, WordPress carousel, Instagram gallery, Lightbox, Instagram pictures
 Requires at least: 3.0.1
 Tested up to: 4.9
-Version: 3.4.1
-Stable tag: 3.4.1
+Version: 3.4.3
+Stable tag: 3.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -192,6 +192,10 @@ In the Setting section yon can customize grid and/or Carousel view
 
 == Changelog ==
 
+= 3.4.3 =
+* Hot Fix for Instagram feed update
+= 3.4.2 =
+* Bug Fix
 = 3.4.1 =
 * NB: Instagram feed on website Wordpress is Php 7 compatible
 = 3.4 =

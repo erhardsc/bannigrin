@@ -72,7 +72,7 @@ foreach ($result as $entry) {
 	}else{
 		$caption = '';
 	}
-	$square_thumbnail = str_replace('s150x150/', 's320x320/', $entry['images']['thumbnail']['url']);
+	$square_thumbnail = $entry['images']['thumbnail']['url'];
 
 	$link = "<a title=\"{$caption}\" rel=\"gallery_swypebox\" class=\"swipebox\" href=\"{$entry['images']['standard_resolution']['url']}\">";
 

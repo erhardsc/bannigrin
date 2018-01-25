@@ -8,7 +8,7 @@
   $value: map-get($breakpoints, $break);
   $sm: map-get($breakpoints, 'sm');
 
-  @if $value < $sm {
+  @if $value == $sm {
     @media (max-width: $value) {
       @content;
     }

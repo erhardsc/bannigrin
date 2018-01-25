@@ -1,4 +1,4 @@
-.themify_builder_2772_row.module_row_0.module_row{background-image: url("http://localhost/bannigrin/wp-content/uploads/2018/01/ryan-drum.jpg"); padding-top:20%; padding-bottom:20%; }
+.themify_builder_2772_row.module_row_0.module_row{background-image: url("http://bannigrin.com/wp-content/uploads/2018/01/19.jpg"); padding-top:20em; padding-bottom:20em; }
 .themify_builder_2772_row.module_row_0.module_row>.builder_row_cover:before{background-image:-webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
 background-image:-moz-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
 background-image:-o-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
@@ -6,7 +6,7 @@ background-image:-ms-linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255
 background-image:linear-gradient(180deg,rgba(0, 0, 0, 0.65) 0%,rgba(255, 255, 255, 0.1) 100%);
 }
 .themify_builder_2772_row.module_row_0 a{text-decoration: underline; }
-@media screen and (max-width: 414px) {.themify_builder_2772_row.module_row_0.module_row{padding-top:20%; padding-bottom:8%; }
+@media screen and (max-width: 414px) {.themify_builder_2772_row.module_row_0 a{text-decoration: underline; }
 }
 .themify_builder .text-2772-0-0-0.module-text{background-repeat: repeat; font-size:2em; text-align: center; }
 .themify_builder .text-2772-0-0-0.module-text a{text-decoration: underline; }

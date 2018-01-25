@@ -31,12 +31,11 @@ foreach ($result as $entry) {
 	}else{
 		$caption = '';
 	}
-	$square_thumbnail = str_replace('s150x150/', 's320x320/', $entry['images']['thumbnail']['url']);
 
 	//For standard resolution and default format
 	//$shortcode_content .=  "<li>".$link."<img  src=\"{$entry['images']['standard_resolution']['url']}\">".$link_close."</li>";
 
-  $square_thumbnail = str_replace('s150x150/', 's320x320/', $entry['images']['thumbnail']['url']);
+	$square_thumbnail = $entry['images']['thumbnail']['url'];
 
 	$link = "<a title=\"{$caption}\" class=\"swipebox_grid\" data-video=\"no\" href=\"{$entry['images']['standard_resolution']['url']}\"><img  src=\"{$square_thumbnail}\">";
 

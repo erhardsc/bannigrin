@@ -1,5 +1,15 @@
 #headerwrap {
 
+  #site-logo img {
+    max-height: unset !important;
+
+    @include media-query('sm') {
+      margin-top: 3px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
   &.fixed-header {
     background-color: rgba(41, 41, 43, .9) !important;
   }
@@ -23,6 +33,10 @@
   #mobile-menu {
     background-color: #1F1F1F;
     @include shadow-dark;
+    #menu-item-3101 {
+      padding: 2em;
+      text-align: center;
+    }
   }
 
   #menu-icon-close {

@@ -7,6 +7,10 @@
   }
 }
 
+#text-2551-0-0-1 a:hover {
+  color: #fff;
+}
+
 
 // video banner
 .big-video-wrap video {
@@ -70,8 +74,8 @@
   }
 
   .lesson {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin: 4em 2em;
+    
     @include media-query('med'){
       margin-top: 0;
       margin-bottom: 0;
@@ -84,6 +88,7 @@
     right: 0;
     top: -75px;
     z-index: 11;
+
   }
 
   .beginner {
@@ -118,6 +123,10 @@
     left: 0;
     right: 0;
     top: -80px;
+
+    @include media-query('sm') {
+      top: -60px;
+    }
   }
 }
 
